@@ -3,34 +3,65 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanXFrontend.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+    <Grid>
+    <!-- Imagen de fondo -->
+        <Image
+        Source="Resources/Images/background.jpeg"
+        Aspect="AspectFill" 
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"/>
+
+
+
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#808D14A5" Offset="0.0" />
+                    <!-- Negro semitransparente -->
+                    <GradientStop Color="#80000000" Offset="1.0" />
+                    <!-- Negro semitransparente -->
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <!-- Contenido superpuesto -->
+        <StackLayout Spacing="2" Margin="5">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                Source="Resources/Images/planxlogo.png"
+                Aspect="AspectFit" 
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand"
+                HeightRequest="280"
+                MinimumHeightRequest="280"/>
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <Button Text="Log In" 
+                    x:Name="btnLogIn"
+                    BackgroundColor="White" 
+                    TextColor="Black" 
+                    FontAttributes="Bold"
+                    CornerRadius="28" 
+                    BorderColor="Black" 
+                    BorderWidth="2"
+                    HeightRequest="43"
+                    WidthRequest="280"
+                    Clicked="btnLogIn_Clicked"/>
+            <FlexLayout HorizontalOptions="Center">
+                <Label Text="Don't have an account? " 
+                    TextColor="White" 
+                    FontSize="Small"/>
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                <Label Text="Sign In" 
+                    TextColor="#C115E3"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Tap_SignIn"/>
+                    </Label.GestureRecognizers>
+                </Label>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+            </FlexLayout>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>
