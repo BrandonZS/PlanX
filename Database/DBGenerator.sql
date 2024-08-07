@@ -13,7 +13,7 @@ SET DATEFORMAT dmy
 SET LANGUAGE spanish
 
 CREATE TABLE PAIS (
-	idPais tinyInt	NOT NULL,
+	idPais tinyInt IDENTITY(1,1)	NOT NULL,
 	nombre varchar(50) NOT NULL,
 	codigo varchar(2) NOT NULL,
 	horarioUTC tinyINT NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE PAIS (
 
 -- Table: Usuario
 CREATE TABLE Usuario (
-    idUsuario int NOT NULL,
+    idUsuario int IDENTITY(1,1)NOT NULL,
     nombre varchar(255) NOT NULL,
     apellido varchar(255) NULL,
     fecNacimiento date NULL,
@@ -31,6 +31,7 @@ CREATE TABLE Usuario (
     idPais tinyInt NULL,
     contrasenia varchar(255) NULL,
     userReg bit NOT NULL,
+    fecRegistro datetime NOT NULL,
     CONSTRAINT [PK_Usuario] PRIMARY KEY (idUsuario ASC),
 	CONSTRAINT FK_Pais_Usuario FOREIGN KEY (idPais) REFERENCES PAIS(idPais)
 );
@@ -38,7 +39,7 @@ GO
 
 -- Table: Evento
 CREATE TABLE Evento (
-    idEvento int NOT NULL,
+    idEvento int IDENTITY(1,1) NOT NULL,
     codInvitacion varchar(255) NULL,
     nombre varchar(255) NULL,
     descripcion varchar(255) NULL,
@@ -53,14 +54,14 @@ CREATE TABLE Evento (
 GO
 -- Table: Prioridad
 CREATE TABLE Prioridad (
-    idPrioridad int NOT NULL,
+    idPrioridad int IDENTITY(1,1) NOT NULL,
     descripcion varchar(255) NULL,
     CONSTRAINT [PK_Prioridad] PRIMARY KEY (idPrioridad ASC)
 );
 GO
 -- Table: Tarea
 CREATE TABLE Tarea (
-    idTarea int NOT NULL,
+    idTarea int IDENTITY(1,1) NOT NULL,
     titulo varchar(255) NOT NULL,
     descripcion varchar(255) NULL,
     fechaHoraInicio datetime NOT NULL,
@@ -89,7 +90,7 @@ GO
 
 -- Table: Sesion
 CREATE TABLE Sesion (
-    idSesion int NOT NULL,
+    idSesion int IDENTITY(1,1) NOT NULL,
     sesion varchar(255) NULL,
     usuario varchar(255) NULL,
     Origen varchar(255) NULL,
@@ -102,7 +103,7 @@ GO
 
 -- Table: ErrorBD
 CREATE TABLE ErrorBD (
-    idErrorBD int NOT NULL,
+    idErrorBD int IDENTITY(1,1) NOT NULL,
     Severidad int NOT NULL,
     SP varchar(255) NULL,
     Numero int NOT NULL,
