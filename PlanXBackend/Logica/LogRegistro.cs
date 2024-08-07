@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanXBackend
+namespace PlanXBackend.Logica
 {
-    public class Class1
+    internal class LogRegistro
     {
-        //edito para el ejemplo
-
     }
 }

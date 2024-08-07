@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanXBackend
+namespace PlanXBackend.Entidades.Request
 {
-    public class Class1
+    internal class ReqInsertarUsuarioRegular
     {
-        //edito para el ejemplo
-
     }
 }
