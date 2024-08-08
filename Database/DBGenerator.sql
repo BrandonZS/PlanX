@@ -13,10 +13,10 @@ SET DATEFORMAT dmy
 SET LANGUAGE spanish
 
 CREATE TABLE PAIS (
-	idPais tinyInt IDENTITY(1,1)	NOT NULL,
+	idPais INT IDENTITY(1,1)	NOT NULL,
 	nombre varchar(50) NOT NULL,
 	codigo varchar(2) NOT NULL,
-	horarioUTC tinyINT NOT NULL,
+	horarioUTC INT NOT NULL,
 	CONSTRAINT [PK_Pais] PRIMARY KEY (idPais ASC)
 );
 
@@ -28,10 +28,10 @@ CREATE TABLE Usuario (
     apellido varchar(255) NULL,
     fecNacimiento date NULL,
     email varchar(255) NULL,
-    idPais tinyInt NULL,
+    idPais INT NULL,
     contrasenia varchar(255) NULL,
     userReg bit NOT NULL,
-    fecRegistro datetime NOT NULL,
+    fecRegistro datetime NOT NULL DEFAULT GETUTCDATE(),
     CONSTRAINT [PK_Usuario] PRIMARY KEY (idUsuario ASC),
 	CONSTRAINT FK_Pais_Usuario FOREIGN KEY (idPais) REFERENCES PAIS(idPais)
 );
