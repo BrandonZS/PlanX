@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|c:\\users\\asus x515\\desktop\\proyectomovil\\planx\\planxbackend\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -52,17 +52,8 @@
           "SelectedChildIndex": 10,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXAPI\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "..\\PlanXAPI\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXAPI\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "..\\PlanXAPI\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T23:40:35.755Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -74,8 +65,7 @@
               "RelativeToolTip": "AccesoDatos\\ConexionLinq.designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T02:12:49.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T02:12:49.287Z"
             },
             {
               "$type": "Document",
@@ -87,8 +77,7 @@
               "RelativeToolTip": "Entidades\\Response\\ResInsertarUsuarioRegular.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:57:03.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T01:57:03.621Z"
             },
             {
               "$type": "Document",
@@ -100,8 +89,7 @@
               "RelativeToolTip": "Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:54:56.827Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T01:54:56.827Z"
             },
             {
               "$type": "Document",
@@ -113,8 +101,7 @@
               "RelativeToolTip": "Entidades\\Response\\ResBase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:47:13.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T01:47:13.004Z"
             },
             {
               "$type": "Document",
@@ -126,8 +113,7 @@
               "RelativeToolTip": "Logica\\LogRegistro.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAkwDYAAADVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:46:26.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T01:46:26.529Z"
             },
             {
               "$type": "Document",
@@ -139,8 +125,7 @@
               "RelativeToolTip": "Entidades\\Entities\\UsuarioRegistrado.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T00:59:28.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T00:59:28.044Z"
             },
             {
               "$type": "Document",
@@ -152,21 +137,30 @@
               "RelativeToolTip": "Entidades\\Entities\\Usuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T00:58:55.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T00:58:55.169Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "",
-              "DocumentMoniker": "Stub",
-              "ToolTip": "Stub",
+              "Title": "ConexionLinq.dbml",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.dbml",
+              "RelativeDocumentMoniker": "AccesoDatos\\ConexionLinq.dbml",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.dbml",
+              "RelativeToolTip": "AccesoDatos\\ConexionLinq.dbml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
               "WhenOpened": "2024-08-07T00:53:42.078Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXAPI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\PlanXAPI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXAPI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\PlanXAPI\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T23:40:35.755Z"
             },
             {
               "$type": "Document",
