@@ -1,62 +1,68 @@
-CREATE PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
-	@NOMBRE nvarchar(50),
-	@APELLIDOS nvarchar(50),
-	@CORREO_ELECTRONICO nvarchar(max),
-	@PASSWORD nvarchar(max),
-	@FECNACIMIENTO DATE,
-	@PAISRESIDENCIA TINYINT,
-	@IDRETURN int output,
-	@ERRORID int output,
-	@ERRORDESCRIPCION nvarchar(max) output
+ALTER PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
+    @NOMBRE nvarchar(50),
+    @APELLIDOS nvarchar(50),
+    @CORREO_ELECTRONICO nvarchar(max),
+    @PASSWORD nvarchar(max),
+    @FECNACIMIENTO DATETIME,
+    @CODPAIS nvarchar(2),
+    @IDRETURN int output,
+    @ERRORID int output,
+    @ERRORDESCRIPCION nvarchar(max) output
 )
 AS
 BEGIN
-	BEGIN TRY
-	IF EXISTS (SELECT * FROM USUARIO WHERE email = @CORREO_ELECTRONICO) --¿el correo está registrada?
-		-- Si, el correo si está registrada. Devolver error.
-		BEGIN
-			SET @IDRETURN = -1;
-			SET @ERRORID = 1; --correo ya registrada
-			SET @ERRORDESCRIPCION = 'ERROR DESDE BD: CORREO YA REGISTRADO';
-		END
-	ELSE
-		-- No, la el correo no está registrada.
-		--¡TODO BIEN! El correo no está registrados
-				BEGIN
-					
-					INSERT INTO Usuario 
-					(
-						[nombre],
-						[apellido],
-						[fecNacimiento],
-						[email],
-						[idPais],
-						[contrasenia],
-						[userReg]
-					)
-				VALUES
-					(
-						@NOMBRE,
-						@APELLIDOS,
-						@FECNACIMIENTO,
-						@CORREO_ELECTRONICO,
-						@PAISRESIDENCIA,
-						@PASSWORD,
-						1
-						
-					);
+    BEGIN TRY
+        IF EXISTS (SELECT * FROM [dbo].[Usuario] WHERE [email] = @CORREO_ELECTRONICO)	
+        BEGIN
+            SET @IDRETURN = 0;
+            SET @ERRORID = 1; --correo ya registrada
+            SET @ERRORDESCRIPCION = 'ERROR DESDE BD: CORREO YA REGISTRADO';
 
-					set @idReturn = scope_identity();
-			END
-		
+        END
+        ELSE
+        BEGIN
+            DECLARE @IDPAIS int
+            SELECT @IDPAIS = [idPais] FROM [dbo].[PAIS] WHERE [codigo] = @CODPAIS
+            
+            IF @IDPAIS IS NULL
+            BEGIN
+                SET @IDRETURN = -1;
+                SET @ERRORID = 2; --Código de país inválido
+                SET @ERRORDESCRIPCION = 'ERROR DESDE BD: CÓDIGO DE PAÍS INVÁLIDO';
 
-	END TRY
-	
-	BEGIN CATCH
-		set @idReturn = -1;
-		set @errorId = ERROR_NUMBER();
-		set @errorDescripcion = ERROR_MESSAGE();
-		
-	END CATCH
+            END
+            ELSE
+            BEGIN
+                INSERT INTO Usuario 
+                (
+                    [nombre],
+                    [apellido],
+                    [fecNacimiento],
+                    [email],
+                    [idPais],
+                    [contrasenha],
+                    [userReg]
+                )
+                VALUES
+                (
+                    @NOMBRE,
+                    @APELLIDOS,
+                    @FECNACIMIENTO,
+                    @CORREO_ELECTRONICO,
+                    @IDPAIS,
+                    @PASSWORD,
+                    1
+                );
+
+                SET @IDRETURN = SCOPE_IDENTITY();                
+            END
+        END
+    END TRY
+    
+    BEGIN CATCH
+        SET @IDRETURN = -1;
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END CATCH
 END
 GO
