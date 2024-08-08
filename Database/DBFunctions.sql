@@ -1,4 +1,6 @@
-ALTER PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
+
+--SP para registrar el usuario en la DB ////Ultima Actualizacion 8/8/2025 14:23
+Create OR Alter PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
     @NOMBRE nvarchar(50),
     @APELLIDOS nvarchar(50),
     @CORREO_ELECTRONICO nvarchar(max),
@@ -66,3 +68,34 @@ BEGIN
     END CATCH
 END
 GO
+
+--SP para el login de usuario ////Ultima Actualizacion 8/8/2025 14:23
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_Login]
+    @CORREO_ELECTRONICO nVARCHAR(50), -- Tamaño típico para un email
+    @PASSWORD NVARCHAR(max),           -- Tamaño puede variar dependiendo de tu esquema de encriptación
+    @id_usuario INT OUTPUT,
+    @nombre NVARCHAR(50) OUTPUT,
+    @apellidos NVARCHAR(50) OUTPUT
+AS
+BEGIN
+    SET @id_usuario = 0; -- Inicializar el valor en cero
+    SET @nombre = '';
+    SET @apellidos = '';
+    
+    IF EXISTS (
+        SELECT idUsuario, nombre, apellidos
+        FROM TB_USUARIO
+        WHERE CORREO_ELECTRONICO = @CORREO_ELECTRONICO
+            AND PASSWORD = @PASSWORD
+    )
+    BEGIN
+        SELECT @id_usuario = id_usuario, @estado = estado, @nombre = nombre, @apellidos = apellidos
+        FROM TB_USUARIO
+        WHERE CORREO_ELECTRONICO = @CORREO_ELECTRONICO
+            AND PASSWORD = @PASSWORD;
+    END
+END;
