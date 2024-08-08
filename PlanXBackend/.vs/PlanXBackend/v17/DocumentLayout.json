@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|c:\\users\\asus x515\\desktop\\proyectomovil\\planx\\planxbackend\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanXBackend.csproj|solutionrelative:class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -49,8 +49,103 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConexionLinq.designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.designer.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\ConexionLinq.designer.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.designer.cs",
+              "RelativeToolTip": "AccesoDatos\\ConexionLinq.designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T02:12:49.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResInsertarUsuarioRegular.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResInsertarUsuarioRegular.cs",
+              "RelativeDocumentMoniker": "Entidades\\Response\\ResInsertarUsuarioRegular.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResInsertarUsuarioRegular.cs",
+              "RelativeToolTip": "Entidades\\Response\\ResInsertarUsuarioRegular.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:57:03.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReqInsertarUsuarioRegular.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
+              "RelativeDocumentMoniker": "Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
+              "RelativeToolTip": "Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:54:56.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResBase.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResBase.cs",
+              "RelativeDocumentMoniker": "Entidades\\Response\\ResBase.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResBase.cs",
+              "RelativeToolTip": "Entidades\\Response\\ResBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:47:13.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LogRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Logica\\LogRegistro.cs",
+              "RelativeDocumentMoniker": "Logica\\LogRegistro.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Logica\\LogRegistro.cs",
+              "RelativeToolTip": "Logica\\LogRegistro.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAkwDYAAADVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:46:26.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioRegistrado.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\UsuarioRegistrado.cs",
+              "RelativeDocumentMoniker": "Entidades\\Entities\\UsuarioRegistrado.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\UsuarioRegistrado.cs",
+              "RelativeToolTip": "Entidades\\Entities\\UsuarioRegistrado.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T00:59:28.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "Entidades\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\Usuario.cs",
+              "RelativeToolTip": "Entidades\\Entities\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T00:58:55.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConexionLinq.dbml",
+              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.dbml",
+              "RelativeDocumentMoniker": "AccesoDatos\\ConexionLinq.dbml",
+              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.dbml",
+              "RelativeToolTip": "AccesoDatos\\ConexionLinq.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2024-08-07T00:53:42.078Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -66,110 +161,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConexionLinq.designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.designer.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\ConexionLinq.designer.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\AccesoDatos\\ConexionLinq.designer.cs",
-              "RelativeToolTip": "AccesoDatos\\ConexionLinq.designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T02:12:49.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ResInsertarUsuarioRegular.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResInsertarUsuarioRegular.cs",
-              "RelativeDocumentMoniker": "Entidades\\Response\\ResInsertarUsuarioRegular.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResInsertarUsuarioRegular.cs",
-              "RelativeToolTip": "Entidades\\Response\\ResInsertarUsuarioRegular.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:57:03.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReqInsertarUsuarioRegular.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
-              "RelativeDocumentMoniker": "Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
-              "RelativeToolTip": "Entidades\\Request\\ReqInsertarUsuarioRegular.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:54:56.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResBase.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResBase.cs",
-              "RelativeDocumentMoniker": "Entidades\\Response\\ResBase.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Response\\ResBase.cs",
-              "RelativeToolTip": "Entidades\\Response\\ResBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:47:13.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LogRegistro.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Logica\\LogRegistro.cs",
-              "RelativeDocumentMoniker": "Logica\\LogRegistro.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Logica\\LogRegistro.cs",
-              "RelativeToolTip": "Logica\\LogRegistro.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAkwDYAAADVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T01:46:26.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UsuarioRegistrado.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\UsuarioRegistrado.cs",
-              "RelativeDocumentMoniker": "Entidades\\Entities\\UsuarioRegistrado.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\UsuarioRegistrado.cs",
-              "RelativeToolTip": "Entidades\\Entities\\UsuarioRegistrado.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T00:59:28.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "Entidades\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Entidades\\Entities\\Usuario.cs",
-              "RelativeToolTip": "Entidades\\Entities\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T00:58:55.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "",
-              "DocumentMoniker": "Stub",
-              "ToolTip": "Stub",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2024-08-07T00:53:42.078Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXBackend\\Class1.cs",
@@ -180,6 +171,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T07:04:32.366Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
