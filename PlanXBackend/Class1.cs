@@ -8,5 +8,7 @@ namespace PlanXBackend
 {
     public class Class1
     {
+        //edito para el ejemplo
+
     }
 }

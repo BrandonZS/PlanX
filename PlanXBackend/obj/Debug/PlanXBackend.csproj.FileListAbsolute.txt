@@ -1,0 +1,6 @@
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\bin\Debug\PlanXBackend.dll
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\bin\Debug\PlanXBackend.pdb
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\obj\Debug\PlanXBackend.csproj.AssemblyReference.cache
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\obj\Debug\PlanXBackend.csproj.CoreCompileInputs.cache
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\obj\Debug\PlanXBackend.dll
+C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanXBackend\obj\Debug\PlanXBackend.pdb
