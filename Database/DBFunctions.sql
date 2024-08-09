@@ -163,3 +163,42 @@ BEGIN
 					@ID_USER
                 );
 END;
+
+
+--SP para insertar una Tarea ////Ultima Actualizacion 8/8/2024 19:16
+
+CREATE PROCEDURE SP_INSERTAR_TAREA
+	@TITULO VARCHAR(255),
+	@DESCRIPCION VARCHAR(255),
+	@FECHORA_INICIO DATETIME,
+	@FECHORA_FIN DATETIME,
+	@EMAIL VARCHAR(255),
+	@PRIORIDAD VARCHAR(50)
+AS
+BEGIN
+	DECLARE @ID_USER INT
+	SELECT @ID_USER =  [idUsuario] FROM [dbo].[Usuario] WHERE [email] = @EMAIL
+	DECLARE @ID_PRIORIDAD INT
+	SELECT @ID_PRIORIDAD =  [idPrioridad] FROM [dbo].[Prioridad] WHERE [descripcion] = @PRIORIDAD
+
+			        INSERT INTO [dbo].[Tarea]
+                (
+                    [titulo],
+					[descripcion],
+					[fechaHoraInicio],
+					[fechaHoraFinal],
+					[idUsuario],
+					[idPrioridad]
+
+                )
+                VALUES
+                (
+                    @TITULO,
+					@DESCRIPCION,
+					@FECHORA_INICIO,
+					@FECHORA_FIN,
+					@ID_USER,
+					@ID_PRIORIDAD
+                );
+
+END
