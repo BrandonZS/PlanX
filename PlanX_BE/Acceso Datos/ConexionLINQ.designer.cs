@@ -81,6 +81,20 @@ namespace PlanXBackend.Acceso_Datos
 			apellido = ((string)(result.GetParameterValue(4)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_CREAR_EVENTO")]
+		public int SP_CREAR_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="NVarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LIMITE_USUARIO", DbType="Int")] System.Nullable<int> lIMITE_USUARIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DURACION", DbType="Float")] System.Nullable<double> dURACION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="NVarChar(255)")] string eMAIL)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, lIMITE_USUARIO, dURACION, eMAIL);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_INSERTAR_TAREA")]
+		public int SP_INSERTAR_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="VarChar(255)")] string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="VarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="VarChar(255)")] string eMAIL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRIORIDAD", DbType="VarChar(50)")] string pRIORIDAD)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tITULO, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, eMAIL, pRIORIDAD);
+			return ((int)(result.ReturnValue));
+		}
 	}
 }
 #pragma warning restore 1591
