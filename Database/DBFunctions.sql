@@ -1,5 +1,5 @@
 
---SP para registrar el usuario en la DB ////Ultima Actualizacion 8/8/2025 14:23
+--SP para registrar el usuario en la DB ////Ultima Actualizacion 8/8/2024 14:23
 Create OR Alter PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
     @NOMBRE nvarchar(50),
     @APELLIDOS nvarchar(50),
@@ -69,7 +69,7 @@ BEGIN
 END
 GO
 
---SP para el login de usuario ////Ultima Actualizacion 8/8/2025 14:23
+--SP para el login de usuario ////Ultima Actualizacion 8/8/2024 14:23
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,4 +98,68 @@ BEGIN
         WHERE CORREO_ELECTRONICO = @CORREO_ELECTRONICO
             AND PASSWORD = @PASSWORD;
     END
+END;
+
+--SP para insertar un evento ////Ultima Actualizacion 8/8/2024 19:04
+
+CREATE or alter PROCEDURE SP_CREAR_EVENTO
+	@NOMBRE NVARCHAR(255),
+	@DESCRIPCION NVARCHAR(255),
+	@FECHORA_INICIO DATETIME,
+	@FECHORA_FIN DATETIME,
+	@LIMITE_USUARIO INT,
+	@DURACION FLOAT,
+	@EMAIL NVARCHAR(255)
+AS
+BEGIN
+	
+	DECLARE @CodigoAlfanumerico NVARCHAR(6)
+	DECLARE @Existe BIT = 1
+
+	-- Ciclo DO WHILE
+	WHILE @Existe = 1
+	BEGIN
+
+		-- Generar el código alfanumérico
+		PRINT 'Este es un mensaje de prueba';
+		SET @CodigoAlfanumerico = SUBSTRING(CONVERT(VARCHAR(40), NEWID()), 1, 6)
+
+		-- Verificar si el código ya existe en la tabla Evento y si la fechaHoraFin ha pasado
+		IF NOT EXISTS (
+			SELECT 1 
+			FROM [dbo].[Evento] 
+			WHERE [codInvitacion] = @CodigoAlfanumerico 
+			AND [fechaHoraFin] > GETDATE()
+		)
+		BEGIN
+			-- Si no existe o existe pero la fechaHoraFin ya ha pasado, salir del ciclo
+			SET @Existe = 0
+		END
+	END
+
+	DECLARE @ID_USER INT
+	SELECT @ID_USER =  [idUsuario] FROM [dbo].[Usuario] WHERE [email] = @EMAIL
+
+		        INSERT INTO [dbo].[Evento]
+                (
+                    [codInvitacion],
+					[nombre],
+					[descripcion],
+					[fechaHoraInicio],
+					[fechaHoraFin],
+					[limiteUsuarios],
+					[duracion],
+					[idUsuario]
+                )
+                VALUES
+                (
+                    @CodigoAlfanumerico,
+					@NOMBRE,
+					@DESCRIPCION,
+					@FECHORA_INICIO,
+					@FECHORA_FIN,
+					@LIMITE_USUARIO,
+					@DURACION,
+					@ID_USER
+                );
 END;
