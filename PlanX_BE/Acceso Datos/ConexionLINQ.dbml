@@ -12,4 +12,12 @@
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.sp_Login" Method="sp_Login">
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="id_usuario" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="nombre" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Parameter Name="apellido" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
