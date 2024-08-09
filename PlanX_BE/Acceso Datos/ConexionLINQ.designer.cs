@@ -71,6 +71,16 @@ namespace PlanXBackend.Acceso_Datos
 			eRRORDESCRIPCION = ((string)(result.GetParameterValue(8)));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Login")]
+		public int sp_Login([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CORREO_ELECTRONICO", DbType="NVarChar(50)")] string cORREO_ELECTRONICO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> id_usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string apellido)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cORREO_ELECTRONICO, pASSWORD, id_usuario, nombre, apellido);
+			id_usuario = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			nombre = ((string)(result.GetParameterValue(3)));
+			apellido = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
 	}
 }
 #pragma warning restore 1591

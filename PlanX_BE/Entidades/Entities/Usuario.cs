@@ -15,7 +15,7 @@ namespace PlanXBackend.Entidades.Entities
         public string email { get; set; }
         public string codPais { get; set; }
         public string contrasenha { get; set; }
-
+        public string token {  get; set; }
 
     }
 }
