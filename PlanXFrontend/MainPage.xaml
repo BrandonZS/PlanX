@@ -56,7 +56,7 @@
                     FontSize="16"
                     TextDecorations="Underline">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Tap_SignIn"/>
+                    <TapGestureRecognizer Tapped="Tap_SignIn"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
 

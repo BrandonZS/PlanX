@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+09211be78b45cae996c6a755b5f37c550723daba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1925889172dc269b3537856aaf5904bab16b1c72")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

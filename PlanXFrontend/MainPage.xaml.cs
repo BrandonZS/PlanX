@@ -1,4 +1,6 @@
-﻿namespace PlanXFrontend
+﻿using MauiApp1;
+
+namespace PlanXFrontend
 {
     public partial class MainPage : ContentPage
     {
@@ -11,13 +13,13 @@
 
         private async void Tap_SignIn(object sender, TappedEventArgs e)
         {
-            //SignIn es en realidad LogIn se confuncieron los no,bres en el sistema
-            
+
+            await Navigation.PushAsync(new SignIn());
         }
 
         private async void btnLogIn_Clicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("SignIn");
+            await Navigation.PushAsync(new LogIn());
         }
 
  
