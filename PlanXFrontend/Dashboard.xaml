@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Dashboard"
+             Title=""
+             NavigationPage.TitleIconImageSource="Resources/Images/planxlogoresize.png"
+             xmlns:control="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="tbiJoinGroup" Order="Secondary" Text="Join Group"/>
+        <ToolbarItem x:Name="tbiTask" Order="Secondary" Text="Tasks" />
+        <ToolbarItem x:Name="tbiAcount" Order="Secondary" Text="Account" />
+        <ToolbarItem x:Name="tbiLogOut" Order="Secondary" Text="Log Out" Clicked="tbiLogOut_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    
+        <StackLayout VerticalOptions="Start" 
+                    Grid.Row="0" 
+                    Margin="15">
+            <control:SfCalendar NavigationDirection="Horizontal" 
+                            View="Month" 
+                            BackgroundColor="White" 
+                            SelectionBackground="#898D14A5" 
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="CenterAndExpand">
+
+            <control:SfCalendar.HeaderView>
+                <control:CalendarHeaderView>
+                    <control:CalendarHeaderView.TextStyle>
+                        <control:CalendarTextStyle FontFamily="Roboto" 
+                                                    FontSize="17" TextColor="Black" FontAttributes="Bold">
+                        </control:CalendarTextStyle>
+                    </control:CalendarHeaderView.TextStyle>
+                </control:CalendarHeaderView>
+            </control:SfCalendar.HeaderView>
+            <control:SfCalendar.MonthView>
+                <control:CalendarMonthView FirstDayOfWeek="Monday" 
+                                            NumberOfVisibleWeeks="6">
+                </control:CalendarMonthView>
+            </control:SfCalendar.MonthView>
+            
+        </control:SfCalendar>
+            <BoxView Color="LightGray" 
+                    HeightRequest="1" 
+                    HorizontalOptions="Fill"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" 
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand">
+            <Label Text="Events" 
+                    FontSize="18" 
+                    FontAttributes="Bold" 
+                    TextColor="Black" 
+                    Margin="22,0"/>
+
+            <Button Text="+" 
+                    x:Name="btnCreateEvent"
+                    FontFamily="Roboto"
+                    FontSize="Medium"
+                    TextColor="Black" 
+                    BackgroundColor="Transparent" 
+                    HorizontalOptions="End" 
+                    VerticalOptions="EndAndExpand"
+                    CornerRadius="20"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    Margin="20"
+                    Clicked="btnCreateEvent_Clicked"
+                    Pressed="myButton_Pressed"
+                    Released="myButton_Released"/>
+        </StackLayout>
+    
+    </Grid>
+
+
+</ContentPage>
