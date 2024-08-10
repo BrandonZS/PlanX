@@ -9,65 +9,61 @@ using System.Threading.Tasks;
 
 namespace PlanXBackend.Logica
 {
-    public class LogLogin
+    public class LogTarea
     {
-        public ResLogin solicitudLogin(ReqLogin req)
+        public ResInsertarTarea insertarTarea(ReqInsertarTarea req)
         {
-            //Instancio mi respuesta
-            ResLogin res = new ResLogin();
-
+            ResInsertarTarea res = new ResInsertarTarea();
             try
             {
+                //Faltan Comprobaciones
                 if (req == null)
                 {
                     res.resultado = false;
                     res.error = "Req null";
                 }
+                else if (String.IsNullOrEmpty(req.titulo))
+                {
+                    res.resultado = false;
+                    res.error = "Nombre faltante";
+                }
+                else if (String.IsNullOrEmpty(req.descripcion))
+                {
+                    res.resultado = false;
+                    res.error = "Apellido faltante";
+                }
                 else if (String.IsNullOrEmpty(req.email))
                 {
                     res.resultado = false;
-                    res.error = "Email faltante";
-                }
-                else if (String.IsNullOrEmpty(req.password))
-                {
-                    res.resultado = false;
-                    res.error = "Contraseña faltante";
+                    res.error = "Correo Electronico faltante";
                 }
                 else
                 {
-
-                    //Todos los datos son correctos
-                    //Enviarlos a LINQ
                     int? idReturn = 0;
-                    string nombre = null;
-                    string apellido = null;
-                    ConexionLINQDataContext linq = new ConexionLINQDataContext();   //Instancio linq
-                    linq.sp_Login(req.email, req.password, ref idReturn, ref nombre, ref apellido);
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_INSERTAR_TAREA(req.titulo, req.descripcion, req.fecHoraInicio, req.fecHoraFin, req.email, req.prioridad);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
-                        res.error = "Error en BD";
+                        res.error = errorDescripcion;
 
                     }
                     else
                     {
-                        res.nombre = nombre;
-                        res.apellido = apellido;
                         res.resultado = true;
-                        res.Token = GeneradorToken.GenerateToken(nombre);
+
                     }
                 }
             }
             catch (Exception ex)
             {
                 res.resultado = false;
-                res.error = "Ni idea xq se cayó XD";
+                res.error = "Excepcion ha ocurrido";
             }
 
             return res;
-
-
         }
-
     }
 }

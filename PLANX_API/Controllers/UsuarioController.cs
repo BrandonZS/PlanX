@@ -15,7 +15,7 @@ namespace PLANX_API.Controllers
     {
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/usuario/insertarusuario")]
-        public ResInsertarUsuario ingresarPublicacion(ReqInsertarUsuario req)
+        public ResInsertarUsuario insertarUsuario(ReqInsertarUsuario req)
         {
             return new LogUsuario().insertarUsuario(req);
         }

@@ -91,14 +91,22 @@
       <DependentUpon>ConexionLINQ.dbml</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entidades\Entities\Evento.cs" />
+    <Compile Include="Entidades\Entities\Tarea.cs" />
     <Compile Include="Entidades\Entities\Usuario.cs" />
+    <Compile Include="Entidades\Request\ReqInsertarEvento.cs" />
+    <Compile Include="Entidades\Request\ReqInsertarTarea.cs" />
     <Compile Include="Entidades\Request\ReqInsertarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLogin.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
+    <Compile Include="Entidades\Response\ResInsertarEvento.cs" />
+    <Compile Include="Entidades\Response\ResInsertarTarea.cs" />
     <Compile Include="Entidades\Response\ResInsertarUsuario.cs" />
     <Compile Include="Entidades\Response\ResLogin.cs" />
     <Compile Include="Logica\GeneradorToken.cs" />
+    <Compile Include="Logica\LogEvento.cs" />
     <Compile Include="Logica\LogLogin.cs" />
+    <Compile Include="Logica\LogTarea.cs" />
     <Compile Include="Logica\LogUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
