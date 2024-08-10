@@ -79,6 +79,10 @@
               "version": "[8.0.1, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
@@ -125,6 +129,10 @@
               "target": "Package",
               "version": "[8.0.1, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
@@ -173,6 +181,10 @@
               "version": "[8.0.1, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
@@ -214,6 +226,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
