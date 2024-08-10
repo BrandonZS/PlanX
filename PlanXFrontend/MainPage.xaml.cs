@@ -1,25 +1,28 @@
-﻿namespace PlanXFrontend
+﻿using MauiApp1;
+
+namespace PlanXFrontend
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void Tap_SignIn(object sender, TappedEventArgs e)
         {
-            count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new SignIn());
         }
+
+        private async void btnLogIn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LogIn());
+        }
+
+ 
     }
 
 }
