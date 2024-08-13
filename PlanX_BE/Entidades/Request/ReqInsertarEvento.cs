@@ -13,8 +13,8 @@ namespace PlanXBackend.Entidades.Request
         public string descripcion { get; set; }
         public DateTime fecHoraInicio { get; set; }
         public DateTime fecHoraFin { get; set; }
-        public int limUsers { get; set; }
+        public int? limUsers { get; set; }
         public float duracion { get; set; }
-        public string email { get; set; }
+        public int idUsuario { get; set; }
     }
 }

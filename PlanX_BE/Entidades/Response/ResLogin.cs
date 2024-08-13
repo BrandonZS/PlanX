@@ -11,5 +11,6 @@ namespace PlanXBackend.Entidades.Response
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string Token { get; set; }
+
     }
 }
