@@ -1,6 +1,7 @@
 ﻿using PlanXBackend.Acceso_Datos;
 using PlanXBackend.Entidades.Request;
 using PlanXBackend.Entidades.Response;
+using PlanXBackend.Entidades.Response.ResUsuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,6 +112,53 @@ namespace PlanXBackend.Logica
                     string errorDescripcion = null;
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
                     con.SP_ACTUALIZAR_USUARIO_REGULAR(req.nombre, req.apellido, req.contraAntigua, req.contraNueva, req.idUsuario, ref errorId, ref errorDescripcion);
+                    if (errorDescripcion != null)
+                    {
+                        res.resultado = false;
+                        res.error = errorDescripcion;
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.error = "Excepcion ha ocurrido";
+            }
+
+            return res;
+        }
+        public ResEliminarUsuario eliminarUsuario(ReqEliminarUsuario req)
+        {
+            ResEliminarUsuario res = new ResEliminarUsuario();
+            try
+            {
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.error = "Req null";
+                }
+                else if (req.idUsuario <1)
+                {
+                    res.resultado = false;
+                    res.error = "Nombre faltante";
+                }
+                else if (String.IsNullOrEmpty(req.contrasenha))
+                {
+                    res.resultado = false;
+                    res.error = "Apellido faltante";
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext con = new ConexionLINQDataContext();
+                    con.SP_ELIMINAR_USUARIO_REGULAR(req.idUsuario, req.contrasenha, ref errorId, ref errorDescripcion);
                     if (errorDescripcion != null)
                     {
                         res.resultado = false;
