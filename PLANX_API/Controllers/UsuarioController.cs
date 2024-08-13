@@ -19,5 +19,12 @@ namespace PLANX_API.Controllers
         {
             return new LogUsuario().insertarUsuario(req);
         }
+
+        [System.Web.Http.HttpPut]
+        [System.Web.Http.Route("api/usuario/actualizarusuario")]
+        public ResActualizarUsuario actualizarUsuario(ReqActualizarUsuario req)
+        {
+            return new LogUsuario().actualizarUsuario(req);
+        }
     }
 }

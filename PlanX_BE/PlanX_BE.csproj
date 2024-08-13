@@ -99,6 +99,7 @@
     <Compile Include="Entidades\Request\ReqInsertarTarea.cs" />
     <Compile Include="Entidades\Request\ReqInsertarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLogin.cs" />
+    <Compile Include="Entidades\Response\ResActualizarUsuario.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
     <Compile Include="Entidades\Response\ResInsertarEvento.cs" />
     <Compile Include="Entidades\Response\ResInsertarTarea.cs" />

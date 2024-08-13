@@ -73,31 +73,40 @@ CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_USUARIO_REGULAR
 	@APELLIDO NVARCHAR(255),
 	@CONTRA_ANTIGUA NVARCHAR(255),
 	@CONTRA_NUEVA NVARCHAR(255),
-	@ID_USER INT
+	@ID_USER INT,
+    @IDRETURN int output,
+    @ERRORID int output,
+    @ERRORDESCRIPCION nvarchar(max) output
 AS
 BEGIN
-
-	IF @NOMBRE IS NOT NULL
-	BEGIN
-		UPDATE  [dbo].[Usuario]
-		SET [nombre] = @NOMBRE
-		WHERE [idUsuario] = @ID_USER
-	END
-	IF @APELLIDO IS NOT NULL
-	BEGIN
-		UPDATE  [dbo].[Usuario]
-		SET [apellido] = @APELLIDO
-		WHERE [idUsuario] = @ID_USER
-	END
-	IF @CONTRA_ANTIGUA IS NOT NULL AND @CONTRA_NUEVA IS NOT NULL
-	BEGIN
-		if(SELECT [contrasenha] FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER ) = @CONTRA_ANTIGUA
+	BEGIN TRY
+		IF @NOMBRE IS NOT NULL
 		BEGIN
-			UPDATE [dbo].[Usuario]
-			SET [contrasenha] = @CONTRA_NUEVA
+			UPDATE  [dbo].[Usuario]
+			SET [nombre] = @NOMBRE
 			WHERE [idUsuario] = @ID_USER
 		END
-	END 
+		IF @APELLIDO IS NOT NULL
+		BEGIN
+			UPDATE  [dbo].[Usuario]
+			SET [apellido] = @APELLIDO
+			WHERE [idUsuario] = @ID_USER
+		END
+		IF @CONTRA_ANTIGUA IS NOT NULL AND @CONTRA_NUEVA IS NOT NULL
+		BEGIN
+			if(SELECT [contrasenha] FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER ) = @CONTRA_ANTIGUA
+			BEGIN
+				UPDATE [dbo].[Usuario]
+				SET [contrasenha] = @CONTRA_NUEVA
+				WHERE [idUsuario] = @ID_USER
+			END
+		END
+	END TRY
+	BEGIN CATCH
+		SET @IDRETURN = -1;
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+	END CATCH
 END
 GO
 

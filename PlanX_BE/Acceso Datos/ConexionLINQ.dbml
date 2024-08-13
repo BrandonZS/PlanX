@@ -29,14 +29,6 @@
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.SP_ACTUALIZAR_USUARIO_REGULAR" Method="SP_ACTUALIZAR_USUARIO_REGULAR">
-    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="APELLIDO" Parameter="aPELLIDO" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="CONTRA_ANTIGUA" Parameter="cONTRA_ANTIGUA" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="CONTRA_NUEVA" Parameter="cONTRA_NUEVA" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.SP_ELIMINAR_EVENTO" Method="SP_ELIMINAR_EVENTO">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="COD_INV" Parameter="cOD_INV" Type="System.String" DbType="NVarChar(6)" />
@@ -127,6 +119,16 @@
     <Parameter Name="FEC_INICIO" Parameter="fEC_INICIO" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="FEC_FIN" Parameter="fEC_FIN" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ACTUALIZAR_USUARIO_REGULAR" Method="SP_ACTUALIZAR_USUARIO_REGULAR">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="APELLIDO" Parameter="aPELLIDO" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="CONTRA_ANTIGUA" Parameter="cONTRA_ANTIGUA" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="CONTRA_NUEVA" Parameter="cONTRA_NUEVA" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />

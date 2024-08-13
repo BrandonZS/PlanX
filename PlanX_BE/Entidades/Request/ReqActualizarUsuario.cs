@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace PlanXBackend.Entidades.Request
 {
-    internal class ReqActualizarUsuario
+    public class ReqActualizarUsuario
     {
+        public string nombre {  get; set; }
+        public string apellido { get; set; }
+        public string contraAntigua { get; set; }
+        public string contraNueva { get; set; }
+        public int idUsuario { get; set; }
     }
 }
