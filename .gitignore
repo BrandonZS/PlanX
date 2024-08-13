@@ -1,1 +1,9 @@
 .vs/
+PlanXFrontend/obj/Debug/net8.0-android/PlanXFrontend.AssemblyInfo.cs
+PlanXFrontend/obj/Debug/net8.0-android/PlanXFrontend.AssemblyInfoInputs.cache
+PlanXFrontend/obj/Debug/net8.0-ios/iossimulator-x64/PlanXFrontend.AssemblyInfo.cs
+PlanXFrontend/obj/Debug/net8.0-ios/iossimulator-x64/PlanXFrontend.AssemblyInfoInputs.cache
+PlanXFrontend/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/PlanXFrontend.AssemblyInfo.cs
+PlanXFrontend/obj/Debug/net8.0-maccatalyst/maccatalyst-x64/PlanXFrontend.AssemblyInfoInputs.cache
+PlanXFrontend/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/PlanXFrontend.AssemblyInfo.cs
+PlanXFrontend/obj/Debug/net8.0-windows10.0.19041.0/win10-x64/PlanXFrontend.AssemblyInfoInputs.cache
