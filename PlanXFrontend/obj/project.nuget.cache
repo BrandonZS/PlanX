@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8s6BRZIgmbA=",
+  "dgSpecHash": "SLbYfyS+X6Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS X515\\Desktop\\ProyectoMovil\\PlanX\\PlanXFrontend\\PlanXFrontend.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,11 @@
     "C:\\Users\\ASUS X515\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.5\\microsoft.net.illink.tasks.8.0.5.nupkg.sha512",
     "C:\\Users\\ASUS X515\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\ASUS X515\\.nuget\\packages\\microsoft.windowsappsdk\\1.5.240311000\\microsoft.windowsappsdk.1.5.240311000.nupkg.sha512",
+    "C:\\Users\\ASUS X515\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ASUS X515\\.nuget\\packages\\syncfusion.licensing\\26.2.8\\syncfusion.licensing.26.2.8.nupkg.sha512",
+    "C:\\Users\\ASUS X515\\.nuget\\packages\\syncfusion.maui.calendar\\26.2.8\\syncfusion.maui.calendar.26.2.8.nupkg.sha512",
+    "C:\\Users\\ASUS X515\\.nuget\\packages\\syncfusion.maui.core\\26.2.8\\syncfusion.maui.core.26.2.8.nupkg.sha512",
+    "C:\\Users\\ASUS X515\\.nuget\\packages\\syncfusion.maui.popup\\26.2.8\\syncfusion.maui.popup.26.2.8.nupkg.sha512",
     "C:\\Users\\ASUS X515\\.nuget\\packages\\xamarin.android.glide\\4.15.1.2\\xamarin.android.glide.4.15.1.2.nupkg.sha512",
     "C:\\Users\\ASUS X515\\.nuget\\packages\\xamarin.android.glide.annotations\\4.15.1.2\\xamarin.android.glide.annotations.4.15.1.2.nupkg.sha512",
     "C:\\Users\\ASUS X515\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.15.1.2\\xamarin.android.glide.disklrucache.4.15.1.2.nupkg.sha512",

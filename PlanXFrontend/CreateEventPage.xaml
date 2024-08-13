@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.CreateEventPage"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             Title="">
+
+<StackLayout BackgroundColor="White" Margin="0">
+<StackLayout.Background>
+        <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
+                <GradientStop Color="#ffffff" Offset="0.0" />
+                    <!-- Negro semitransparente -->
+                <GradientStop Color="#8D14A5" Offset="1.0" />
+                    <!-- Negro semitransparente -->
+        </RadialGradientBrush>
+</StackLayout.Background>
+
+        <Frame CornerRadius="50"  Padding="0" Margin="30" BorderColor="Black" VerticalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="#8D14A5" Padding="20">
+                <Label  Text="Create Event"
+                        FontSize="Large" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" 
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Title"
+                        FontSize="Subtitle" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" />
+                        <!--Title-->
+                <Entry x:Name="enyTitle"
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        PlaceholderColor="White"
+                        Margin="0,0,0,20"/>
+
+                        <!--Description-->
+                        <Label Text="Description"
+                        FontSize="Subtitle" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" />
+                <Editor x:Name="enyDescription"
+                        AutoSize="TextChanges"
+                        MaxLength="500"
+                        TextColor="White"
+                        PlaceholderColor="white"
+                        Margin="0,0,0,10"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="Date"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center"/>
+                        <DatePicker x:Name="datePicker"
+                                        Format="D"
+                                        MinimumDate="{x:Static sys:DateTime.Today}"
+                                        TextColor="White"
+                                        FontFamily="Roboto"
+                                        HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <BoxView Color="White"
+                                HeightRequest="0.3"
+                                HorizontalOptions="FillAndExpand"/>
+                        <!--date-->  
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="Begin Hour"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold"
+                                VerticalOptions="Center"/>
+                        <TimePicker x:Name="timeBeginPicker"
+                                        TextColor="White"
+                                        FontFamily="Roboto"
+                                        HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <BoxView Color="White"
+                                HeightRequest="0.3"
+                                HorizontalOptions="FillAndExpand"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="End Hour"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center"/>
+                        <TimePicker x:Name="timeEndPicker"
+                                        TextColor="White"
+                                        FontFamily="Roboto"
+                                        HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <BoxView Color="White"
+                                HeightRequest="0.3"
+                                HorizontalOptions="FillAndExpand"/>
+                                
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="Duration(Min)"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center"/>
+                                <Picker Title="Select Your Country" 
+                                TitleColor="White" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="Center">
+                                <Picker.Items>
+                                <x:String>30</x:String>
+                                <x:String>60</x:String>
+                                <x:String>90</x:String>
+                                <x:String>120</x:String>
+                                <x:String>150</x:String>
+                                <x:String>180</x:String>
+                                <x:String>210</x:String>
+                                </Picker.Items>
+                                </Picker>
+                        </StackLayout>
+
+
+
+
+
+                        <!-- Login Button -->
+                <Button Text="Accept"
+                        x:Name="btnCreateEvent"
+                        BackgroundColor="White"
+                        CornerRadius="28"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,10,0,20"
+                        FontFamily="Roboto"
+                        TextColor="Black" 
+                        FontAttributes="Bold"
+                        BorderColor="Black" 
+                        BorderWidth="2"/>
+            </StackLayout>
+            
+        </Frame>
+        
+        
+    </StackLayout>
+</ContentPage>

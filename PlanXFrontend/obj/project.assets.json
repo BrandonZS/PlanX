@@ -445,6 +445,77 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.15.1.2": {
         "type": "package",
         "dependencies": {
@@ -2650,6 +2721,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.15.1.2": {
@@ -4859,6 +5001,77 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.15.1.2": {
         "type": "package",
         "dependencies": {
@@ -7064,6 +7277,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.15.1.2": {
@@ -9273,6 +9557,77 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.15.1.2": {
         "type": "package",
         "dependencies": {
@@ -11478,6 +11833,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.15.1.2": {
@@ -13687,6 +14113,77 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.15.1.2": {
         "type": "package",
         "dependencies": {
@@ -15894,6 +16391,77 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Xamarin.Android.Glide/4.15.1.2": {
         "type": "package",
         "dependencies": {
@@ -18076,6 +18644,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-ios17.2/android-arm": {
@@ -18496,6 +19135,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -18918,6 +19628,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-ios17.2/android-x64": {
@@ -19338,6 +20119,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -19760,6 +20612,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-ios17.2/iossimulator-x64": {
@@ -20180,6 +21103,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -20602,6 +21596,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-ios17.2/win10-x64": {
@@ -21022,6 +22087,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -21444,6 +22580,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-maccatalyst17.2/android-arm": {
@@ -21864,6 +23071,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -22286,6 +23564,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-maccatalyst17.2/android-x64": {
@@ -22706,6 +24055,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -23128,6 +24548,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-maccatalyst17.2/iossimulator-x64": {
@@ -23548,6 +25039,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -23970,6 +25532,77 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        }
       }
     },
     "net8.0-maccatalyst17.2/win10-x64": {
@@ -24390,6 +26023,77 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -24967,6 +26671,77 @@
             "rid": "win10-x86"
           }
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
       }
     },
     "net8.0-windows10.0.19041/android-arm": {
@@ -25502,6 +27277,77 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
         }
       }
     },
@@ -26039,6 +27885,77 @@
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
       }
     },
     "net8.0-windows10.0.19041/android-x64": {
@@ -26574,6 +28491,77 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
         }
       }
     },
@@ -27111,6 +29099,77 @@
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
       }
     },
     "net8.0-windows10.0.19041/iossimulator-x64": {
@@ -27647,6 +29706,77 @@
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
       }
     },
     "net8.0-windows10.0.19041/maccatalyst-x64": {
@@ -28182,6 +30312,77 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
         }
       }
     },
@@ -28724,6 +30925,77 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/26.2.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Maui.Calendar/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8",
+          "Syncfusion.Maui.Popup": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Core/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll": {
+            "related": ".deps.json;.pri;.xml"
+          }
+        }
+      },
+      "Syncfusion.Maui.Popup/26.2.8": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Maui.Core": "26.2.8"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll": {
+            "related": ".deps.json;.xml"
+          }
         }
       }
     }
@@ -30854,6 +33126,192 @@
         "tools/x86/GenXbf.dll"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "Syncfusion.Licensing/26.2.8": {
+      "sha512": "2Kz7fFrzf0QECPbvwtmQjjYLXeMrfqw2MPhQ1BrDUS8orTjajQ+VDXzrSY+GuWv+qUxM77tMl/5u4YLtwi0bSw==",
+      "type": "package",
+      "path": "syncfusion.licensing/26.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net462/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/net8.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.26.2.8.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Maui.Calendar/26.2.8": {
+      "sha512": "+iaAb4v2Nhta3CUtDH3udMDfisl7qgAE3bXo0VGRCAWlS030+rePH2ZLbCFkhq4U168tgn138lLCGPDRWWcIfA==",
+      "type": "package",
+      "path": "syncfusion.maui.calendar/26.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Calendar.aar",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Calendar.xml",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Calendar.dll",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Calendar.xml",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Calendar.xml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.deps.json",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.xml",
+        "lib/net7.0/Syncfusion.Maui.Calendar.deps.json",
+        "lib/net7.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net7.0/Syncfusion.Maui.Calendar.xml",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Calendar.xml",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.dll",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Calendar.xml",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.dll",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Calendar.xml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.deps.json",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Calendar.xml",
+        "lib/net8.0/Syncfusion.Maui.Calendar.deps.json",
+        "lib/net8.0/Syncfusion.Maui.Calendar.dll",
+        "lib/net8.0/Syncfusion.Maui.Calendar.xml",
+        "syncfusion.maui.calendar.26.2.8.nupkg.sha512",
+        "syncfusion.maui.calendar.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Maui.Core/26.2.8": {
+      "sha512": "klqwr4Im48Cd1VmgyalKMuviWSDl/MFR+3RMNKx3nvW4DYRxAV0wmlTS7Y/ljFI07fDtZNI88T7+Ug5kQKCLnA==",
+      "type": "package",
+      "path": "syncfusion.maui.core/26.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Core.aar",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Core.dll",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Core.xml",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Core.dll",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Core.xml",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Core.dll",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Core.xml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core.deps.json",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core.pri",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core.xml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/CarouselStyles.xaml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/CarouselStyles.xbf",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/Resources.xaml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/Resources.xbf",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/RotatorStyles.xaml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/RotatorStyles.xbf",
+        "lib/net7.0/Syncfusion.Maui.Core.deps.json",
+        "lib/net7.0/Syncfusion.Maui.Core.dll",
+        "lib/net7.0/Syncfusion.Maui.Core.xml",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Core.dll",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Core.xml",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Core.dll",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Core.xml",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.dll",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Core.xml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.deps.json",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.dll",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.pri",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core.xml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/CarouselStyles.xaml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/CarouselStyles.xbf",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/Resources.xaml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/Resources.xbf",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/RotatorStyles.xaml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Core/Platform/Windows/Styles/RotatorStyles.xbf",
+        "lib/net8.0/Syncfusion.Maui.Core.deps.json",
+        "lib/net8.0/Syncfusion.Maui.Core.dll",
+        "lib/net8.0/Syncfusion.Maui.Core.xml",
+        "syncfusion.maui.core.26.2.8.nupkg.sha512",
+        "syncfusion.maui.core.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Maui.Popup/26.2.8": {
+      "sha512": "l+h6Y2Zd48CPyXwJ9B5J/8DNZSN2b/wEQeHTWAtRnEQngHeEwCVX6LkmTHt+8/2yaJbyLa3eXP+aObbmhMPx+Q==",
+      "type": "package",
+      "path": "syncfusion.maui.popup/26.2.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Popup.aar",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Popup.dll",
+        "lib/net7.0-android33.0/Syncfusion.Maui.Popup.xml",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Popup.dll",
+        "lib/net7.0-ios16.1/Syncfusion.Maui.Popup.xml",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll",
+        "lib/net7.0-maccatalyst16.1/Syncfusion.Maui.Popup.xml",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Popup.deps.json",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll",
+        "lib/net7.0-windows10.0.19041.0/Syncfusion.Maui.Popup.xml",
+        "lib/net7.0/Syncfusion.Maui.Popup.deps.json",
+        "lib/net7.0/Syncfusion.Maui.Popup.dll",
+        "lib/net7.0/Syncfusion.Maui.Popup.xml",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Popup.dll",
+        "lib/net8.0-android34.0/Syncfusion.Maui.Popup.xml",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.dll",
+        "lib/net8.0-ios16.1/Syncfusion.Maui.Popup.xml",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.dll",
+        "lib/net8.0-maccatalyst16.1/Syncfusion.Maui.Popup.xml",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.deps.json",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.dll",
+        "lib/net8.0-windows10.0.19041.0/Syncfusion.Maui.Popup.xml",
+        "lib/net8.0/Syncfusion.Maui.Popup.deps.json",
+        "lib/net8.0/Syncfusion.Maui.Popup.dll",
+        "lib/net8.0/Syncfusion.Maui.Popup.xml",
+        "syncfusion.maui.popup.26.2.8.nupkg.sha512",
+        "syncfusion.maui.popup.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
     "Xamarin.Android.Glide/4.15.1.2": {
       "sha512": "DcekP+BXm4jFMV7zjHEltj01uiXcItq1kjGa79pj/Vx1rk3Ac2VXdmwGw06HXDP8n2XZsDh8dAoSI48G4KODRA==",
       "type": "package",
@@ -32897,24 +35355,32 @@
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.5"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.5",
+      "Newtonsoft.Json >= 13.0.3",
+      "Syncfusion.Maui.Calendar >= 26.2.8"
     ],
     "net8.0-ios17.2": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.5"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.5",
+      "Newtonsoft.Json >= 13.0.3",
+      "Syncfusion.Maui.Calendar >= 26.2.8"
     ],
     "net8.0-maccatalyst17.2": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.21",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.5"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.5",
+      "Newtonsoft.Json >= 13.0.3",
+      "Syncfusion.Maui.Calendar >= 26.2.8"
     ],
     "net8.0-windows10.0.19041": [
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.21",
-      "Microsoft.Maui.Controls.Compatibility >= 8.0.21"
+      "Microsoft.Maui.Controls.Compatibility >= 8.0.21",
+      "Newtonsoft.Json >= 13.0.3",
+      "Syncfusion.Maui.Calendar >= 26.2.8"
     ]
   },
   "packageFolders": {
@@ -33000,6 +35466,14 @@
             "target": "Package",
             "version": "[8.0.5, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "Syncfusion.Maui.Calendar": {
+            "target": "Package",
+            "version": "[26.2.8, )"
           }
         },
         "imports": [
@@ -33043,6 +35517,14 @@
             "target": "Package",
             "version": "[8.0.5, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "Syncfusion.Maui.Calendar": {
+            "target": "Package",
+            "version": "[26.2.8, )"
           }
         },
         "imports": [
@@ -33086,6 +35568,14 @@
             "target": "Package",
             "version": "[8.0.5, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "Syncfusion.Maui.Calendar": {
+            "target": "Package",
+            "version": "[26.2.8, )"
           }
         },
         "imports": [
@@ -33124,6 +35614,14 @@
           "Microsoft.Maui.Controls.Compatibility": {
             "target": "Package",
             "version": "[8.0.21, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "Syncfusion.Maui.Calendar": {
+            "target": "Package",
+            "version": "[26.2.8, )"
           }
         },
         "imports": [
