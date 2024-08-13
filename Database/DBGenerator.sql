@@ -45,7 +45,7 @@ CREATE TABLE Evento (
     descripcion varchar(255) NULL,
     fechaHoraInicio datetime NOT NULL,
     fechaHoraFin datetime NOT NULL,
-    limiteUsuarios int NOT NULL,
+    limiteUsuarios int NULL,
     duracion float NOT NULL,
     idUsuario int NOT NULL,
     CONSTRAINT [PK_Evento] PRIMARY KEY (idEvento ASC),
