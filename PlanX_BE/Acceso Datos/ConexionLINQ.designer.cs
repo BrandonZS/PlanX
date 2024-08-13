@@ -33,7 +33,7 @@ namespace PlanXBackend.Acceso_Datos
     #endregion
 		
 		public ConexionLINQDataContext() : 
-				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString, mappingSource)
+				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,9 +91,11 @@ namespace PlanXBackend.Acceso_Datos
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ACTUALIZAR_USUARIO_REGULAR")]
-		public int SP_ACTUALIZAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDO", DbType="NVarChar(255)")] string aPELLIDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_ANTIGUA", DbType="NVarChar(255)")] string cONTRA_ANTIGUA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_NUEVA", DbType="NVarChar(255)")] string cONTRA_NUEVA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER)
+		public int SP_ACTUALIZAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDO", DbType="NVarChar(255)")] string aPELLIDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_ANTIGUA", DbType="NVarChar(255)")] string cONTRA_ANTIGUA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_NUEVA", DbType="NVarChar(255)")] string cONTRA_NUEVA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDO, cONTRA_ANTIGUA, cONTRA_NUEVA, iD_USER);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDO, cONTRA_ANTIGUA, cONTRA_NUEVA, iD_USER, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(6)));
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -114,12 +116,11 @@ namespace PlanXBackend.Acceso_Datos
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ELIMINAR_USUARIO_REGULAR")]
-		public int SP_ELIMINAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		public int SP_ELIMINAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, pASSWORD, iDRETURN, eRRORID, eRRORDESCRIPCION);
-			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(2)));
-			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(3)));
-			eRRORDESCRIPCION = ((string)(result.GetParameterValue(4)));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, pASSWORD, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(3)));
 			return ((int)(result.ReturnValue));
 		}
 		

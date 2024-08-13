@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanXBackend.Entidades.Request
+namespace PlanXBackend.Entidades.Response
 {
-    internal class ReqActualizarUsuario
+    public class ResActualizarUsuario : ResBase
     {
     }
 }

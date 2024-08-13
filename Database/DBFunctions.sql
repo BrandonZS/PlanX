@@ -13,7 +13,7 @@ Create OR Alter PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
 AS
 BEGIN
     BEGIN TRY
-        IF EXISTS (SELECT * FROM [dbo].[Usuario] WHERE [email] = @CORREO_ELECTRONICO)	
+        IF EXISTS (SELECT * FROM [dbo].[Usuario] WHERE [email] = @CORREO_ELECTRONICO AND [estado] = 1)	
         BEGIN
             SET @IDRETURN = 0;
             SET @ERRORID = 1; --correo ya registrada
@@ -68,43 +68,50 @@ BEGIN
 END
 GO
 
+
 CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_USUARIO_REGULAR
 	@NOMBRE NVARCHAR(255),
 	@APELLIDO NVARCHAR(255),
 	@CONTRA_ANTIGUA NVARCHAR(255),
 	@CONTRA_NUEVA NVARCHAR(255),
-	@ID_USER INT
+	@ID_USER INT,
+    @ERRORID int output,
+    @ERRORDESCRIPCION nvarchar(max) output
 AS
 BEGIN
-
-	IF @NOMBRE IS NOT NULL
-	BEGIN
-		UPDATE  [dbo].[Usuario]
-		SET [nombre] = @NOMBRE
-		WHERE [idUsuario] = @ID_USER
-	END
-	IF @APELLIDO IS NOT NULL
-	BEGIN
-		UPDATE  [dbo].[Usuario]
-		SET [apellido] = @APELLIDO
-		WHERE [idUsuario] = @ID_USER
-	END
-	IF @CONTRA_ANTIGUA IS NOT NULL AND @CONTRA_NUEVA IS NOT NULL
-	BEGIN
-		if(SELECT [contrasenha] FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER ) = @CONTRA_ANTIGUA
+	BEGIN TRY
+		IF @NOMBRE IS NOT NULL
 		BEGIN
-			UPDATE [dbo].[Usuario]
-			SET [contrasenha] = @CONTRA_NUEVA
+			UPDATE  [dbo].[Usuario]
+			SET [nombre] = @NOMBRE
 			WHERE [idUsuario] = @ID_USER
 		END
-	END 
+		IF @APELLIDO IS NOT NULL
+		BEGIN
+			UPDATE  [dbo].[Usuario]
+			SET [apellido] = @APELLIDO
+			WHERE [idUsuario] = @ID_USER
+		END
+		IF @CONTRA_ANTIGUA IS NOT NULL AND @CONTRA_NUEVA IS NOT NULL
+		BEGIN
+			if(SELECT [contrasenha] FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER ) = @CONTRA_ANTIGUA
+			BEGIN
+				UPDATE [dbo].[Usuario]
+				SET [contrasenha] = @CONTRA_NUEVA
+				WHERE [idUsuario] = @ID_USER
+			END
+		END
+	END TRY
+	BEGIN CATCH
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+	END CATCH
 END
 GO
 
 CREATE OR ALTER PROCEDURE SP_ELIMINAR_USUARIO_REGULAR
 	@ID_USER INT,
 	@PASSWORD NVARCHAR(max),
-	@IDRETURN int output,
     @ERRORID int output,
     @ERRORDESCRIPCION nvarchar(max) output
 AS 
@@ -119,14 +126,12 @@ BEGIN
 		END
 		ELSE
 		BEGIN
-			SET @IDRETURN = 0;
             SET @ERRORID = 2;
             SET @ERRORDESCRIPCION = 'ERROR DESDE BD: CONTRASEÑA INCORRECTA';
 		END
 	END
 	ELSE
 	BEGIN 
-	        SET @IDRETURN = 0;
             SET @ERRORID = 1;
             SET @ERRORDESCRIPCION = 'ERROR DESDE BD: USUARIO NO ENCONTRADO';
 	END
