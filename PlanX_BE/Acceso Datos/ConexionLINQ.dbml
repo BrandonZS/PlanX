@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PLANXAPP" Class="ConexionLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\BrandonZamora;Initial Catalog=PLANXAPP;Integrated Security=True;Encrypt=False" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SP_REGISTRO_USUARIO_REGULAR" Method="SP_REGISTRO_USUARIO_REGULAR">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FECNACIMIENTO" Parameter="fECNACIMIENTO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CODPAIS" Parameter="cODPAIS" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_Login" Method="sp_Login">
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="id_usuario" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="nombre" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Parameter Name="apellido" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CREAR_EVENTO" Method="SP_CREAR_EVENTO">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="FECHORA_INICIO" Parameter="fECHORA_INICIO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHORA_FIN" Parameter="fECHORA_FIN" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="LIMITE_USUARIO" Parameter="lIMITE_USUARIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DURACION" Parameter="dURACION" Type="System.Double" DbType="Float" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="NVarChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INSERTAR_TAREA" Method="SP_INSERTAR_TAREA">
+    <Parameter Name="TITULO" Parameter="tITULO" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="FECHORA_INICIO" Parameter="fECHORA_INICIO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHORA_FIN" Parameter="fECHORA_FIN" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EMAIL" Parameter="eMAIL" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="PRIORIDAD" Parameter="pRIORIDAD" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

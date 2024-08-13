@@ -29,7 +29,7 @@ CREATE TABLE Usuario (
     fecNacimiento date NULL,
     email varchar(255) NULL,
     idPais INT NULL,
-    contrasenia varchar(255) NULL,
+    contrasenha varchar(255) NULL,
     userReg bit NOT NULL,
     fecRegistro datetime NOT NULL DEFAULT GETUTCDATE(),
     CONSTRAINT [PK_Usuario] PRIMARY KEY (idUsuario ASC),

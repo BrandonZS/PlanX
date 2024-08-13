@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.SignIn"
+             Title="SignIn">
+
+<StackLayout BackgroundColor="White" Margin="0">
+<StackLayout.Background>
+        <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
+                <GradientStop Color="#ffffff" Offset="0.0" />
+                    <!-- Negro semitransparente -->
+                <GradientStop Color="#8D14A5" Offset="1.0" />
+                    <!-- Negro semitransparente -->
+        </RadialGradientBrush>
+</StackLayout.Background>
+
+<FlexLayout HorizontalOptions="CenterAndExpand" Margin="20,60,20,20">
+        <Label Text="Haven't "
+                FontFamily="Roboto"                
+                TextColor="Black" 
+                FontAttributes="Bold"
+                FontSize="30"/>
+
+        <Label Text="Sign In Yet?" 
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="30"/>
+</FlexLayout>
+
+        <Frame CornerRadius="50"  Padding="0" Margin="30" BorderColor="Black" VerticalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="#8D14A5" Padding="20">
+                <Label  Text="Keap It On"
+                        FontSize="Large" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" 
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="CenterAndExpand"/>
+                        <!--Name-->
+                <Entry Placeholder="Name"
+                        x:Name="enyName"
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        PlaceholderColor="White"
+                        Margin="0,0,0,20"/>
+
+                        <!--Last Name-->
+                <Entry Placeholder="Last Name"
+                        x:Name="enyLastName"
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        PlaceholderColor="White"
+                        Margin="0,0,0,20"/>
+                        <!--Email-->
+                <Entry  Placeholder="E-Mail"
+                        x:Name="enyMailReg"
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        PlaceholderColor="White"
+                        Margin="0,0,0,20"/>
+                        <!--Password-->
+                <Entry  Placeholder="Password"
+                        x:Name="enyPasswordReg"
+                        TextColor="White"
+                        PlaceholderColor="White"
+                        IsPassword="True"
+                        FontFamily="Roboto"
+                        BackgroundColor="Transparent"
+                        Margin="0,0,0,20"/>
+                        <!--Verify Password-->
+                <Entry  Placeholder="Verify Password"
+                        x:Name="enyVerifyassword"
+                        TextColor="White"
+                        PlaceholderColor="White"
+                        IsPassword="True"
+                        FontFamily="Roboto"
+                        BackgroundColor="Transparent"
+                        Margin="0,0,0,20"/>
+
+                <Picker Title="Select Your Country" 
+                TitleColor="White" 
+                TextColor="White"
+                FontFamily="Roboto"
+                BackgroundColor="Transparent"
+                Margin="0,0,0,20">
+                <Picker.Items>
+                <x:String>Costa Rica</x:String>
+                <x:String>Canada</x:String>
+                <x:String>China</x:String>
+                <x:String>Spain</x:String>
+                <x:String>Brazil</x:String>
+                <x:String>United States</x:String>
+                <x:String>Japan</x:String>
+                </Picker.Items>
+                </Picker>
+
+                        <!-- Login Button -->
+                <Button Text="Sign In"
+                        x:Name="btnSignInPassR"
+                        BackgroundColor="White"
+                        CornerRadius="28"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,20"
+                        FontFamily="Roboto"
+                        TextColor="Black" 
+                        FontAttributes="Bold"
+                        BorderColor="Black" 
+                        BorderWidth="2"/>
+            </StackLayout>
+            
+        </Frame>
+        
+        
+    </StackLayout>
+</ContentPage>

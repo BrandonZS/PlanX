@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.LogIn"
+             Title="LogIn">
+
+    <StackLayout BackgroundColor="White" Margin="0">
+        <Image     Source="Resources/Images/headersignin.png"
+                Aspect="AspectFill"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"/>
+
+        <Frame CornerRadius="50" Padding="0" Margin="30" BorderColor="Black">
+            <StackLayout BackgroundColor="#8D14A5" Padding="20">
+            <Label     Text="Welcome To PlanX"
+                    FontSize="Large" 
+                    TextColor="White"
+                    FontFamily="Roboto"
+                    FontAttributes="Bold" 
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"/>
+
+        <Entry         Placeholder="E-Mail"
+                    x:Name="enyMail"
+                    TextColor="White"
+                    FontFamily="Roboto"
+                    PlaceholderColor="White"
+                    Margin="0,0,0,20"/>
+
+        <Entry         Placeholder="Password"
+                    x:Name="enyPassword"
+                    TextColor="White"
+                    PlaceholderColor="White"
+                    IsPassword="True"
+                    FontFamily="Roboto"
+                    BackgroundColor="Transparent"
+                    Margin="0,0,0,20"/>
+
+        <!-- Sign In Button -->
+        <Button         Text="Sign In"
+                        x:Name="btnLogInPass"
+                        BackgroundColor="White"
+                        CornerRadius="28"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,0,0,20"
+                        FontFamily="Roboto"
+                        TextColor="Black" 
+                        FontAttributes="Bold"
+                        BorderColor="Black" 
+                        BorderWidth="1"
+                        Clicked="btnLogInPass_Clicked"/>
+
+        </StackLayout>
+            
+        </Frame>
+        
+        
+    </StackLayout>
+</ContentPage>
