@@ -94,6 +94,7 @@
     <Compile Include="Entidades\Entities\Evento.cs" />
     <Compile Include="Entidades\Entities\Tarea.cs" />
     <Compile Include="Entidades\Entities\Usuario.cs" />
+    <Compile Include="Entidades\Request\ReqActualizarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqInsertarEvento.cs" />
     <Compile Include="Entidades\Request\ReqInsertarTarea.cs" />
     <Compile Include="Entidades\Request\ReqInsertarUsuario.cs" />

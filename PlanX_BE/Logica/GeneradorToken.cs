@@ -16,7 +16,7 @@ namespace PlanXBackend.Logica
 
         private const string SecretKey = "ghghghghghghtynbfghinghsdgfhjiwi"; // Debe ser secreta y segura
         private const int ExpirationMinutes = 30; // Duración del token
-        public static string GenerateToken(string username)
+        public static string GenerateToken(string email)
         {
             var symmetricKey = Encoding.UTF8.GetBytes(SecretKey);
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -25,7 +25,7 @@ namespace PlanXBackend.Logica
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim(ClaimTypes.Name, username)
+                new Claim(ClaimTypes.Name, email)
                 // Agrega aquí más claims si lo necesitas
             }),
                 Expires = DateTime.UtcNow.AddMinutes(ExpirationMinutes),
