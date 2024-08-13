@@ -1086,3 +1086,4 @@ C:\Users\angel\OneDrive\Documentos\GitHub\PlanX\PlanXFrontend\obj\Debug\net8.0-a
 C:\Users\angel\OneDrive\Documentos\GitHub\PlanX\PlanXFrontend\obj\Debug\net8.0-android\android\src\crc64f5844edce43316e7\TabStrip.java
 C:\Users\angel\OneDrive\Documentos\GitHub\PlanX\PlanXFrontend\obj\Debug\net8.0-android\android\src\crc64f5844edce43316e7\ThumbnailStrip.java
 C:\Users\angel\OneDrive\Documentos\GitHub\PlanX\PlanXFrontend\obj\Debug\net8.0-android\resizetizer\r\drawable\planxlogoresize.png
+C:\Users\angel\OneDrive\Documentos\GitHub\PlanX\PlanXFrontend\obj\Debug\net8.0-android\android\assets\Newtonsoft.Json.dll

@@ -19,6 +19,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.dll",
 		"Microsoft.Maui.Essentials.dll",
 		"Microsoft.Maui.Graphics.dll",
+		"Newtonsoft.Json.dll",
 		"Syncfusion.Licensing.dll",
 		"Syncfusion.Maui.Calendar.dll",
 		"Syncfusion.Maui.Core.dll",
