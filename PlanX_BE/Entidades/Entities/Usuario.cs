@@ -11,7 +11,6 @@ namespace PlanXBackend.Entidades.Entities
     {
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public DateTime fecNacimiento { get; set; }
         public string email { get; set; }
         public string codPais { get; set; }
         public string contrasenha { get; set; }

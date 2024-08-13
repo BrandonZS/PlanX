@@ -16,7 +16,7 @@ namespace PlanXBackend.Logica
             ResInsertarEvento res = new ResInsertarEvento();
             try
             {
-                //Faltan Comprobaciones
+                //Faltan Comprobaciones de otros datos
                 if (req == null)
                 {
                     res.resultado = false;
@@ -25,17 +25,27 @@ namespace PlanXBackend.Logica
                 else if (String.IsNullOrEmpty(req.nombre))
                 {
                     res.resultado = false;
-                    res.error = "Nombre faltante";
+                    res.error = "Titulo faltante";
                 }
                 else if (String.IsNullOrEmpty(req.descripcion))
                 {
                     res.resultado = false;
-                    res.error = "Apellido faltante";
+                    res.error = "Descripcion faltante";
                 }
-                else if (String.IsNullOrEmpty(req.email))
+                else if (req.idUsuario < 1)
                 {
                     res.resultado = false;
-                    res.error = "Correo Electronico faltante";
+                    res.error = "Usuario Faltante";
+                }
+                else if (req.limUsers != null && req.limUsers < 1) 
+                {
+                    res.resultado = false;
+                    res.error = "Limite incorrecto";
+                }
+                else if(req.duracion < 0)
+                {
+                    res.resultado = false;
+                    res.error = "Duracion incorrecta";
                 }
                 else
                 {
@@ -43,7 +53,7 @@ namespace PlanXBackend.Logica
                     int? errorId = 0;
                     string errorDescripcion = null;
                     ConexionLINQDataContext linq = new ConexionLINQDataContext();
-                    linq.SP_CREAR_EVENTO(req.nombre, req.descripcion, req.fecHoraInicio, req.fecHoraFin, req.limUsers, req.duracion, req.email);
+                    linq.SP_INSERTAR_EVENTO(req.nombre, req.descripcion, req.fecHoraInicio, req.fecHoraFin, req.limUsers, req.duracion, req.idUsuario, ref idReturn, ref errorId, ref errorDescripcion);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
@@ -53,6 +63,7 @@ namespace PlanXBackend.Logica
                     else
                     {
                         res.resultado = true;
+                        res.error = errorDescripcion;
 
                     }
                 }

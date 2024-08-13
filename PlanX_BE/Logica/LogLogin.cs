@@ -42,7 +42,7 @@ namespace PlanXBackend.Logica
                     string nombre = null;
                     string apellido = null;
                     ConexionLINQDataContext linq = new ConexionLINQDataContext();   //Instancio linq
-                    linq.sp_Login(req.email, req.password, ref idReturn, ref nombre, ref apellido);
+                    linq.SP_LOGIN(req.email, req.password, ref idReturn, ref nombre, ref apellido);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
@@ -54,7 +54,7 @@ namespace PlanXBackend.Logica
                         res.nombre = nombre;
                         res.apellido = apellido;
                         res.resultado = true;
-                        res.Token = GeneradorToken.GenerateToken(nombre);
+                        res.Token = GeneradorToken.GenerateToken(req.email);
                     }
                 }
             }
