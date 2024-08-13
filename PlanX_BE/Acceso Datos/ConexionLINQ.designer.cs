@@ -62,37 +62,140 @@ namespace PlanXBackend.Acceso_Datos
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_REGISTRO_USUARIO_REGULAR")]
-		public int SP_REGISTRO_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(50)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDOS", DbType="NVarChar(50)")] string aPELLIDOS, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CORREO_ELECTRONICO", DbType="NVarChar(MAX)")] string cORREO_ELECTRONICO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECNACIMIENTO", DbType="DateTime")] System.Nullable<System.DateTime> fECNACIMIENTO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CODPAIS", DbType="NVarChar(2)")] string cODPAIS, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ACTUALIZAR_EVENTO")]
+		public int SP_ACTUALIZAR_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="NVarChar(255)")] string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="NVarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="NVarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDOS, cORREO_ELECTRONICO, pASSWORD, fECNACIMIENTO, cODPAIS, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tITULO, dESCRIPCION, iD_USER, cOD_INVI, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(4)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(5)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_REGISTRO_USUARIO_REGULAR")]
+		public int SP_REGISTRO_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDOS", DbType="NVarChar(255)")] string aPELLIDOS, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CORREO_ELECTRONICO", DbType="NVarChar(MAX)")] string cORREO_ELECTRONICO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CODPAIS", DbType="NVarChar(2)")] string cODPAIS, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDOS, cORREO_ELECTRONICO, pASSWORD, cODPAIS, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(6)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(7)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ACTUALIZAR_TAREA")]
+		public int SP_ACTUALIZAR_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="NVarChar(255)")] string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="NVarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_TAREA", DbType="Int")] System.Nullable<int> iD_TAREA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tITULO, dESCRIPCION, iD_USER, iD_TAREA, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(4)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(5)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ACTUALIZAR_USUARIO_REGULAR")]
+		public int SP_ACTUALIZAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDO", DbType="NVarChar(255)")] string aPELLIDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_ANTIGUA", DbType="NVarChar(255)")] string cONTRA_ANTIGUA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CONTRA_NUEVA", DbType="NVarChar(255)")] string cONTRA_NUEVA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDO, cONTRA_ANTIGUA, cONTRA_NUEVA, iD_USER);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ELIMINAR_EVENTO")]
+		public int SP_ELIMINAR_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INV", DbType="NVarChar(6)")] string cOD_INV, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, cOD_INV, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(3)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ELIMINAR_TAREA")]
+		public int SP_ELIMINAR_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_TAREA", DbType="Int")] System.Nullable<int> iD_TAREA)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, iD_TAREA);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ELIMINAR_USUARIO_REGULAR")]
+		public int SP_ELIMINAR_USUARIO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, pASSWORD, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(2)));
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(3)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(4)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_INSERTAR_EVENTO")]
+		public int SP_INSERTAR_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="NVarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LIMITE_USUARIO", DbType="Int")] System.Nullable<int> lIMITE_USUARIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DURACION", DbType="Float")] System.Nullable<double> dURACION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, lIMITE_USUARIO, dURACION, iD_USER, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(7)));
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(8)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(9)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_INSERTAR_TAREA")]
+		public int SP_INSERTAR_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="VarChar(255)")] string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="VarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRIORIDAD", DbType="VarChar(50)")] string pRIORIDAD, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tITULO, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, iD_USER, pRIORIDAD, iDRETURN, eRRORID, eRRORDESCRIPCION);
 			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(6)));
 			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(7)));
 			eRRORDESCRIPCION = ((string)(result.GetParameterValue(8)));
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Login")]
-		public int sp_Login([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CORREO_ELECTRONICO", DbType="NVarChar(50)")] string cORREO_ELECTRONICO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> id_usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string apellido)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_LOGIN")]
+		public int SP_LOGIN([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CORREO_ELECTRONICO", DbType="NVarChar(50)")] string cORREO_ELECTRONICO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PASSWORD", DbType="NVarChar(MAX)")] string pASSWORD, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] ref System.Nullable<int> id_usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] ref string apellidos)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cORREO_ELECTRONICO, pASSWORD, id_usuario, nombre, apellido);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cORREO_ELECTRONICO, pASSWORD, id_usuario, nombre, apellidos);
 			id_usuario = ((System.Nullable<int>)(result.GetParameterValue(2)));
 			nombre = ((string)(result.GetParameterValue(3)));
-			apellido = ((string)(result.GetParameterValue(4)));
+			apellidos = ((string)(result.GetParameterValue(4)));
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_CREAR_EVENTO")]
-		public int SP_CREAR_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="NVarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="NVarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LIMITE_USUARIO", DbType="Int")] System.Nullable<int> lIMITE_USUARIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DURACION", DbType="Float")] System.Nullable<double> dURACION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="NVarChar(255)")] string eMAIL)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_EVENTO")]
+		public int SP_OBTENER_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(255)")] ref string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="VarChar(255)")] ref string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="VarChar(255)")] ref string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECINICIO", DbType="DateTime")] ref System.Nullable<System.DateTime> fECINICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECFIN", DbType="DateTime")] ref System.Nullable<System.DateTime> fECFIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LIM_USERS", DbType="Int")] ref System.Nullable<int> lIM_USERS, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DURACION", DbType="Float")] ref System.Nullable<double> dURACION)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, lIMITE_USUARIO, dURACION, eMAIL);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, cOD_INVI, nOMBRE, dESCRIPCION, fECINICIO, fECFIN, lIM_USERS, dURACION);
+			cOD_INVI = ((string)(result.GetParameterValue(1)));
+			nOMBRE = ((string)(result.GetParameterValue(2)));
+			dESCRIPCION = ((string)(result.GetParameterValue(3)));
+			fECINICIO = ((System.Nullable<System.DateTime>)(result.GetParameterValue(4)));
+			fECFIN = ((System.Nullable<System.DateTime>)(result.GetParameterValue(5)));
+			lIM_USERS = ((System.Nullable<int>)(result.GetParameterValue(6)));
+			dURACION = ((System.Nullable<double>)(result.GetParameterValue(7)));
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_INSERTAR_TAREA")]
-		public int SP_INSERTAR_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="VarChar(255)")] string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="VarChar(255)")] string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECHORA_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fECHORA_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="EMAIL", DbType="VarChar(255)")] string eMAIL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PRIORIDAD", DbType="VarChar(50)")] string pRIORIDAD)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_TAREA")]
+		public int SP_OBTENER_TAREA([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TITULO", DbType="VarChar(255)")] ref string tITULO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DESCRIPCION", DbType="VarChar(255)")] ref string dESCRIPCION, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECINICIO", DbType="DateTime")] ref System.Nullable<System.DateTime> fECINICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FECFIN", DbType="DateTime")] ref System.Nullable<System.DateTime> fECFIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_PRIORIDAD", DbType="Int")] ref System.Nullable<int> iD_PRIORIDAD)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tITULO, dESCRIPCION, fECHORA_INICIO, fECHORA_FIN, eMAIL, pRIORIDAD);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, tITULO, dESCRIPCION, fECINICIO, fECFIN, iD_PRIORIDAD);
+			tITULO = ((string)(result.GetParameterValue(1)));
+			dESCRIPCION = ((string)(result.GetParameterValue(2)));
+			fECINICIO = ((System.Nullable<System.DateTime>)(result.GetParameterValue(3)));
+			fECFIN = ((System.Nullable<System.DateTime>)(result.GetParameterValue(4)));
+			iD_PRIORIDAD = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_REGISTRO_EVENTO_INVITADO")]
+		public int SP_REGISTRO_EVENTO_INVITADO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NOMBRE", DbType="VarChar(255)")] string nOMBRE, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="APELLIDO", DbType="VarChar(255)")] string aPELLIDO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fEC_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fEC_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nOMBRE, aPELLIDO, cOD_INVI, fEC_INICIO, fEC_FIN, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(6)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(7)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_REGISTRO_EVENTO_REGULAR")]
+		public int SP_REGISTRO_EVENTO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fEC_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fEC_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, cOD_INVI, fEC_INICIO, fEC_FIN, iDRETURN, eRRORID, eRRORDESCRIPCION);
+			iDRETURN = ((System.Nullable<int>)(result.GetParameterValue(4)));
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(5)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(6)));
 			return ((int)(result.ReturnValue));
 		}
 	}

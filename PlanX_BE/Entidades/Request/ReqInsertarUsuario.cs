@@ -9,7 +9,11 @@ namespace PlanXBackend.Entidades.Request
 {
     public class ReqInsertarUsuario
     {
-        public Usuario usuario {  get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string email { get; set; }
+        public string codPais { get; set; }
+        public string contrasenha { get; set; }
 
 
     }

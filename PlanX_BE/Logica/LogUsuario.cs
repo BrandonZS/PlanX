@@ -21,32 +21,27 @@ namespace PlanXBackend.Logica
                     res.resultado = false;
                     res.error = "Req null";
                 }
-                else if (String.IsNullOrEmpty(req.usuario.nombre))
+                else if (String.IsNullOrEmpty(req.nombre))
                 {
                     res.resultado = false;
                     res.error = "Nombre faltante";
                 }
-                else if (String.IsNullOrEmpty(req.usuario.apellido))
+                else if (String.IsNullOrEmpty(req.apellido))
                 {
                     res.resultado = false;
                     res.error = "Apellido faltante";
                 }
-                else if (String.IsNullOrEmpty(req.usuario.email))
+                else if (String.IsNullOrEmpty(req.email))
                 {
                     res.resultado = false;
                     res.error = "Correo Electronico faltante";
                 }
-                else if (String.IsNullOrEmpty(req.usuario.contrasenha))
+                else if (String.IsNullOrEmpty(req.contrasenha))
                 {
                     res.resultado = false;
                     res.error = "Contraseña faltante";
                 }
-                else if (String.IsNullOrEmpty(req.usuario.codPais))
-                {
-                    res.resultado = false;
-                    res.error = "pais faltante";
-                }
-                else if ((req.usuario.fecNacimiento == DateTime.MinValue))
+                else if (String.IsNullOrEmpty(req.codPais))
                 {
                     res.resultado = false;
                     res.error = "pais faltante";
@@ -57,7 +52,7 @@ namespace PlanXBackend.Logica
                     int? errorId = 0;
                     string errorDescripcion = null;
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
-                    con.SP_REGISTRO_USUARIO_REGULAR(req.usuario.nombre, req.usuario.apellido, req.usuario.email, req.usuario.contrasenha, req.usuario.fecNacimiento, req.usuario.codPais, ref idReturn, ref errorId, ref errorDescripcion);
+                    con.SP_REGISTRO_USUARIO_REGULAR(req.nombre, req.apellido, req.email, req.contrasenha, req.codPais, ref idReturn, ref errorId, ref errorDescripcion);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
