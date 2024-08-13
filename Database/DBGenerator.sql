@@ -26,12 +26,12 @@ CREATE TABLE Usuario (
     idUsuario int IDENTITY(1,1)NOT NULL,
     nombre varchar(255) NOT NULL,
     apellido varchar(255) NULL,
-    fecNacimiento date NULL,
     email varchar(255) NULL,
     idPais INT NULL,
     contrasenha varchar(255) NULL,
     userReg bit NOT NULL,
     fecRegistro datetime NOT NULL DEFAULT GETUTCDATE(),
+    estado bit NULL,
     CONSTRAINT [PK_Usuario] PRIMARY KEY (idUsuario ASC),
 	CONSTRAINT FK_Pais_Usuario FOREIGN KEY (idPais) REFERENCES PAIS(idPais)
 );
@@ -45,11 +45,15 @@ CREATE TABLE Evento (
     descripcion varchar(255) NULL,
     fechaHoraInicio datetime NOT NULL,
     fechaHoraFin datetime NOT NULL,
-    limiteUsuarios int NOT NULL,
+    limiteUsuarios int NULL,
     duracion float NOT NULL,
     idUsuario int NOT NULL,
     CONSTRAINT [PK_Evento] PRIMARY KEY (idEvento ASC),
-    CONSTRAINT FK_UsuarioAdministrador FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+    CONSTRAINT FK_UsuarioAdministrador FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
+    CONSTRAINT CHK_FechaHoraFin_Despues_FechaHoraInicio CHECK (fechaHoraFin > fechaHoraInicio),
+    CONSTRAINT CHK_LimiteUsuarios_Positive CHECK (limiteUsuarios > 0),
+    CONSTRAINT CHK_Duracion_Positive CHECK (duracion > 0),
+    CONSTRAINT CHK_CodInvitacion_Format CHECK (codInvitacion LIKE '[A-Z0-9]%')
 );
 GO
 -- Table: Prioridad
@@ -70,7 +74,8 @@ CREATE TABLE Tarea (
     idPrioridad int NOT NULL,
     CONSTRAINT [PK_Tarea] PRIMARY KEY (idTarea ASC),
     CONSTRAINT FK_Tarea_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
-    CONSTRAINT FK_Tarea_Prioridad FOREIGN KEY (idPrioridad) REFERENCES Prioridad(idPrioridad)
+    CONSTRAINT FK_Tarea_Prioridad FOREIGN KEY (idPrioridad) REFERENCES Prioridad(idPrioridad),
+    CONSTRAINT CHK_FechaHoraFin_Despues_FechaHoraInicio_Tarea CHECK (fechaHoraFinal > fechaHoraInicio)
 );
 GO
 
@@ -80,11 +85,12 @@ GO
 CREATE TABLE EventoUsuario (
     idUsuario int NOT NULL,
     idEvento int NOT NULL,
-    horaInicial datetime NOT NULL,
-    horaFinal datetime NOT NULL,
+    fechaHoraInicio datetime NOT NULL,
+    fechaHoraFinal datetime NOT NULL,
     CONSTRAINT [PK_EventoUsuario] PRIMARY KEY (idUsuario ASC, idEvento ASC),
     CONSTRAINT FK_EventoUsuario_Usuario FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
-    CONSTRAINT FK_EventoUsuario_Evento FOREIGN KEY (idEvento) REFERENCES Evento(idEvento)
+    CONSTRAINT FK_EventoUsuario_Evento FOREIGN KEY (idEvento) REFERENCES Evento(idEvento),
+    CONSTRAINT CHK_FechaHoraFin_Despues_FechaHoraInicio_Registro CHECK (fechaHoraFinal > fechaHoraInicio)
 );
 GO
 
@@ -97,7 +103,8 @@ CREATE TABLE Sesion (
     fechaInicio datetime NOT NULL,
     fechaFin datetime NOT NULL,
     Estado varchar(50) NULL,
-    CONSTRAINT [PK_Sesion] PRIMARY KEY (idSesion ASC)
+    CONSTRAINT [PK_Sesion] PRIMARY KEY (idSesion ASC),
+    CONSTRAINT CHK_fechaFin_Despues_fechaInicio CHECK (fechaFin > fechaInicio)
 );
 GO
 
