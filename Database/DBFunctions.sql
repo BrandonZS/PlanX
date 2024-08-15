@@ -429,23 +429,34 @@ GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_TAREA
     @ID_USER INT,
-	@TITULO VARCHAR(255) OUTPUT,
-	@DESCRIPCION VARCHAR(255) OUTPUT,
-	@FECINICIO DATETIME OUTPUT,
-	@FECFIN DATETIME OUTPUT,
-	@ID_PRIORIDAD INT OUTPUT
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
+
 AS
 BEGIN
-	DECLARE @PRIORIDAD VARCHAR(255)
-	SELECT @PRIORIDAD = [descripcion] FROM [dbo].[Prioridad] WHERE [idPrioridad] = @ID_PRIORIDAD
-    SELECT 
-        @TITULO = [titulo],
-        @DESCRIPCION = [descripcion],
-        @FECINICIO = [fechaHoraInicio],
-        @FECFIN = [fechaHoraFinal],
-        @PRIORIDAD = [idPrioridad]
-    FROM [dbo].[Tarea]
-    WHERE [idUsuario] = @ID_USER;
+
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Tarea]
+        WHERE [idUsuario] = @ID_USER
+    )
+    BEGIN
+        -- Seleccionar datos de la tarea
+        SELECT 
+           t.[titulo] AS TITULO,
+           t.[descripcion] AS DESCRIPCION,
+           t.[fechaHoraInicio] AS FECINICIAL,
+           t.[fechaHoraFinal] AS FECFINAL,
+           p.[descripcion] AS PRIORIDAD
+        FROM [dbo].[Tarea] t
+        INNER JOIN [dbo].[Prioridad] p ON t.[idPrioridad] = p.[idPrioridad]
+        WHERE t.[idUsuario] = @ID_USER;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
+    END
 END;
 GO
 
