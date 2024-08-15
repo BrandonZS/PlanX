@@ -140,29 +140,47 @@ GO
 
 --SP para el login de usuario ////Ultima Actualizacion 8/8/2024 14:23
 
-CREATE PROCEDURE SP_LOGIN
-    @CORREO_ELECTRONICO nVARCHAR(50), 
-    @PASSWORD NVARCHAR(max),           
-    @id_usuario INT OUTPUT,
-    @nombre NVARCHAR(50) OUTPUT,
-    @apellidos NVARCHAR(50) OUTPUT
+CREATE OR ALTER PROCEDURE SP_LOGIN
+    @CORREO_ELECTRONICO NVARCHAR(50), 
+    @PASSWORD NVARCHAR(MAX),           
+    @IDRETURN INT OUTPUT,
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
 AS
 BEGIN
-    SET @id_usuario = 0;
-    SET @nombre = '';
-    SET @apellidos = '';
-    
+    -- Inicializar los valores de salida
+    SET @IDRETURN = 0;
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el usuario existe
     IF EXISTS (
-        SELECT [idUsuario], [nombre], [apellido]
+        SELECT [idUsuario]
         FROM [dbo].[Usuario]
         WHERE [email] = @CORREO_ELECTRONICO
             AND [contrasenha] = @PASSWORD
     )
     BEGIN
-        SELECT @id_usuario = [idUsuario], @nombre = nombre, @apellidos = [apellido]
-        FROM [dbo].[Usuario]
-        WHERE  [email] =  @CORREO_ELECTRONICO
-            AND [contrasenha] = @PASSWORD;
+        -- Seleccionar datos del usuario junto con el código del país
+        SELECT 
+            u.[idUsuario] AS ID_USUARIO,
+            u.[nombre] AS NOMBRE,
+            u.[apellido] AS APELLIDOS,
+			u.[email] AS CORREO_ELECTRONICO,
+            p.[codigo] AS CODIGO_PAIS
+        FROM 
+            [dbo].[Usuario] u
+            INNER JOIN [dbo].[Pais] p ON u.[IDPAIS] = p.[idPais]
+        WHERE 
+            u.[email] = @CORREO_ELECTRONICO
+            AND u.[contrasenha] = @PASSWORD;
+    END
+    ELSE
+    BEGIN
+        -- Manejar error cuando el usuario no existe
+        SET @IDRETURN = -1;
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
     END
 END
 GO
