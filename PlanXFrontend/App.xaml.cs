@@ -8,7 +8,7 @@ namespace PlanXFrontend
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage()){
+            MainPage = new NavigationPage(new Dashboard()){
                 BarBackgroundColor = Colors.Black,
                 BarTextColor = Colors.White
                 

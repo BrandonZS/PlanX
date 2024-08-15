@@ -25,7 +25,7 @@ public partial class LogIn : ContentPage
 		//Conectar con API
  
 		ReqLogin req = new ReqLogin();
-		req.correoElectronico = enyMail.Text;
+		req.email = enyMail.Text;
 		req.password = enyPassword.Text;
  
 		var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
@@ -52,7 +52,7 @@ public partial class LogIn : ContentPage
  
  
 				//DisplayAlert("Login correcto", "¡Bienvenido(a) " + res.usuario.nombre +"!", "Aceptar");
-				Navigation.PushAsync(new MainPage());
+				Navigation.PushAsync(new Dashboard());
 			}
 			else
 			{
