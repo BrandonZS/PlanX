@@ -306,44 +306,77 @@ GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_EVENTO
     @ID_USER INT,
-	@COD_INVI VARCHAR(255) OUTPUT,
-	@NOMBRE VARCHAR(255) OUTPUT, 
-	@DESCRIPCION VARCHAR(255) OUTPUT,
-	@FECINICIO DATETIME OUTPUT,
-	@FECFIN DATETIME OUTPUT,
-	@LIM_USERS INT OUTPUT,
-	@DURACION FLOAT OUTPUT
+	@COD_INVI VARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(255) OUTPUT
 AS
 BEGIN
 
-    SELECT 
-        @COD_INVI = [codInvitacion],
-        @NOMBRE = [nombre],
-        @DESCRIPCION = [descripcion],
-        @FECINICIO = [fechaHoraInicio],
-        @FECFIN = [fechaHoraFin],
-        @LIM_USERS = [limiteUsuarios],
-        @DURACION = [duracion]
-    FROM [dbo].[Evento]
-    WHERE [idUsuario] = @ID_USER;
-END;
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el evento existe
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER
+          AND [codInvitacion] = @COD_INVI
+    )
+    BEGIN
+        -- Seleccionar datos del evento
+        SELECT 
+            [nombre] AS NOMBRE_EVENTO,
+            [descripcion] AS DESCRIPCION,
+            [fechaHoraInicio] AS HORA_INICIO,
+            [fechaHoraFin] AS HORA_FINAL,
+            [limiteUsuarios] AS LIM_USERS,
+            [duracion] AS DURACION
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER
+          AND [codInvitacion] = @COD_INVI;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END
+END
 GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_LISTA_EVENTOS
-    @ID_USER INT
+    @ID_USER INT,
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(255) OUTPUT
 AS
 BEGIN
-    SELECT 
-        [codInvitacion] AS COD_INVI,
-        [nombre] AS NOMBRE,
-        [descripcion] AS DESCRIPCION,
-        [fechaHoraInicio] AS FECINICIO,
-        [fechaHoraFin] AS FECFIN,
-        [limiteUsuarios] AS LIM_USERS,
-        [duracion] AS DURACION
-    FROM [dbo].[Evento]
-    WHERE [idUsuario] = @ID_USER;
-END;
+
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el evento existe
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER
+    )
+    BEGIN
+        -- Seleccionar datos del evento
+        SELECT 
+            [nombre] AS NOMBRE_EVENTO,
+            [descripcion] AS DESCRIPCION,
+            [fechaHoraInicio] AS HORA_INICIO,
+            [fechaHoraFin] AS HORA_FINAL,
+            [limiteUsuarios] AS LIM_USERS,
+            [duracion] AS DURACION
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END
+END
 GO
 
 --SP para insertar una Tarea ////Ultima Actualizacion 8/8/2024 19:16
