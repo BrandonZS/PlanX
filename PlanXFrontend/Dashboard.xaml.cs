@@ -37,7 +37,7 @@ public partial class Dashboard : ContentPage
     }
     private async void tbiTask_Clicked(object sender, EventArgs e)
     {
-        //await Navigation.PushAsync(new);
+        await Navigation.PushAsync(new TasksPage());
     }
     private async void tbiAccount_Clicked(object sender, EventArgs e)
     {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+decc09d388aa1f89fd4e2942453a030e40c8a5d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+08672c6c498dc76ac5e42965db9c08deb462193c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlanXFrontend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

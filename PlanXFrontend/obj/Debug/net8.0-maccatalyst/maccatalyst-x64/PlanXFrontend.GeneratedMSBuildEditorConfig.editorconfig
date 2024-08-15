@@ -34,6 +34,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = PlanXFrontend.AppShell.xam
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/angel/OneDrive/Documentos/GitHub/PlanX/PlanXFrontend/ChangePasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PlanXFrontend.ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ChangePasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ChangePasswordPage.xaml
+
 [C:/Users/angel/OneDrive/Documentos/GitHub/PlanX/PlanXFrontend/CreateEventPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PlanXFrontend.CreateEventPage.xaml
@@ -81,3 +87,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PlanXFrontend.SignIn.xaml
 build_metadata.AdditionalFiles.TargetPath = SignIn.xaml
 build_metadata.AdditionalFiles.RelativePath = SignIn.xaml
+
+[C:/Users/angel/OneDrive/Documentos/GitHub/PlanX/PlanXFrontend/TasksPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = PlanXFrontend.TasksPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TasksPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TasksPage.xaml

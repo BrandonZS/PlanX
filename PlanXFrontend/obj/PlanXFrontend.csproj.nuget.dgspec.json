@@ -86,6 +86,14 @@
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
+            },
+            "Syncfusion.Maui.Scheduler": {
+              "target": "Package",
+              "version": "[26.2.9, )"
+            },
+            "Syncfusion.Schedule.Windows": {
+              "target": "Package",
+              "version": "[26.2.9, )"
             }
           },
           "imports": [
@@ -137,6 +145,14 @@
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
+            },
+            "Syncfusion.Maui.Scheduler": {
+              "target": "Package",
+              "version": "[26.2.9, )"
+            },
+            "Syncfusion.Schedule.Windows": {
+              "target": "Package",
+              "version": "[26.2.9, )"
             }
           },
           "imports": [
@@ -188,6 +204,14 @@
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
+            },
+            "Syncfusion.Maui.Scheduler": {
+              "target": "Package",
+              "version": "[26.2.9, )"
+            },
+            "Syncfusion.Schedule.Windows": {
+              "target": "Package",
+              "version": "[26.2.9, )"
             }
           },
           "imports": [
@@ -234,6 +258,14 @@
             "Syncfusion.Maui.Calendar": {
               "target": "Package",
               "version": "[26.2.8, )"
+            },
+            "Syncfusion.Maui.Scheduler": {
+              "target": "Package",
+              "version": "[26.2.9, )"
+            },
+            "Syncfusion.Schedule.Windows": {
+              "target": "Package",
+              "version": "[26.2.9, )"
             }
           },
           "imports": [

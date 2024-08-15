@@ -7,7 +7,7 @@
              xmlns:control="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="tbiJoinGroup" Order="Primary" Text="Join Group" Clicked="tbiJoinGroup_Clicked"/>
-        <ToolbarItem x:Name="tbiTask" Order="Primary" Text="Tasks" />
+        <ToolbarItem x:Name="tbiTask" Order="Primary" Text="Tasks" Clicked="tbiTask_Clicked"/>
         <ToolbarItem x:Name="tbiAccount" Order="Primary" Text="Account"  Clicked="tbiAccount_Clicked"/>
     </ContentPage.ToolbarItems>
     <Grid Margin="5">

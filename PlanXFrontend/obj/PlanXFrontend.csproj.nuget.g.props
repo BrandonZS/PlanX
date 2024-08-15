@@ -32,6 +32,7 @@
     <Import Project="$(NuGetPackageRoot)microsoft.maui.controls.build.tasks\8.0.3\buildTransitive\net6.0-maccatalyst13.1\Microsoft.Maui.Controls.Build.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.controls.build.tasks\8.0.3\buildTransitive\net6.0-maccatalyst13.1\Microsoft.Maui.Controls.Build.Tasks.props')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net8.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.winforms.designer.sdk\1.6.0\build\netcoreapp3.1\Microsoft.WinForms.Designer.SDK.props" Condition="Exists('$(NuGetPackageRoot)microsoft.winforms.designer.sdk\1.6.0\build\netcoreapp3.1\Microsoft.WinForms.Designer.SDK.props')" />
     <Import Project="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\10.0.22621.756\buildTransitive\Microsoft.Windows.SDK.BuildTools.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.windowsappsdk\1.3.230724000\buildTransitive\Microsoft.WindowsAppSDK.props" Condition="Exists('$(NuGetPackageRoot)microsoft.windowsappsdk\1.3.230724000\buildTransitive\Microsoft.WindowsAppSDK.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.maui.resizetizer\8.0.3\buildTransitive\Microsoft.Maui.Resizetizer.props" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.resizetizer\8.0.3\buildTransitive\Microsoft.Maui.Resizetizer.props')" />
@@ -39,15 +40,31 @@
     <Import Project="$(NuGetPackageRoot)microsoft.maui.controls.build.tasks\8.0.3\buildTransitive\net6.0-windows10.0.17763.0\Microsoft.Maui.Controls.Build.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.maui.controls.build.tasks\8.0.3\buildTransitive\net6.0-windows10.0.17763.0\Microsoft.Maui.Controls.Build.Tasks.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-android' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.shared.base\26.2.9</PkgSyncfusion_Shared_Base>
+    <PkgSyncfusion_Grid_Windows Condition=" '$(PkgSyncfusion_Grid_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.grid.windows\26.2.9</PkgSyncfusion_Grid_Windows>
+    <PkgSyncfusion_Tools_Windows Condition=" '$(PkgSyncfusion_Tools_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.tools.windows\26.2.9</PkgSyncfusion_Tools_Windows>
+    <PkgSyncfusion_Schedule_Windows Condition=" '$(PkgSyncfusion_Schedule_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.schedule.windows\26.2.9</PkgSyncfusion_Schedule_Windows>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\angel\.nuget\packages\microsoft.net.illink.tasks\8.0.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.shared.base\26.2.9</PkgSyncfusion_Shared_Base>
+    <PkgSyncfusion_Grid_Windows Condition=" '$(PkgSyncfusion_Grid_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.grid.windows\26.2.9</PkgSyncfusion_Grid_Windows>
+    <PkgSyncfusion_Tools_Windows Condition=" '$(PkgSyncfusion_Tools_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.tools.windows\26.2.9</PkgSyncfusion_Tools_Windows>
+    <PkgSyncfusion_Schedule_Windows Condition=" '$(PkgSyncfusion_Schedule_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.schedule.windows\26.2.9</PkgSyncfusion_Schedule_Windows>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\angel\.nuget\packages\microsoft.net.illink.tasks\8.0.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.shared.base\26.2.9</PkgSyncfusion_Shared_Base>
+    <PkgSyncfusion_Grid_Windows Condition=" '$(PkgSyncfusion_Grid_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.grid.windows\26.2.9</PkgSyncfusion_Grid_Windows>
+    <PkgSyncfusion_Tools_Windows Condition=" '$(PkgSyncfusion_Tools_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.tools.windows\26.2.9</PkgSyncfusion_Tools_Windows>
+    <PkgSyncfusion_Schedule_Windows Condition=" '$(PkgSyncfusion_Schedule_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.schedule.windows\26.2.9</PkgSyncfusion_Schedule_Windows>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\angel\.nuget\packages\microsoft.net.illink.tasks\8.0.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net8.0-windows10.0.19041.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.shared.base\26.2.9</PkgSyncfusion_Shared_Base>
+    <PkgSyncfusion_Grid_Windows Condition=" '$(PkgSyncfusion_Grid_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.grid.windows\26.2.9</PkgSyncfusion_Grid_Windows>
+    <PkgSyncfusion_Tools_Windows Condition=" '$(PkgSyncfusion_Tools_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.tools.windows\26.2.9</PkgSyncfusion_Tools_Windows>
+    <PkgSyncfusion_Schedule_Windows Condition=" '$(PkgSyncfusion_Schedule_Windows)' == '' ">C:\Users\angel\.nuget\packages\syncfusion.schedule.windows\26.2.9</PkgSyncfusion_Schedule_Windows>
     <PkgMicrosoft_WindowsAppSDK Condition=" '$(PkgMicrosoft_WindowsAppSDK)' == '' ">C:\Users\angel\.nuget\packages\microsoft.windowsappsdk\1.3.230724000</PkgMicrosoft_WindowsAppSDK>
   </PropertyGroup>
 </Project>

@@ -8,9 +8,7 @@
 <StackLayout.Background>
         <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
                 <GradientStop Color="#ffffff" Offset="0.0" />
-                    <!-- Negro semitransparente -->
                 <GradientStop Color="#8D14A5" Offset="1.0" />
-                    <!-- Negro semitransparente -->
         </RadialGradientBrush>
 </StackLayout.Background>
 
