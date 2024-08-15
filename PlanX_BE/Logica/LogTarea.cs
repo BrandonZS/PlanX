@@ -32,7 +32,7 @@ namespace PlanXBackend.Logica
                     res.resultado = false;
                     res.error = "Apellido faltante";
                 }
-                else if (String.IsNullOrEmpty(req.email))
+                else if (req.idUsuario < 1)
                 {
                     res.resultado = false;
                     res.error = "Correo Electronico faltante";
@@ -43,7 +43,7 @@ namespace PlanXBackend.Logica
                     int? errorId = 0;
                     string errorDescripcion = null;
                     ConexionLINQDataContext linq = new ConexionLINQDataContext();
-                    linq.SP_INSERTAR_TAREA(req.titulo, req.descripcion, req.fecHoraInicio, req.fecHoraFin, req.email, req.prioridad);
+                    linq.SP_INSERTAR_TAREA(req.titulo, req.descripcion, req.fecHoraInicio, req.fecHoraFin, req.idUsuario, req.prioridad, ref idReturn, ref errorId, ref errorDescripcion);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
@@ -52,7 +52,9 @@ namespace PlanXBackend.Logica
                     }
                     else
                     {
+                        
                         res.resultado = true;
+                        res.error = errorDescripcion;
 
                     }
                 }
