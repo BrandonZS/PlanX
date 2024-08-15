@@ -328,6 +328,24 @@ BEGIN
     WHERE [idUsuario] = @ID_USER;
 END;
 GO
+
+CREATE OR ALTER PROCEDURE SP_OBTENER_LISTA_EVENTOS
+    @ID_USER INT
+AS
+BEGIN
+    SELECT 
+        [codInvitacion] AS COD_INVI,
+        [nombre] AS NOMBRE,
+        [descripcion] AS DESCRIPCION,
+        [fechaHoraInicio] AS FECINICIO,
+        [fechaHoraFin] AS FECFIN,
+        [limiteUsuarios] AS LIM_USERS,
+        [duracion] AS DURACION
+    FROM [dbo].[Evento]
+    WHERE [idUsuario] = @ID_USER;
+END;
+GO
+
 --SP para insertar una Tarea ////Ultima Actualizacion 8/8/2024 19:16
 CREATE OR ALTER PROCEDURE SP_INSERTAR_TAREA
 	@TITULO VARCHAR(255),
