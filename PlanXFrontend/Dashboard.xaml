@@ -4,13 +4,16 @@
              x:Class="MauiApp1.Dashboard"
              Title=""
              NavigationPage.TitleIconImageSource="Resources/Images/planxlogoresize.png"
-             xmlns:control="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:viewModel="clr-namespace:PlanXFrontend.ViewModel">
+
+    <!-- Define Toolbar Items -->
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="tbiJoinGroup" Order="Primary" Text="Join Group" Clicked="tbiJoinGroup_Clicked"/>
         <ToolbarItem x:Name="tbiTask" Order="Primary" Text="Tasks" Clicked="tbiTask_Clicked"/>
         <ToolbarItem x:Name="tbiAccount" Order="Primary" Text="Account"  Clicked="tbiAccount_Clicked"/>
     </ContentPage.ToolbarItems>
-    <Grid Margin="5">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -19,32 +22,27 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
     
-        <StackLayout VerticalOptions="Start" 
-                    Grid.Row="0" 
-                    Margin="15">
-            <control:SfCalendar NavigationDirection="Horizontal" 
-                            View="Month" 
-                            BackgroundColor="White" 
-                            SelectionBackground="#898D14A5" 
-                            VerticalOptions="CenterAndExpand" 
-                            HorizontalOptions="CenterAndExpand">
+        <StackLayout VerticalOptions="FillAndExpand" 
+                    Grid.Row="0"
+                    HorizontalOptions="FillAndExpand">
+            <ScrollView>
+                
+                    <syncfusion:SfScheduler x:Name="ScheduleView" 
+                                AppointmentsSource="{Binding SchedulerEvents}"
+                                AllowedViews="Agenda,Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week"
+                                View="Week"
+                                ShowWeekNumber="True"
+                                TodayHighlightBrush="#8D14A5">
+                    <syncfusion:SfScheduler.BindingContext>
+                        <viewModel:ControlViewModel />
+                    </syncfusion:SfScheduler.BindingContext>
 
-            <control:SfCalendar.HeaderView>
-                <control:CalendarHeaderView>
-                    <control:CalendarHeaderView.TextStyle>
-                        <control:CalendarTextStyle FontFamily="Roboto" 
-                                                    FontSize="17" TextColor="Black" FontAttributes="Bold">
-                        </control:CalendarTextStyle>
-                    </control:CalendarHeaderView.TextStyle>
-                </control:CalendarHeaderView>
-            </control:SfCalendar.HeaderView>
-            <control:SfCalendar.MonthView>
-                <control:CalendarMonthView FirstDayOfWeek="Monday" 
-                                            NumberOfVisibleWeeks="6">
-                </control:CalendarMonthView>
-            </control:SfCalendar.MonthView>
-            
-        </control:SfCalendar>
+                </syncfusion:SfScheduler>
+                        
+
+            </ScrollView>
+
+
             <BoxView Color="LightGray" 
                     HeightRequest="1" 
                     HorizontalOptions="Fill"/>

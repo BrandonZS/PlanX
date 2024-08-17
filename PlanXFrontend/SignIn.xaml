@@ -77,20 +77,20 @@
                         BackgroundColor="Transparent"
                         Margin="0,0,0,20"/>
 
-                <Picker Title="Select Your Country" 
+                <Picker Title="Select Your Country"
+                x:Name="enyCountry"
                 TitleColor="White" 
                 TextColor="White"
                 FontFamily="Roboto"
                 BackgroundColor="Transparent"
                 Margin="0,0,0,20">
                 <Picker.Items>
-                <x:String>Costa Rica</x:String>
-                <x:String>Canada</x:String>
-                <x:String>China</x:String>
-                <x:String>Spain</x:String>
-                <x:String>Brazil</x:String>
-                <x:String>United States</x:String>
-                <x:String>Japan</x:String>
+                <x:String>CR</x:String>
+                <x:String>CN</x:String>
+                <x:String>SP</x:String>
+                <x:String>BZ</x:String>
+                <x:String>US</x:String>
+                <x:String>JP</x:String>
                 </Picker.Items>
                 </Picker>
 
@@ -105,7 +105,8 @@
                         TextColor="Black" 
                         FontAttributes="Bold"
                         BorderColor="Black" 
-                        BorderWidth="2"/>
+                        BorderWidth="2"
+                        Clicked="btnSignInPass_Clicked"/>
             </StackLayout>
             
         </Frame>

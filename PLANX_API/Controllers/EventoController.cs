@@ -21,14 +21,14 @@ namespace PLANX_API.Controllers
             return new LogEvento().insertarEvento(req);
         }
 
-        [System.Web.Http.HttpGet]
+        [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/evento/obtenerevento")]
         public ResObtenerEvento obtenerEvento(ReqObtenerEvento req)
         {
             return new LogEvento().obtenerEvento(req);
         }
 
-        [System.Web.Http.HttpGet]
+        [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/evento/obtenerlistaevento")]
         public ResObtenerListaEvento obtenerListaEvento(ReqObtenerListaEvento req)
         {
