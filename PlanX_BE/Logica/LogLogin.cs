@@ -1,10 +1,13 @@
 ﻿using PlanXBackend.Acceso_Datos;
+using PlanXBackend.Entidades.Entities;
 using PlanXBackend.Entidades.Request;
 using PlanXBackend.Entidades.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace PlanXBackend.Logica
@@ -13,60 +16,67 @@ namespace PlanXBackend.Logica
     {
         public ResLogin solicitudLogin(ReqLogin req)
         {
-            //Instancio mi respuesta
             ResLogin res = new ResLogin();
-
+            short tipoRegistro = 0; //1 Exitoso - 2 Error en Logica - 3 Error No Controlado
             try
             {
-                if (req == null)
+                if (String.IsNullOrEmpty(req.email))
                 {
                     res.resultado = false;
-                    res.error = "Req null";
+                    res.listaDeErrores.Add("Correo electronico faltante");
+                    tipoRegistro = 2; //No Exitoso
                 }
-                else if (String.IsNullOrEmpty(req.email))
+                if (String.IsNullOrEmpty(req.password))
                 {
                     res.resultado = false;
-                    res.error = "Email faltante";
+                    res.listaDeErrores.Add("Password faltante");
+                    tipoRegistro = 2; //No Exitoso
                 }
-                else if (String.IsNullOrEmpty(req.password))
-                {
-                    res.resultado = false;
-                    res.error = "Contraseña faltante";
-                }
-                else
-                {
 
-                    //Todos los datos son correctos
-                    //Enviarlos a LINQ
+                if (!res.listaDeErrores.Any()) /*Lista vacia*/
+                {
+                    //No hay errores
+                    //Enviar a linq
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
                     int? idReturn = 0;
-                    string nombre = null;
-                    string apellido = null;
-                    ConexionLINQDataContext linq = new ConexionLINQDataContext();   //Instancio linq
-                    linq.SP_LOGIN(req.email, req.password, ref idReturn, ref nombre, ref apellido);
-                    if (idReturn == 0)
+                    int? idError = 0;
+                    string errorBd = "";
+                    SP_LOGINResult resultado = new SP_LOGINResult();
+                    resultado = linq.SP_LOGIN(req.email, req.password, ref idReturn, ref idError, ref errorBd).ToList().First();
+                    if (idError == null || idError == 0)
                     {
-                        res.resultado = false;
-                        res.error = "Error en BD";
-
+                            //Usuario verificado
+                            res.resultado = true;
+                            res.usuario = this.armarUsuario(resultado);      
                     }
                     else
                     {
-                        res.nombre = nombre;
-                        res.apellido = apellido;
-                        res.resultado = true;
-                        res.Token = GeneradorToken.GenerateToken(req.email);
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorBd); //GRAVISIMO!!!
+                        tipoRegistro = 2; //No Exitoso
                     }
                 }
             }
             catch (Exception ex)
             {
-                res.resultado = false;
-                res.error = "Ni idea xq se cayó XD";
+                //Se bitacorea todo resultado. Exitoso o no exitoso.
+                //Utilitarios.Utilitarios.crearBitacora(res.listaDeErrores, tipoRegistro, System.Reflection.MethodBase.GetCurrentMethod().DeclaringType.Name, MethodBase.GetCurrentMethod().Name, JsonConvert.SerializeObject(req), JsonConvert.SerializeObject(res));
             }
 
             return res;
+        }
+        private Usuario armarUsuario(SP_LOGINResult usuarioLinq)
+        {
+            Usuario usuario = new Usuario();
+            usuario.Id = usuarioLinq.ID_USUARIO;
+            usuario.nombre = usuarioLinq.NOMBRE;
+            usuario.apellido = usuarioLinq.APELLIDOS;
+            usuario.email = usuarioLinq.CORREO_ELECTRONICO;
+            usuario.codPais = usuarioLinq.CODIGO_PAIS;
+            Guid guid = Guid.NewGuid();
+            usuario.token = guid.ToString();
 
-
+            return usuario;
         }
 
     }

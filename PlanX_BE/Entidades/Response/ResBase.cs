@@ -8,7 +8,7 @@ namespace PlanXBackend.Entidades.Response
 {
     public class ResBase
     {
-        public Boolean resultado { get; set; }
-        public string error { get; set; }
+        public bool resultado { get; set; }
+        public List<String> listaDeErrores = new List<String>();
     }
 }

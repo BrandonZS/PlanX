@@ -75,11 +75,13 @@ CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_USUARIO_REGULAR
 	@CONTRA_ANTIGUA NVARCHAR(255),
 	@CONTRA_NUEVA NVARCHAR(255),
 	@ID_USER INT,
+	@COD_PAIS VARCHAR(2),
     @ERRORID int output,
     @ERRORDESCRIPCION nvarchar(max) output
 AS
 BEGIN
 	BEGIN TRY
+
 		IF @NOMBRE IS NOT NULL
 		BEGIN
 			UPDATE  [dbo].[Usuario]
@@ -92,6 +94,16 @@ BEGIN
 			SET [apellido] = @APELLIDO
 			WHERE [idUsuario] = @ID_USER
 		END
+		IF @COD_PAIS IS NOT NULL
+		BEGIN
+			DECLARE @ID_PAIS INT
+			SELECT @ID_PAIS = [idPais] FROM [dbo].[PAIS] WHERE @COD_PAIS = [codigo]
+			UPDATE  [dbo].[Usuario]
+			SET [idPais] = @ID_PAIS
+			WHERE [idUsuario] = @ID_USER
+		END
+
+
 		IF @CONTRA_ANTIGUA IS NOT NULL AND @CONTRA_NUEVA IS NOT NULL
 		BEGIN
 			if(SELECT [contrasenha] FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER ) = @CONTRA_ANTIGUA
@@ -140,29 +152,47 @@ GO
 
 --SP para el login de usuario ////Ultima Actualizacion 8/8/2024 14:23
 
-CREATE PROCEDURE SP_LOGIN
-    @CORREO_ELECTRONICO nVARCHAR(50), 
-    @PASSWORD NVARCHAR(max),           
-    @id_usuario INT OUTPUT,
-    @nombre NVARCHAR(50) OUTPUT,
-    @apellidos NVARCHAR(50) OUTPUT
+CREATE OR ALTER PROCEDURE SP_LOGIN
+    @CORREO_ELECTRONICO NVARCHAR(50), 
+    @PASSWORD NVARCHAR(MAX),           
+    @IDRETURN INT OUTPUT,
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
 AS
 BEGIN
-    SET @id_usuario = 0;
-    SET @nombre = '';
-    SET @apellidos = '';
-    
+    -- Inicializar los valores de salida
+    SET @IDRETURN = 0;
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el usuario existe
     IF EXISTS (
-        SELECT [idUsuario], [nombre], [apellido]
+        SELECT [idUsuario]
         FROM [dbo].[Usuario]
         WHERE [email] = @CORREO_ELECTRONICO
             AND [contrasenha] = @PASSWORD
     )
     BEGIN
-        SELECT @id_usuario = [idUsuario], @nombre = nombre, @apellidos = [apellido]
-        FROM [dbo].[Usuario]
-        WHERE  [email] =  @CORREO_ELECTRONICO
-            AND [contrasenha] = @PASSWORD;
+        -- Seleccionar datos del usuario junto con el código del país
+        SELECT 
+            u.[idUsuario] AS ID_USUARIO,
+            u.[nombre] AS NOMBRE,
+            u.[apellido] AS APELLIDOS,
+			u.[email] AS CORREO_ELECTRONICO,
+            p.[codigo] AS CODIGO_PAIS
+        FROM 
+            [dbo].[Usuario] u
+            INNER JOIN [dbo].[Pais] p ON u.[IDPAIS] = p.[idPais]
+        WHERE 
+            u.[email] = @CORREO_ELECTRONICO
+            AND u.[contrasenha] = @PASSWORD;
+    END
+    ELSE
+    BEGIN
+        -- Manejar error cuando el usuario no existe
+        SET @IDRETURN = -1;
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
     END
 END
 GO
@@ -288,28 +318,78 @@ GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_EVENTO
     @ID_USER INT,
-	@COD_INVI VARCHAR(255) OUTPUT,
-	@NOMBRE VARCHAR(255) OUTPUT, 
-	@DESCRIPCION VARCHAR(255) OUTPUT,
-	@FECINICIO DATETIME OUTPUT,
-	@FECFIN DATETIME OUTPUT,
-	@LIM_USERS INT OUTPUT,
-	@DURACION FLOAT OUTPUT
+	@COD_INVI VARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(255) OUTPUT
 AS
 BEGIN
 
-    SELECT 
-        @COD_INVI = [codInvitacion],
-        @NOMBRE = [nombre],
-        @DESCRIPCION = [descripcion],
-        @FECINICIO = [fechaHoraInicio],
-        @FECFIN = [fechaHoraFin],
-        @LIM_USERS = [limiteUsuarios],
-        @DURACION = [duracion]
-    FROM [dbo].[Evento]
-    WHERE [idUsuario] = @ID_USER;
-END;
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el evento existe
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [codInvitacion] = @COD_INVI
+    )
+    BEGIN
+        -- Seleccionar datos del evento
+        SELECT 
+            [nombre] AS NOMBRE_EVENTO,
+            [descripcion] AS DESCRIPCION,
+            [fechaHoraInicio] AS HORA_INICIO,
+            [fechaHoraFin] AS HORA_FINAL,
+            [limiteUsuarios] AS LIM_USERS,
+            [duracion] AS DURACION
+        FROM [dbo].[Evento]
+        WHERE [codInvitacion] = @COD_INVI;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END
+END
 GO
+
+CREATE OR ALTER PROCEDURE SP_OBTENER_LISTA_EVENTOS
+    @ID_USER INT,
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(255) OUTPUT
+AS
+BEGIN
+
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = '';
+
+    -- Comprobar si el evento existe
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER
+    )
+    BEGIN
+        -- Seleccionar datos del evento
+        SELECT 
+            [nombre] AS NOMBRE_EVENTO,
+            [descripcion] AS DESCRIPCION,
+            [fechaHoraInicio] AS HORA_INICIO,
+            [fechaHoraFin] AS HORA_FINAL,
+            [limiteUsuarios] AS LIM_USERS,
+            [duracion] AS DURACION,
+			[codInvitacion] AS COD_INVI
+        FROM [dbo].[Evento]
+        WHERE [idUsuario] = @ID_USER;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END
+END
+GO
+
 --SP para insertar una Tarea ////Ultima Actualizacion 8/8/2024 19:16
 CREATE OR ALTER PROCEDURE SP_INSERTAR_TAREA
 	@TITULO VARCHAR(255),
@@ -360,23 +440,34 @@ GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_TAREA
     @ID_USER INT,
-	@TITULO VARCHAR(255) OUTPUT,
-	@DESCRIPCION VARCHAR(255) OUTPUT,
-	@FECINICIO DATETIME OUTPUT,
-	@FECFIN DATETIME OUTPUT,
-	@ID_PRIORIDAD INT OUTPUT
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
+
 AS
 BEGIN
-	DECLARE @PRIORIDAD VARCHAR(255)
-	SELECT @PRIORIDAD = [descripcion] FROM [dbo].[Prioridad] WHERE [idPrioridad] = @ID_PRIORIDAD
-    SELECT 
-        @TITULO = [titulo],
-        @DESCRIPCION = [descripcion],
-        @FECINICIO = [fechaHoraInicio],
-        @FECFIN = [fechaHoraFinal],
-        @PRIORIDAD = [idPrioridad]
-    FROM [dbo].[Tarea]
-    WHERE [idUsuario] = @ID_USER;
+
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Tarea]
+        WHERE [idUsuario] = @ID_USER
+    )
+    BEGIN
+        -- Seleccionar datos de la tarea
+        SELECT 
+           t.[titulo] AS TITULO,
+           t.[descripcion] AS DESCRIPCION,
+           t.[fechaHoraInicio] AS FECINICIAL,
+           t.[fechaHoraFinal] AS FECFINAL,
+           p.[descripcion] AS PRIORIDAD
+        FROM [dbo].[Tarea] t
+        INNER JOIN [dbo].[Prioridad] p ON t.[idPrioridad] = p.[idPrioridad]
+        WHERE t.[idUsuario] = @ID_USER;
+    END
+    ELSE
+    BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
+    END
 END;
 GO
 
