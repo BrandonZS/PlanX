@@ -7,6 +7,7 @@ namespace PlanXFrontend;
 
 public class DatePickerViewModel : INotifyPropertyChanged
 {
+
     private DateTime minDate;
     private DateTime maxDate;
     private DateTime selectedDate;

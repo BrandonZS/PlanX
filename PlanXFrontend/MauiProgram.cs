@@ -5,6 +5,7 @@ namespace PlanXFrontend
 {
     public static class MauiProgram
     {
+        public const string API_URL = "https://localhost:44302/";
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();

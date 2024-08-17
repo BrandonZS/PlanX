@@ -107,7 +107,8 @@
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                                <Picker Title="Select Your Country" 
+                                <Picker Title="Select duration" 
+                                x:Name="enyDuracion"
                                 TitleColor="White" 
                                 TextColor="White"
                                 FontFamily="Roboto"
@@ -141,7 +142,8 @@
                         TextColor="Black" 
                         FontAttributes="Bold"
                         BorderColor="Black" 
-                        BorderWidth="2"/>
+                        BorderWidth="2"
+                        Clicked="btnCreateEvent_Clicked"/>
             </StackLayout>
             
         </Frame>

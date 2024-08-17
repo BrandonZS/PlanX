@@ -10,8 +10,8 @@ namespace MauiApp1;
 
 public partial class LogIn : ContentPage
 {
-	string laURL = "https://backendcursos.azurewebsites.net/";
-	public LogIn()
+    string laUrl = App.API_URL;
+    public LogIn()
 	{
 		InitializeComponent();
          NavigationPage.SetHasNavigationBar(this, false);
@@ -22,8 +22,7 @@ public partial class LogIn : ContentPage
     try
 	{
 		//Validaciones
-		//Conectar con API
- 
+		
 		ReqLogin req = new ReqLogin();
 		req.email = enyMail.Text;
 		req.password = enyPassword.Text;
@@ -32,7 +31,7 @@ public partial class LogIn : ContentPage
  
 		HttpClient httpClient = new HttpClient();
  
-		var response = await httpClient.PostAsync(laURL + "api/usuario/login", jsonContent);
+		var response = await httpClient.PostAsync(laUrl + "api/login", jsonContent);
  
 		if (response.IsSuccessStatusCode) //El API esta vivo???
 		{
