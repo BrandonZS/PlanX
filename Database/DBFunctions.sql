@@ -331,8 +331,7 @@ BEGIN
     IF EXISTS (
         SELECT 1
         FROM [dbo].[Evento]
-        WHERE [idUsuario] = @ID_USER
-          AND [codInvitacion] = @COD_INVI
+        WHERE [codInvitacion] = @COD_INVI
     )
     BEGIN
         -- Seleccionar datos del evento
@@ -344,8 +343,7 @@ BEGIN
             [limiteUsuarios] AS LIM_USERS,
             [duracion] AS DURACION
         FROM [dbo].[Evento]
-        WHERE [idUsuario] = @ID_USER
-          AND [codInvitacion] = @COD_INVI;
+        WHERE [codInvitacion] = @COD_INVI;
     END
     ELSE
     BEGIN
