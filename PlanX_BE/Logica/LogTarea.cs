@@ -1,6 +1,11 @@
 ﻿using PlanXBackend.Acceso_Datos;
+using PlanXBackend.Entidades.Entities;
 using PlanXBackend.Entidades.Request;
+using PlanXBackend.Entidades.Request.ReqEvento;
+using PlanXBackend.Entidades.Request.ReqTarea;
 using PlanXBackend.Entidades.Response;
+using PlanXBackend.Entidades.Response.ResEvento;
+using PlanXBackend.Entidades.Response.ResTarea;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,22 +25,22 @@ namespace PlanXBackend.Logica
                 if (req == null)
                 {
                     res.resultado = false;
-                    res.error = "Req null";
+                    res.listaDeErrores.Add("Req null");
                 }
                 else if (String.IsNullOrEmpty(req.titulo))
                 {
                     res.resultado = false;
-                    res.error = "Nombre faltante";
+                    res.listaDeErrores.Add("Nombre faltante");
                 }
                 else if (String.IsNullOrEmpty(req.descripcion))
                 {
                     res.resultado = false;
-                    res.error = "Apellido faltante";
+                    res.listaDeErrores.Add("Apellido faltante");
                 }
                 else if (req.idUsuario < 1)
                 {
                     res.resultado = false;
-                    res.error = "Correo Electronico faltante";
+                    res.listaDeErrores.Add("Correo Electronico faltante");
                 }
                 else
                 {
@@ -47,14 +52,14 @@ namespace PlanXBackend.Logica
                     if (idReturn == 0)
                     {
                         res.resultado = false;
-                        res.error = errorDescripcion;
+                        res.listaDeErrores.Add(errorDescripcion);
 
                     }
                     else
                     {
                         
                         res.resultado = true;
-                        res.error = errorDescripcion;
+                        res.listaDeErrores.Add(errorDescripcion);
 
                     }
                 }
@@ -62,10 +67,71 @@ namespace PlanXBackend.Logica
             catch (Exception ex)
             {
                 res.resultado = false;
-                res.error = "Excepcion ha ocurrido";
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
             }
 
             return res;
+        }
+
+        public ResObtenerTarea obtenerListaTarea(ReqObtenerTarea req)
+        {
+            ResObtenerTarea res = new ResObtenerTarea();
+            try
+            {
+                //Faltan Comprobaciones de otros datos
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.id < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Error en el usuario");
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    List<SP_OBTENER_TAREAResult> resultado = new List<SP_OBTENER_TAREAResult>();
+                    resultado = linq.SP_OBTENER_TAREA(req.id, ref errorId, ref errorDescripcion).ToList();
+                    if (errorId != 0)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+                        foreach (SP_OBTENER_TAREAResult tarea in resultado)
+                        {
+                            res.listaTarea.Add(armarTarea(tarea));
+                        }
+
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+            return res;
+        }
+        private Tarea armarTarea(SP_OBTENER_TAREAResult tareaLinq)
+        {
+            Tarea tarea = new Tarea();
+            tarea.titulo = tareaLinq.TITULO;
+            tarea.descripcion = tareaLinq.DESCRIPCION;
+            tarea.fecHoraInicio = tareaLinq.FECINICIAL;
+            tarea.fecHoraFin = tareaLinq.FECFINAL;
+            tarea.prioridad = tareaLinq.PRIORIDAD;
+            return tarea;
         }
     }
 }

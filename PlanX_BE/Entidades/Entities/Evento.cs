@@ -13,7 +13,7 @@ namespace PlanXBackend.Entidades.Entities
         public string descripcion { get; set; }
         public DateTime fecHoraInicio { get; set; }
         public DateTime fecHoraFin { get; set; }
-        public int limUsers { get; set; }
+        public int? limUsers { get; set; }
         public float duracion  { get; set; }
     } 
 }

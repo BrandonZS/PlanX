@@ -1,4 +1,5 @@
 ﻿using PlanXBackend.Acceso_Datos;
+using PlanXBackend.Entidades.Entities;
 using PlanXBackend.Entidades.Request;
 using PlanXBackend.Entidades.Response;
 using PlanXBackend.Entidades.Response.ResUsuario;
@@ -20,32 +21,32 @@ namespace PlanXBackend.Logica
                 if (req == null)
                 {
                     res.resultado = false;
-                    res.error = "Req null";
+                    res.listaDeErrores.Add("Req null");
                 }
                 else if (String.IsNullOrEmpty(req.nombre))
                 {
                     res.resultado = false;
-                    res.error = "Nombre faltante";
+                    res.listaDeErrores.Add("Nombre faltante");
                 }
                 else if (String.IsNullOrEmpty(req.apellido))
                 {
                     res.resultado = false;
-                    res.error = "Apellido faltante";
+                    res.listaDeErrores.Add("Apellido faltante");
                 }
                 else if (String.IsNullOrEmpty(req.email))
                 {
                     res.resultado = false;
-                    res.error = "Correo Electronico faltante";
+                    res.listaDeErrores.Add("Correo electronico faltante");
                 }
                 else if (String.IsNullOrEmpty(req.contrasenha))
                 {
                     res.resultado = false;
-                    res.error = "Contraseña faltante";
+                    res.listaDeErrores.Add("Contraseña faltante");
                 }
                 else if (String.IsNullOrEmpty(req.codPais))
                 {
                     res.resultado = false;
-                    res.error = "pais faltante";
+                    res.listaDeErrores.Add("pais faltante");
                 }
                 else
                 {
@@ -57,7 +58,7 @@ namespace PlanXBackend.Logica
                     if (idReturn == 0)
                     {
                         res.resultado = false;
-                        res.error = errorDescripcion;
+                        res.listaDeErrores.Add(errorDescripcion);
 
                     }
                     else
@@ -70,7 +71,7 @@ namespace PlanXBackend.Logica
             catch (Exception ex)
             {
                 res.resultado = false;
-                res.error = "Excepcion ha ocurrido";
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
             }
 
             return res;
@@ -84,38 +85,43 @@ namespace PlanXBackend.Logica
                 if (req == null)
                 {
                     res.resultado = false;
-                    res.error = "Req null";
+                    res.listaDeErrores.Add("Req null");
                 }
                 else if (req.nombre == "")
                 {
                     res.resultado = false;
-                    res.error = "Nombre faltante";
+                    res.listaDeErrores.Add("Nombre faltante");
                 }
                 else if (req.apellido == "")
                 {
                     res.resultado = false;
-                    res.error = "Apellido faltante";
+                    res.listaDeErrores.Add("Apellido faltante");
                 }
                 else if (req.contraAntigua == "")
                 {
                     res.resultado = false;
-                    res.error = "Contraseña faltante";
+                    res.listaDeErrores.Add("Contraseña faltante");
                 }
                 else if (req.contraNueva == "")
                 {
                     res.resultado = false;
-                    res.error = "Contraseña faltante";
+                    res.listaDeErrores.Add("Contraseña faltante");
+                }
+                else if (req.codPais == "")
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Error en Pais");
                 }
                 else
                 {
                     int? errorId = 0;
                     string errorDescripcion = null;
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
-                    con.SP_ACTUALIZAR_USUARIO_REGULAR(req.nombre, req.apellido, req.contraAntigua, req.contraNueva, req.idUsuario, ref errorId, ref errorDescripcion);
+                    con.SP_ACTUALIZAR_USUARIO_REGULAR(req.nombre, req.apellido, req.contraAntigua, req.contraNueva, req.idUsuario, req.codPais, ref errorId, ref errorDescripcion);
                     if (errorDescripcion != null)
                     {
                         res.resultado = false;
-                        res.error = errorDescripcion;
+                        res.listaDeErrores.Add(errorDescripcion);
 
                     }
                     else
@@ -128,7 +134,7 @@ namespace PlanXBackend.Logica
             catch (Exception ex)
             {
                 res.resultado = false;
-                res.error = "Excepcion ha ocurrido";
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
             }
 
             return res;
@@ -141,17 +147,17 @@ namespace PlanXBackend.Logica
                 if (req == null)
                 {
                     res.resultado = false;
-                    res.error = "Req null";
+                    res.listaDeErrores.Add("Req null");
                 }
                 else if (req.idUsuario <1)
                 {
                     res.resultado = false;
-                    res.error = "Nombre faltante";
+                    res.listaDeErrores.Add("Nombre faltante");
                 }
                 else if (String.IsNullOrEmpty(req.contrasenha))
                 {
                     res.resultado = false;
-                    res.error = "Apellido faltante";
+                    res.listaDeErrores.Add("Contraseña faltante");
                 }
                 else
                 {
@@ -162,7 +168,7 @@ namespace PlanXBackend.Logica
                     if (errorDescripcion != null)
                     {
                         res.resultado = false;
-                        res.error = errorDescripcion;
+                        res.listaDeErrores.Add(errorDescripcion);
 
                     }
                     else
@@ -175,10 +181,13 @@ namespace PlanXBackend.Logica
             catch (Exception ex)
             {
                 res.resultado = false;
-                res.error = "Excepcion ha ocurrido";
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
             }
 
             return res;
         }
+
+
+
     }
 }

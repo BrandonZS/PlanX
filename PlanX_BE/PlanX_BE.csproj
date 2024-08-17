@@ -55,6 +55,11 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\System.IdentityModel.Tokens.Jwt.8.0.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -94,20 +99,25 @@
     <Compile Include="Entidades\Entities\Evento.cs" />
     <Compile Include="Entidades\Entities\Tarea.cs" />
     <Compile Include="Entidades\Entities\Usuario.cs" />
+    <Compile Include="Entidades\Request\ReqEvento\ReqObtenerEvento.cs" />
+    <Compile Include="Entidades\Request\ReqEvento\ReqObtenerListaEvento.cs" />
+    <Compile Include="Entidades\Request\ReqTarea\ReqObtenerTarea.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqActualizarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqEliminarUsuario.cs" />
-    <Compile Include="Entidades\Request\ReqInsertarEvento.cs" />
-    <Compile Include="Entidades\Request\ReqInsertarTarea.cs" />
+    <Compile Include="Entidades\Request\ReqEvento\ReqInsertarEvento.cs" />
+    <Compile Include="Entidades\Request\ReqTarea\ReqInsertarTarea.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqInsertarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLogin.cs" />
+    <Compile Include="Entidades\Response\ResEvento\ResObtenerEvento.cs" />
+    <Compile Include="Entidades\Response\ResEvento\ResObtenerListaEvento.cs" />
+    <Compile Include="Entidades\Response\ResTarea\ResObtenerTarea.cs" />
     <Compile Include="Entidades\Response\ResUsuario\ResActualizarUsuario.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
-    <Compile Include="Entidades\Response\ResInsertarEvento.cs" />
-    <Compile Include="Entidades\Response\ResInsertarTarea.cs" />
+    <Compile Include="Entidades\Response\ResEvento\ResInsertarEvento.cs" />
+    <Compile Include="Entidades\Response\ResTarea\ResInsertarTarea.cs" />
     <Compile Include="Entidades\Response\ResUsuario\ResEliminarUsuario.cs" />
     <Compile Include="Entidades\Response\ResUsuario\ResInsertarUsuario.cs" />
     <Compile Include="Entidades\Response\ResLogin.cs" />
-    <Compile Include="Logica\GeneradorToken.cs" />
     <Compile Include="Logica\LogEvento.cs" />
     <Compile Include="Logica\LogLogin.cs" />
     <Compile Include="Logica\LogTarea.cs" />

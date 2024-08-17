@@ -9,6 +9,7 @@ namespace PlanXBackend.Entidades.Entities
 {
     public class Usuario
     {
+        public Int64 Id { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string email { get; set; }
