@@ -12,6 +12,7 @@ namespace PlanXBackend.Entidades.Request
         public string apellido { get; set; }
         public string contraAntigua { get; set; }
         public string contraNueva { get; set; }
+        public string codPais { get; set; }
         public int idUsuario { get; set; }
     }
 }

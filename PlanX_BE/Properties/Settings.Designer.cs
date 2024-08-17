@@ -44,5 +44,16 @@ namespace PlanXBackend.Properties {
                 return ((string)(this["PLANXAPPConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=158.23.82.142;Initial Catalog=PLANXAPP;Persist Security Info=True;Use" +
+            "r ID=Admin1995;TrustServerCertificate=True")]
+        public string PLANXAPPConnectionString2 {
+            get {
+                return ((string)(this["PLANXAPPConnectionString2"]));
+            }
+        }
     }
 }
