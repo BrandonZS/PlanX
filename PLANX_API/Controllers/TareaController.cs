@@ -1,5 +1,7 @@
 ﻿using PlanXBackend.Entidades.Request;
+using PlanXBackend.Entidades.Request.ReqTarea;
 using PlanXBackend.Entidades.Response;
+using PlanXBackend.Entidades.Response.ResTarea;
 using PlanXBackend.Logica;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,13 @@ namespace PLANX_API.Controllers
         public ResInsertarTarea insertarTarea(ReqInsertarTarea req)
         {
             return new LogTarea().insertarTarea(req);
+        }
+
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/tarea/obtenertarea")]
+        public ResObtenerTarea obtenerTarea(ReqObtenerTarea req)
+        {
+            return new LogTarea().obtenerListaTarea(req);
         }
     }
 }
