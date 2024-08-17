@@ -21,7 +21,7 @@ namespace PLANX_API.Controllers
             return new LogTarea().insertarTarea(req);
         }
 
-        [System.Web.Http.HttpGet]
+        [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/tarea/obtenertarea")]
         public ResObtenerTarea obtenerTarea(ReqObtenerTarea req)
         {
