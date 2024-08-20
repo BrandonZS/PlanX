@@ -94,6 +94,7 @@
 
         <Button Text="Log Out" 
         TextColor="White"
+        CornerRadius="0"
         VerticalOptions="EndAndExpand"
         BackgroundColor="Red"
         FontAttributes="Bold"
