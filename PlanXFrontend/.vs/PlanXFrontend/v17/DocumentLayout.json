@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\entidades\\entities\\listaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:entidades\\entities\\listaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\viewmodel\\controlviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:viewmodel\\controlviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\entidades\\response\\resevento\\resobtenerlistaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:entidades\\response\\resevento\\resobtenerlistaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:joingrouppage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -49,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\signin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:signin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,18 +99,6 @@
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:entidades\\request\\requsuario\\reqinsertarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\viewmodel\\controlviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:viewmodel\\controlviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\entidades\\entities\\listaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:entidades\\entities\\listaeventos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planxfrontend\\entidades\\entities\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E64EED2-AB60-4536-8C2A-B856D5D1E5E8}|PlanXFrontend.csproj|solutionrelative:entidades\\entities\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -126,11 +126,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 26,
+          "SelectedChildIndex": 28,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ResObtenerListaEventos.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Response\\ResEvento\\ResObtenerListaEventos.cs",
               "RelativeDocumentMoniker": "Entidades\\Response\\ResEvento\\ResObtenerListaEventos.cs",
@@ -138,12 +146,11 @@
               "RelativeToolTip": "Entidades\\Response\\ResEvento\\ResObtenerListaEventos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:45:54.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:45:54.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ResObtenerEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Response\\ResEvento\\ResObtenerEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Response\\ResEvento\\ResObtenerEvento.cs",
@@ -151,12 +158,11 @@
               "RelativeToolTip": "Entidades\\Response\\ResEvento\\ResObtenerEvento.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:38:57.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:38:57.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ReqObtenerEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Request\\ReqEvento\\ReqObtenerEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Request\\ReqEvento\\ReqObtenerEvento.cs",
@@ -164,12 +170,11 @@
               "RelativeToolTip": "Entidades\\Request\\ReqEvento\\ReqObtenerEvento.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:37:37.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:37:37.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "JoinGroupPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\JoinGroupPage.xaml.cs",
               "RelativeDocumentMoniker": "JoinGroupPage.xaml.cs",
@@ -177,12 +182,11 @@
               "RelativeToolTip": "JoinGroupPage.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:35:14.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:35:14.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
@@ -190,12 +194,11 @@
               "RelativeToolTip": "MauiProgram.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:23:53.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:23:53.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
@@ -203,12 +206,11 @@
               "RelativeToolTip": "MainPage.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:23:46.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:23:46.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "ResInsertarEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Response\\ResEvento\\ResInsertarEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Response\\ResEvento\\ResInsertarEvento.cs",
@@ -216,12 +218,11 @@
               "RelativeToolTip": "Entidades\\Response\\ResEvento\\ResInsertarEvento.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:19:42.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:19:42.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "ReqInsertarEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Request\\ReqEvento\\ReqInsertarEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Request\\ReqEvento\\ReqInsertarEvento.cs",
@@ -229,12 +230,11 @@
               "RelativeToolTip": "Entidades\\Request\\ReqEvento\\ReqInsertarEvento.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:19:18.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:19:18.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "SignIn.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\SignIn.xaml",
               "RelativeDocumentMoniker": "SignIn.xaml",
@@ -242,12 +242,11 @@
               "RelativeToolTip": "SignIn.xaml",
               "ViewState": "AQIAAFcAAAAAAAAAAAAAAF0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-17T10:05:49.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:05:49.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "ResInsertarUsuario.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Response\\ResUsuario\\ResInsertarUsuario.cs",
               "RelativeDocumentMoniker": "Entidades\\Response\\ResUsuario\\ResInsertarUsuario.cs",
@@ -255,12 +254,11 @@
               "RelativeToolTip": "Entidades\\Response\\ResUsuario\\ResInsertarUsuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:05:24.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:05:24.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "ReqInsertarUsuario.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Request\\ReqUsuario\\ReqInsertarUsuario.cs",
               "RelativeDocumentMoniker": "Entidades\\Request\\ReqUsuario\\ReqInsertarUsuario.cs",
@@ -268,12 +266,11 @@
               "RelativeToolTip": "Entidades\\Request\\ReqUsuario\\ReqInsertarUsuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:04:13.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:04:13.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "SignIn.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\SignIn.xaml.cs",
               "RelativeDocumentMoniker": "SignIn.xaml.cs",
@@ -281,25 +278,23 @@
               "RelativeToolTip": "SignIn.xaml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T10:02:18.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T10:02:18.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T09:56:37.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T09:56:37.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 1,
               "Title": "ListaEventos.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Entities\\ListaEventos.cs",
               "RelativeDocumentMoniker": "Entidades\\Entities\\ListaEventos.cs",
@@ -320,8 +315,7 @@
               "RelativeToolTip": "Entidades\\Entities\\Evento.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T09:34:43.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T09:34:43.345Z"
             },
             {
               "$type": "Document",
@@ -333,12 +327,11 @@
               "RelativeToolTip": "Entidades\\Entities\\Sesion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T09:34:37.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T09:34:37.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "App.g.i.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
               "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
@@ -346,18 +339,17 @@
               "RelativeToolTip": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAvwE0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:48:22.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:48:22.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 2,
               "Title": "ControlViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\ViewModel\\ControlViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\ControlViewModel.cs",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\ViewModel\\ControlViewModel.cs",
               "RelativeToolTip": "ViewModel\\ControlViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAMAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T08:38:56.322Z",
               "EditorCaption": ""
@@ -372,12 +364,11 @@
               "RelativeToolTip": "Entidades\\Entities\\Usuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:26:46.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:26:46.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "ReqObtenerListaEventos.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Entidades\\Request\\ReqEvento\\ReqObtenerListaEventos.cs",
               "RelativeDocumentMoniker": "Entidades\\Request\\ReqEvento\\ReqObtenerListaEventos.cs",
@@ -385,12 +376,11 @@
               "RelativeToolTip": "Entidades\\Request\\ReqEvento\\ReqObtenerListaEventos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:26:29.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:26:29.752Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "CreateEventPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\CreateEventPage.xaml.cs",
               "RelativeDocumentMoniker": "CreateEventPage.xaml.cs",
@@ -398,12 +388,11 @@
               "RelativeToolTip": "CreateEventPage.xaml.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAIwA8AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T08:07:47.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:07:47.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "CreateEventPage.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\CreateEventPage.xaml",
               "RelativeDocumentMoniker": "CreateEventPage.xaml",
@@ -411,12 +400,11 @@
               "RelativeToolTip": "CreateEventPage.xaml",
               "ViewState": "AQIAAHwAAAAAAAAAAAAcwJEAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-17T08:07:10.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:07:10.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "LogIn.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\LogIn.xaml",
               "RelativeDocumentMoniker": "LogIn.xaml",
@@ -424,12 +412,11 @@
               "RelativeToolTip": "LogIn.xaml",
               "ViewState": "AQIAACAAAAAAAAAAAAAewDIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-17T08:06:54.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T08:06:54.135Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
@@ -437,8 +424,7 @@
               "RelativeToolTip": "MainPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-17T07:38:36.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T07:38:36.707Z"
             },
             {
               "$type": "Document",
@@ -450,18 +436,17 @@
               "RelativeToolTip": "ViewModel\\DatePickerViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T07:07:06.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T07:07:06.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 3,
               "Title": "Dashboard.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Dashboard.xaml",
               "RelativeDocumentMoniker": "Dashboard.xaml",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Dashboard.xaml",
               "RelativeToolTip": "Dashboard.xaml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAewCIAAAA+AAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-17T07:02:37.295Z",
               "EditorCaption": ""
@@ -474,7 +459,7 @@
               "RelativeDocumentMoniker": "Dashboard.xaml.cs",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\Dashboard.xaml.cs",
               "RelativeToolTip": "Dashboard.xaml.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAuwEwAAAA+AAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAA7wC8AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T07:02:22.015Z",
               "EditorCaption": ""
@@ -489,21 +474,19 @@
               "RelativeToolTip": "Entidades\\Entities\\Publicacion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T17:25:10.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T17:25:10.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "LogIn.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\LogIn.xaml.cs",
               "RelativeDocumentMoniker": "LogIn.xaml.cs",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanXFrontend\\LogIn.xaml.cs",
               "RelativeToolTip": "LogIn.xaml.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAIA8wBoAAAAbAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAIA2wDgAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T17:24:12.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T17:24:12.114Z"
             }
           ]
         }
