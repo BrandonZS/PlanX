@@ -34,5 +34,11 @@ namespace PLANX_API.Controllers
         {
             return new LogEvento().obtenerListaEvento(req);
         }
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/evento/registrareventoregular")]
+        public ResRegistroEventoRegular registrarEventoRegular(ReqRegistroEventoRegular req)
+        {
+            return new LogEvento().registrarEventoRegular(req);
+        }
     }
 }

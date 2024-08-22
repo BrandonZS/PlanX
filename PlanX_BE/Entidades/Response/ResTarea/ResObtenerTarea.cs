@@ -9,7 +9,7 @@ namespace PlanXBackend.Entidades.Response.ResTarea
 {
     public class ResObtenerTarea: ResBase
     {
-        public List<Tarea> listaTarea = new List<Tarea>();
+        public List<Tarea> listaTareas = new List<Tarea>();
 
     }
 }

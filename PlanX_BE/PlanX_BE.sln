@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanX_BE", "PlanX_BE.csproj", "{64D104FD-11F5-424C-B21E-BB821A9F1B55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanX_BE", "PlanX_BE.csproj", "{1F1600F2-53BE-4170-8585-0EC90B8E7A65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLANX_API", "..\PLANX_API\PLANX_API.csproj", "{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLANX_API.Tests", "PLANX_API.Tests\PLANX_API.Tests.csproj", "{36BC4551-879E-49CE-8C41-F5046234BA6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64D104FD-11F5-424C-B21E-BB821A9F1B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64D104FD-11F5-424C-B21E-BB821A9F1B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64D104FD-11F5-424C-B21E-BB821A9F1B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64D104FD-11F5-424C-B21E-BB821A9F1B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F1600F2-53BE-4170-8585-0EC90B8E7A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F1600F2-53BE-4170-8585-0EC90B8E7A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F1600F2-53BE-4170-8585-0EC90B8E7A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F1600F2-53BE-4170-8585-0EC90B8E7A65}.Release|Any CPU.Build.0 = Release|Any CPU
 		{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36BC4551-879E-49CE-8C41-F5046234BA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36BC4551-879E-49CE-8C41-F5046234BA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36BC4551-879E-49CE-8C41-F5046234BA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36BC4551-879E-49CE-8C41-F5046234BA6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

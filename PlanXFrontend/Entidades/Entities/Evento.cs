@@ -4,7 +4,7 @@ namespace PlanXFrontend.Entidades.Entities;
 
 public class Evento
 {
-       public string codInvitacion { get; set; }
+        public string codInvitacion { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public DateTime fecHoraInicio { get; set; }

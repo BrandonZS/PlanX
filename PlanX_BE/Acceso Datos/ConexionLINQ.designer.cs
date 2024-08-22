@@ -33,7 +33,7 @@ namespace PlanXBackend.Acceso_Datos
     #endregion
 		
 		public ConexionLINQDataContext() : 
-				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString1, mappingSource)
+				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString4, mappingSource)
 		{
 			OnCreated();
 		}
@@ -154,13 +154,13 @@ namespace PlanXBackend.Acceso_Datos
 			return ((ISingleResult<SP_LOGINResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_EVENTO")]
-		public ISingleResult<SP_OBTENER_EVENTOResult> SP_OBTENER_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(255)")] ref string eRRORDESCRIPCION)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_LISTA_EVENTOS")]
+		public ISingleResult<SP_OBTENER_LISTA_EVENTOSResult> SP_OBTENER_LISTA_EVENTOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(255)")] ref string eRRORDESCRIPCION)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cOD_INVI, eRRORID, eRRORDESCRIPCION);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, eRRORID, eRRORDESCRIPCION);
 			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			eRRORDESCRIPCION = ((string)(result.GetParameterValue(2)));
-			return ((ISingleResult<SP_OBTENER_EVENTOResult>)(result.ReturnValue));
+			return ((ISingleResult<SP_OBTENER_LISTA_EVENTOSResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_TAREA")]
@@ -182,6 +182,15 @@ namespace PlanXBackend.Acceso_Datos
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_EVENTO")]
+		public ISingleResult<SP_OBTENER_EVENTOResult> SP_OBTENER_EVENTO([global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(255)")] ref string eRRORDESCRIPCION)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cOD_INVI, eRRORID, eRRORDESCRIPCION);
+			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			eRRORDESCRIPCION = ((string)(result.GetParameterValue(2)));
+			return ((ISingleResult<SP_OBTENER_EVENTOResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_REGISTRO_EVENTO_REGULAR")]
 		public int SP_REGISTRO_EVENTO_REGULAR([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="COD_INVI", DbType="VarChar(6)")] string cOD_INVI, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_INICIO", DbType="DateTime")] System.Nullable<System.DateTime> fEC_INICIO, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FEC_FIN", DbType="DateTime")] System.Nullable<System.DateTime> fEC_FIN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IDRETURN", DbType="Int")] ref System.Nullable<int> iDRETURN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(MAX)")] ref string eRRORDESCRIPCION)
 		{
@@ -190,15 +199,6 @@ namespace PlanXBackend.Acceso_Datos
 			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(5)));
 			eRRORDESCRIPCION = ((string)(result.GetParameterValue(6)));
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_OBTENER_LISTA_EVENTOS")]
-		public ISingleResult<SP_OBTENER_LISTA_EVENTOSResult> SP_OBTENER_LISTA_EVENTOS([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ID_USER", DbType="Int")] System.Nullable<int> iD_USER, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORID", DbType="Int")] ref System.Nullable<int> eRRORID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ERRORDESCRIPCION", DbType="NVarChar(255)")] ref string eRRORDESCRIPCION)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iD_USER, eRRORID, eRRORDESCRIPCION);
-			eRRORID = ((System.Nullable<int>)(result.GetParameterValue(1)));
-			eRRORDESCRIPCION = ((string)(result.GetParameterValue(2)));
-			return ((ISingleResult<SP_OBTENER_LISTA_EVENTOSResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -295,220 +295,6 @@ namespace PlanXBackend.Acceso_Datos
 				if ((this._CODIGO_PAIS != value))
 				{
 					this._CODIGO_PAIS = value;
-				}
-			}
-		}
-	}
-	
-	public partial class SP_OBTENER_EVENTOResult
-	{
-		
-		private string _NOMBRE_EVENTO;
-		
-		private string _DESCRIPCION;
-		
-		private System.DateTime _HORA_INICIO;
-		
-		private System.DateTime _HORA_FINAL;
-		
-		private System.Nullable<int> _LIM_USERS;
-		
-		private double _DURACION;
-		
-		public SP_OBTENER_EVENTOResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_EVENTO", DbType="VarChar(255)")]
-		public string NOMBRE_EVENTO
-		{
-			get
-			{
-				return this._NOMBRE_EVENTO;
-			}
-			set
-			{
-				if ((this._NOMBRE_EVENTO != value))
-				{
-					this._NOMBRE_EVENTO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(255)")]
-		public string DESCRIPCION
-		{
-			get
-			{
-				return this._DESCRIPCION;
-			}
-			set
-			{
-				if ((this._DESCRIPCION != value))
-				{
-					this._DESCRIPCION = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORA_INICIO", DbType="DateTime NOT NULL")]
-		public System.DateTime HORA_INICIO
-		{
-			get
-			{
-				return this._HORA_INICIO;
-			}
-			set
-			{
-				if ((this._HORA_INICIO != value))
-				{
-					this._HORA_INICIO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORA_FINAL", DbType="DateTime NOT NULL")]
-		public System.DateTime HORA_FINAL
-		{
-			get
-			{
-				return this._HORA_FINAL;
-			}
-			set
-			{
-				if ((this._HORA_FINAL != value))
-				{
-					this._HORA_FINAL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LIM_USERS", DbType="Int")]
-		public System.Nullable<int> LIM_USERS
-		{
-			get
-			{
-				return this._LIM_USERS;
-			}
-			set
-			{
-				if ((this._LIM_USERS != value))
-				{
-					this._LIM_USERS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DURACION", DbType="Float NOT NULL")]
-		public double DURACION
-		{
-			get
-			{
-				return this._DURACION;
-			}
-			set
-			{
-				if ((this._DURACION != value))
-				{
-					this._DURACION = value;
-				}
-			}
-		}
-	}
-	
-	public partial class SP_OBTENER_TAREAResult
-	{
-		
-		private string _TITULO;
-		
-		private string _DESCRIPCION;
-		
-		private System.DateTime _FECINICIAL;
-		
-		private System.DateTime _FECFINAL;
-		
-		private string _PRIORIDAD;
-		
-		public SP_OBTENER_TAREAResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TITULO", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
-		public string TITULO
-		{
-			get
-			{
-				return this._TITULO;
-			}
-			set
-			{
-				if ((this._TITULO != value))
-				{
-					this._TITULO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(255)")]
-		public string DESCRIPCION
-		{
-			get
-			{
-				return this._DESCRIPCION;
-			}
-			set
-			{
-				if ((this._DESCRIPCION != value))
-				{
-					this._DESCRIPCION = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECINICIAL", DbType="DateTime NOT NULL")]
-		public System.DateTime FECINICIAL
-		{
-			get
-			{
-				return this._FECINICIAL;
-			}
-			set
-			{
-				if ((this._FECINICIAL != value))
-				{
-					this._FECINICIAL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECFINAL", DbType="DateTime NOT NULL")]
-		public System.DateTime FECFINAL
-		{
-			get
-			{
-				return this._FECFINAL;
-			}
-			set
-			{
-				if ((this._FECFINAL != value))
-				{
-					this._FECFINAL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRIORIDAD", DbType="VarChar(255)")]
-		public string PRIORIDAD
-		{
-			get
-			{
-				return this._PRIORIDAD;
-			}
-			set
-			{
-				if ((this._PRIORIDAD != value))
-				{
-					this._PRIORIDAD = value;
 				}
 			}
 		}
@@ -643,6 +429,238 @@ namespace PlanXBackend.Acceso_Datos
 				if ((this._COD_INVI != value))
 				{
 					this._COD_INVI = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_OBTENER_TAREAResult
+	{
+		
+		private string _TITULO;
+		
+		private string _DESCRIPCION;
+		
+		private System.DateTime _FECINICIAL;
+		
+		private System.DateTime _FECFINAL;
+		
+		private string _PRIORIDAD;
+		
+		public SP_OBTENER_TAREAResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TITULO", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string TITULO
+		{
+			get
+			{
+				return this._TITULO;
+			}
+			set
+			{
+				if ((this._TITULO != value))
+				{
+					this._TITULO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(255)")]
+		public string DESCRIPCION
+		{
+			get
+			{
+				return this._DESCRIPCION;
+			}
+			set
+			{
+				if ((this._DESCRIPCION != value))
+				{
+					this._DESCRIPCION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECINICIAL", DbType="DateTime NOT NULL")]
+		public System.DateTime FECINICIAL
+		{
+			get
+			{
+				return this._FECINICIAL;
+			}
+			set
+			{
+				if ((this._FECINICIAL != value))
+				{
+					this._FECINICIAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECFINAL", DbType="DateTime NOT NULL")]
+		public System.DateTime FECFINAL
+		{
+			get
+			{
+				return this._FECFINAL;
+			}
+			set
+			{
+				if ((this._FECFINAL != value))
+				{
+					this._FECFINAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PRIORIDAD", DbType="VarChar(255)")]
+		public string PRIORIDAD
+		{
+			get
+			{
+				return this._PRIORIDAD;
+			}
+			set
+			{
+				if ((this._PRIORIDAD != value))
+				{
+					this._PRIORIDAD = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SP_OBTENER_EVENTOResult
+	{
+		
+		private string _NOMBRE_EVENTO;
+		
+		private string _DESCRIPCION;
+		
+		private System.DateTime _HORA_INICIO;
+		
+		private System.DateTime _HORA_FINAL;
+		
+		private System.Nullable<int> _LIM_USERS;
+		
+		private double _DURACION;
+		
+		private string _COD_INV;
+		
+		public SP_OBTENER_EVENTOResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_EVENTO", DbType="VarChar(255)")]
+		public string NOMBRE_EVENTO
+		{
+			get
+			{
+				return this._NOMBRE_EVENTO;
+			}
+			set
+			{
+				if ((this._NOMBRE_EVENTO != value))
+				{
+					this._NOMBRE_EVENTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(255)")]
+		public string DESCRIPCION
+		{
+			get
+			{
+				return this._DESCRIPCION;
+			}
+			set
+			{
+				if ((this._DESCRIPCION != value))
+				{
+					this._DESCRIPCION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORA_INICIO", DbType="DateTime NOT NULL")]
+		public System.DateTime HORA_INICIO
+		{
+			get
+			{
+				return this._HORA_INICIO;
+			}
+			set
+			{
+				if ((this._HORA_INICIO != value))
+				{
+					this._HORA_INICIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HORA_FINAL", DbType="DateTime NOT NULL")]
+		public System.DateTime HORA_FINAL
+		{
+			get
+			{
+				return this._HORA_FINAL;
+			}
+			set
+			{
+				if ((this._HORA_FINAL != value))
+				{
+					this._HORA_FINAL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LIM_USERS", DbType="Int")]
+		public System.Nullable<int> LIM_USERS
+		{
+			get
+			{
+				return this._LIM_USERS;
+			}
+			set
+			{
+				if ((this._LIM_USERS != value))
+				{
+					this._LIM_USERS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DURACION", DbType="Float NOT NULL")]
+		public double DURACION
+		{
+			get
+			{
+				return this._DURACION;
+			}
+			set
+			{
+				if ((this._DURACION != value))
+				{
+					this._DURACION = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COD_INV", DbType="VarChar(255)")]
+		public string COD_INV
+		{
+			get
+			{
+				return this._COD_INV;
+			}
+			set
+			{
+				if ((this._COD_INV != value))
+				{
+					this._COD_INV = value;
 				}
 			}
 		}

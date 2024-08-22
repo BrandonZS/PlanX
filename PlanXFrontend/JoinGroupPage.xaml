@@ -36,7 +36,7 @@
                                         TextColor="White"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"
-                                        IsEnabled="False"/>
+                                        IsEnabled="True"/>
                         </StackLayout>
                         <BoxView Color="White"
                                 HeightRequest="0.3"
@@ -83,7 +83,8 @@
                         TextColor="Black" 
                         FontAttributes="Bold"
                         BorderColor="Black" 
-                        BorderWidth="2"/>
+                        BorderWidth="2"
+                        Clicked="btnJoinEvent_Clicked"/>
             </StackLayout>
             
         </Frame>

@@ -112,7 +112,7 @@
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
                                 <Picker Title="Select duration" 
-                                x:Name="enyDuracionTask"
+                                x:Name="enyPriorityTask"
                                 TitleColor="White" 
                                 TextColor="White"
                                 FontFamily="Roboto"
@@ -120,10 +120,10 @@
                                 HorizontalOptions="EndAndExpand"
                                 VerticalOptions="Center">
                                 <Picker.Items>
-                                <x:String>Low</x:String>
-                                <x:String>Mid</x:String>
-                                <x:String>High</x:String>
-                                <x:String>Critical</x:String>
+                                <x:String>Baja</x:String>
+                                <x:String>Media</x:String>
+                                <x:String>Alta</x:String>
+                                <x:String>Critica</x:String>
                                 </Picker.Items>
                                 </Picker>
                         </StackLayout>

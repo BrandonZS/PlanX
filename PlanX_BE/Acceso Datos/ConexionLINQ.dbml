@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PLANXAPP" Class="ConexionLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=158.23.82.142;Initial Catalog=PLANXAPP;Persist Security Info=True;User ID=Admin1995;Trust Server Certificate=True" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\BrandonZamora;Initial Catalog=PLANXAPP;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString4" Provider="System.Data.SqlClient" />
   <Function Name="dbo.SP_ACTUALIZAR_EVENTO" Method="SP_ACTUALIZAR_EVENTO">
     <Parameter Name="TITULO" Parameter="tITULO" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
@@ -98,17 +98,18 @@
       <Column Name="CODIGO_PAIS" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.SP_OBTENER_EVENTO" Method="SP_OBTENER_EVENTO">
-    <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="VarChar(6)" />
+  <Function Name="dbo.SP_OBTENER_LISTA_EVENTOS" Method="SP_OBTENER_LISTA_EVENTOS">
+    <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
-    <ElementType Name="SP_OBTENER_EVENTOResult">
+    <ElementType Name="SP_OBTENER_LISTA_EVENTOSResult">
       <Column Name="NOMBRE_EVENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="HORA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="HORA_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="COD_INVI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SP_OBTENER_TAREA" Method="SP_OBTENER_TAREA">
@@ -134,6 +135,20 @@
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.SP_OBTENER_EVENTO" Method="SP_OBTENER_EVENTO">
+    <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <ElementType Name="SP_OBTENER_EVENTOResult">
+      <Column Name="NOMBRE_EVENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HORA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HORA_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="COD_INV" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.SP_REGISTRO_EVENTO_REGULAR" Method="SP_REGISTRO_EVENTO_REGULAR">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="VarChar(6)" />
@@ -143,19 +158,5 @@
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SP_OBTENER_LISTA_EVENTOS" Method="SP_OBTENER_LISTA_EVENTOS">
-    <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
-    <ElementType Name="SP_OBTENER_LISTA_EVENTOSResult">
-      <Column Name="NOMBRE_EVENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="HORA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="HORA_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="COD_INVI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-    </ElementType>
   </Function>
 </Database>

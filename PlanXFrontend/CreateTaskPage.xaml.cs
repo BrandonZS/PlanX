@@ -19,15 +19,16 @@ public partial class CreateTaskPage : ContentPage
 			DateTime selectedDate = datePickerTask.Date;
             TimeSpan beginTime = timeBeginPickerTask.Time;
             TimeSpan endTime = timeEndPickerTask.Time;
-			ReqCrearTarea req = new ReqCrearTarea();
-			req.tarea = new Tarea();
-	        req.tarea.idUsuario = Sesion.id;		
-			req.tarea.titulo = enyTitleTask.Text;
-            req.tarea.descripcion = enyDescriptionTask.Text;
-            req.tarea.fecHoraInicio = selectedDate.Add(beginTime);
-            req.tarea.fecHoraFin = selectedDate.Add(endTime);
+			ReqInsertarTarea req = new ReqInsertarTarea();
+	        req.idUsuario = Sesion.id;		
+			req.titulo = enyTitleTask.Text;
+            req.descripcion = enyDescriptionTask.Text;
+            req.fecHoraInicio = selectedDate.Add(beginTime);
+            req.fecHoraFin = selectedDate.Add(endTime);
+            req.prioridad = enyPriorityTask.SelectedItem.ToString();
 
-			var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
+
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
 
             HttpClient httpClient = new HttpClient();
 
@@ -36,8 +37,8 @@ public partial class CreateTaskPage : ContentPage
 			if (response.IsSuccessStatusCode)
             {
                 var responseContent = await response.Content.ReadAsStringAsync();
-                ResCrearTarea res = new ResCrearTarea();
-                res = JsonConvert.DeserializeObject<ResCrearTarea>(responseContent);
+                ResInsertarTarea res = new ResInsertarTarea();
+                res = JsonConvert.DeserializeObject<ResInsertarTarea>(responseContent);
 
                 if (res.resultado)
                 {
