@@ -30,7 +30,7 @@ namespace PlanXBackend.Logica
                 else if (String.IsNullOrEmpty(req.titulo))
                 {
                     res.resultado = false;
-                    res.listaDeErrores.Add("Nombre faltante");
+                    res.listaDeErrores.Add("Titulo faltante");
                 }
                 else if (String.IsNullOrEmpty(req.descripcion))
                 {
@@ -59,7 +59,7 @@ namespace PlanXBackend.Logica
                     {
                         
                         res.resultado = true;
-                        res.listaDeErrores.Add(errorDescripcion);
+                        
 
                     }
                 }
@@ -107,7 +107,7 @@ namespace PlanXBackend.Logica
                         res.resultado = true;
                         foreach (SP_OBTENER_TAREAResult tarea in resultado)
                         {
-                            res.listaTarea.Add(armarTarea(tarea));
+                            res.listaTareas.Add(armarTarea(tarea));
                         }
 
 

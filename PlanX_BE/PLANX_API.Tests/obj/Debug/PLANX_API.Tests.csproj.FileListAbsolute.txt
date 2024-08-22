@@ -55,3 +55,7 @@ C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debu
 C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_AP.0F0A21B4.Up2Date
 C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.dll
 C:\Users\ASUS X515\Desktop\ProyectoMovil\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.pdb
+C:\Users\ASUS X515\Documents\GitHub\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.csproj.AssemblyReference.cache
+C:\Users\ASUS X515\Documents\GitHub\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ASUS X515\Documents\GitHub\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.dll
+C:\Users\ASUS X515\Documents\GitHub\PlanX\PlanX_BE\PLANX_API.Tests\obj\Debug\PLANX_API.Tests.pdb

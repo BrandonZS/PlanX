@@ -1,15 +1,16 @@
-﻿using PlanXBackend.Entidades.Entities;
 using System;
+using PlanXFrontend.Entidades.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlanXBackend.Entidades.Response.ResTarea
+namespace PlanXFrontend.Entidades.Response.ResTarea 
 {
-    public class ResObtenerTarea: ResBase
+    public class ResObtenerListaTarea : ResBase
     {
         public List<Tarea> listaTareas = new List<Tarea>();
-
     }
+
 }
+

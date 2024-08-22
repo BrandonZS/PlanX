@@ -172,6 +172,67 @@ namespace PlanXBackend.Logica
 
             return res;
         }
+
+        public ResRegistroEventoRegular registrarEventoRegular(ReqRegistroEventoRegular req)
+        {
+            ResRegistroEventoRegular res = new ResRegistroEventoRegular();
+            try
+            {
+                //Faltan Comprobaciones de otros datos
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.idUser < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Error en Usuario");
+                }
+                else if (String.IsNullOrEmpty(req.codInvi))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Codigo Faltate");
+                }
+                else if (req.fecFinal == DateTime.MinValue)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Fecha Final NO Valida");
+                }
+                else if (req.fecInicio == DateTime.MinValue)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Fecha Inicial NO Valida");
+                }
+                else
+                {
+                    int? idReturn = 0;
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_REGISTRO_EVENTO_REGULAR(req.idUser, req.codInvi, req.fecInicio, req.fecFinal, ref idReturn, ref errorId, ref errorDescripcion);
+                    if (idReturn == 0)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+
+            return res;
+        }
         private Evento armarEvento(SP_OBTENER_EVENTOResult eventoLinq)
         {
             Evento evento = new Evento();
@@ -181,6 +242,7 @@ namespace PlanXBackend.Logica
             evento.limUsers = eventoLinq.LIM_USERS;
             evento.fecHoraInicio = eventoLinq.HORA_INICIO;
             evento.fecHoraFin = eventoLinq.HORA_FINAL;
+            evento.codInvitacion = eventoLinq.COD_INV;
 
             return evento;
         }

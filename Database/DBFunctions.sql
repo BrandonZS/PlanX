@@ -317,7 +317,6 @@ END;
 GO
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_EVENTO
-    @ID_USER INT,
 	@COD_INVI VARCHAR(6),
     @ERRORID INT OUTPUT,
     @ERRORDESCRIPCION NVARCHAR(255) OUTPUT
@@ -341,7 +340,8 @@ BEGIN
             [fechaHoraInicio] AS HORA_INICIO,
             [fechaHoraFin] AS HORA_FINAL,
             [limiteUsuarios] AS LIM_USERS,
-            [duracion] AS DURACION
+            [duracion] AS DURACION,
+            [codInvitacion] AS COD_INV
         FROM [dbo].[Evento]
         WHERE [codInvitacion] = @COD_INVI;
     END
@@ -351,7 +351,7 @@ BEGIN
         SET @ERRORDESCRIPCION = ERROR_MESSAGE();
     END
 END
-GO
+
 
 CREATE OR ALTER PROCEDURE SP_OBTENER_LISTA_EVENTOS
     @ID_USER INT,

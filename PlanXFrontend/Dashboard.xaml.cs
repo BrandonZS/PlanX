@@ -1,13 +1,6 @@
 using PlanXFrontend;
 using PlanXFrontend.Entidades.Entities;
-using PlanXFrontend.Entidades.Request;
 using Newtonsoft.Json;
-using PlanXFrontend.Entidades.Response;
-using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-using Syncfusion.Maui.Popup;
-using PlanXFrontend.ViewModel;
-using Microsoft.Maui.ApplicationModel.Communication;
 using PlanXFrontend.Entidades.Request.ReqEvento;
 using PlanXFrontend.Entidades.Response.ResEvento;
 namespace MauiApp1;
@@ -37,7 +30,7 @@ public partial class Dashboard : ContentPage
     btnCreateEvent.BorderWidth = 1;
     btnCreateEvent.TextColor= Colors.Black;
 
-}
+} 
 	
     private async void tbiTask_Clicked(object sender, EventArgs e)
     {
@@ -69,6 +62,10 @@ public partial class Dashboard : ContentPage
 
             if (response.IsSuccessStatusCode)
             {
+                if(ListaEventos.eventos.Count != 0)
+                {
+                    ListaEventos.eventos.Clear();
+                }
                 var responseContent = await response.Content.ReadAsStringAsync();
                 ResObtenerListaEventos res = new ResObtenerListaEventos();
 
@@ -100,16 +97,18 @@ public partial class Dashboard : ContentPage
     }
     private async void tbiJoinGroup_Clicked(object sender, EventArgs e)
     {
+
+        string result = await DisplayPromptAsync("Join Event", "What's your Code?", maxLength: 6);
         try
         {
             ReqObtenerEvento req = new ReqObtenerEvento();
-            
+            req.codInv = result;
 
             var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
 
             HttpClient httpClient = new HttpClient();
 
-            var response = await httpClient.PostAsync(laUrl + "api/evento/obtenerlistaevento", jsonContent);
+            var response = await httpClient.PostAsync(laUrl + "api/evento/obtenerevento", jsonContent);
 
             if (response.IsSuccessStatusCode)
             {
@@ -120,9 +119,12 @@ public partial class Dashboard : ContentPage
 
                 if (res.resultado)
                 {
+                    InvitacionEvento.evento.nombre = res.evento.nombre;
+                    InvitacionEvento.evento.descripcion = res.evento.descripcion;
+                    InvitacionEvento.evento.codInvitacion = res.evento.codInvitacion;
                     await Navigation.PushAsync(new JoinGroupPage());
                 }
-                else if (res.resultado)
+                else
                 {
                     await DisplayAlert("Sorry!!", "Your Code Is Invalid", "OK");
                 }

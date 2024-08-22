@@ -12,9 +12,6 @@ namespace PlanXFrontend
             MainPage = new NavigationPage(new MainPage()){
                 BarBackgroundColor = Colors.Black,
                 BarTextColor = Colors.White
-                
-                
-                
             };
         }
     }

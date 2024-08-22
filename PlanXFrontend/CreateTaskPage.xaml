@@ -1,42 +1,71 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlanXFrontend.CreateTaskPage"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             x:Class="PlanXFrontend.JoinGroupPage"
-             Title="">
+             Title="CreateTaskPage">
+
 <StackLayout BackgroundColor="White" Margin="0">
 <StackLayout.Background>
         <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
                 <GradientStop Color="#ffffff" Offset="0.0" />
+                    <!-- Negro semitransparente -->
                 <GradientStop Color="#8D14A5" Offset="1.0" />
+                    <!-- Negro semitransparente -->
         </RadialGradientBrush>
 </StackLayout.Background>
 
-        <Frame CornerRadius="50"  Padding="0" Margin="30" BorderColor="Black" VerticalOptions="CenterAndExpand">
+        <Frame CornerRadius="50"  
+        Padding="0" 
+        Margin="30"
+        BorderColor="Black"
+        VerticalOptions="CenterAndExpand">
             <StackLayout BackgroundColor="#8D14A5" Padding="20">
-                <Label  Text="Join Event"
+                <Label  Text="Create Task"
                         FontSize="Large" 
                         TextColor="White"
                         FontFamily="Roboto"
                         FontAttributes="Bold" 
                         HorizontalTextAlignment="Center"
-                        VerticalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Title"
+                        FontSize="Subtitle" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" />
+                        <!--Title-->
+                <Entry x:Name="enyTitleTask"
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        PlaceholderColor="White"
                         Margin="0,0,0,20"/>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5" >
-                        <Label Text="Expected Date"
+                        <!--Description-->
+                        <Label Text="Description"
+                        FontSize="Subtitle" 
+                        TextColor="White"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold" />
+                <Editor x:Name="enyDescriptionTask"
+                        AutoSize="TextChanges"
+                        MaxLength="500"
+                        TextColor="White"
+                        PlaceholderColor="white"
+                        Margin="0,0,0,10"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="Date"
                                 FontSize="Subtitle" 
                                 TextColor="White"
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                        <DatePicker x:Name="dpEventExpectedDate"
+                        <DatePicker x:Name="datePickerTask"
                                         Format="D"
                                         MinimumDate="{x:Static sys:DateTime.Today}"
                                         TextColor="White"
                                         FontFamily="Roboto"
-                                        HorizontalOptions="EndAndExpand"
-                                        IsEnabled="True"/>
+                                        HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                         <BoxView Color="White"
                                 HeightRequest="0.3"
@@ -49,7 +78,7 @@
                                 FontFamily="Roboto"
                                 FontAttributes="Bold"
                                 VerticalOptions="Center"/>
-                        <TimePicker x:Name="tpRangeOne"
+                        <TimePicker x:Name="timeBeginPickerTask"
                                         TextColor="White"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
@@ -65,16 +94,47 @@
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                        <TimePicker x:Name="tpRangeTwo"
+                        <TimePicker x:Name="timeEndPickerTask"
                                         TextColor="White"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
 
+                        <BoxView Color="White"
+                                HeightRequest="0.3"
+                                HorizontalOptions="FillAndExpand"/>
+                                
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+                        <Label Text="Priority"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center"/>
+                                <Picker Title="Select duration" 
+                                x:Name="enyPriorityTask"
+                                TitleColor="White" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                BackgroundColor="Transparent"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="Center">
+                                <Picker.Items>
+                                <x:String>Baja</x:String>
+                                <x:String>Media</x:String>
+                                <x:String>Alta</x:String>
+                                <x:String>Critica</x:String>
+                                </Picker.Items>
+                                </Picker>
+                        </StackLayout>
 
-                        <!-- Login Button -->
-                <Button Text="Join"
-                        x:Name="btnJoinEvent"
+
+
+
+
+                        <!-- Create Task Button -->
+                <Button Text="Accept"
+                        x:Name="btnCreateTask"
                         BackgroundColor="White"
                         CornerRadius="28"
                         HorizontalOptions="FillAndExpand"
@@ -84,20 +144,11 @@
                         FontAttributes="Bold"
                         BorderColor="Black" 
                         BorderWidth="2"
-                        Clicked="btnJoinEvent_Clicked"/>
+                        Clicked="btnCreateTask_Clicked"/>
             </StackLayout>
             
         </Frame>
         
-        <Button Text="Back" 
-        x:Name="btnBackJoinEvent"
-        TextColor="White" 
-        FontAttributes="Bold"
-        FontFamily="Roboto"
-        VerticalOptions="End"
-        HorizontalOptions="StartAndExpand"
-        BackgroundColor="Transparent"
-        Margin="30"
-        Clicked="btnBackJoinEvent_Clicked"/>
+        
     </StackLayout>
 </ContentPage>

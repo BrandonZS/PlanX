@@ -3,12 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanXFrontend.TasksPage"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
-             Title="Tasks">
+             Title="Tasks"
+             xmlns:viewModel="clr-namespace:PlanXFrontend.ViewModel">
 
-        <syncfusion:SfScheduler x:Name="scheduler" 
-                                AllowedViews="Agenda,Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week"
-                                View="Week"
-                                TodayHighlightBrush="#8D14A5">
-        </syncfusion:SfScheduler>
+             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+             BackgroundColor="White">
+                <syncfusion:SfScheduler x:Name="scheduler" 
+                VerticalOptions="FillAndExpand"
+                                        AllowedViews="Agenda,Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week"
+                                        View="Week"
+                                        AppointmentsSource="{Binding SchedulerTasks}"
+                                        TodayHighlightBrush="#8D14A5"
+                                        CellBorderBrush="#608D14A5"
+                                        ShowWeekNumber="True"
+                                        ShowBusyIndicator="True">
+                    <syncfusion:SfScheduler.BindingContext> 
+                        <viewModel:TaskViewModel />
+                    </syncfusion:SfScheduler.BindingContext>
+                </syncfusion:SfScheduler>
+                <Button Text="+"
+                x:Name="btnAddTask"
+                Clicked="btnAddTask_Clicked"
+                FontAttributes="Bold"
+                FontFamily="Roboto"
+                FontSize="Medium"
+                TextColor="White"
+                CornerRadius="0">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="Black" Offset="0.0" />
+                        <GradientStop Color="#8D14A5" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+                </Button>
+             </StackLayout> 
+        
 
 </ContentPage>
