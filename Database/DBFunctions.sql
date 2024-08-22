@@ -340,7 +340,8 @@ BEGIN
             [fechaHoraInicio] AS HORA_INICIO,
             [fechaHoraFin] AS HORA_FINAL,
             [limiteUsuarios] AS LIM_USERS,
-            [duracion] AS DURACION
+            [duracion] AS DURACION,
+            [codInvitacion] AS COD_INV
         FROM [dbo].[Evento]
         WHERE [codInvitacion] = @COD_INVI;
     END
