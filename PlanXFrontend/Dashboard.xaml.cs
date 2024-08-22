@@ -37,7 +37,7 @@ public partial class Dashboard : ContentPage
     btnCreateEvent.BorderWidth = 1;
     btnCreateEvent.TextColor= Colors.Black;
 
-}
+} 
 	
     private async void tbiTask_Clicked(object sender, EventArgs e)
     {

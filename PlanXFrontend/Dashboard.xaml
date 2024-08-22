@@ -31,9 +31,11 @@
                                 AppointmentsSource="{Binding SchedulerEvents}"
                                 AllowedViews="Agenda,Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week"
                                 View="Week"
+                                CellBorderBrush="#608D14A5"
                                 ShowWeekNumber="True"
+                                ShowBusyIndicator="True"
                                 TodayHighlightBrush="#8D14A5">
-                    <syncfusion:SfScheduler.BindingContext>
+                    <syncfusion:SfScheduler.BindingContext> 
                         <viewModel:ControlViewModel />
                     </syncfusion:SfScheduler.BindingContext>
 
