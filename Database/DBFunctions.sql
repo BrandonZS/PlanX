@@ -244,7 +244,8 @@ BEGIN
 				[fechaHoraFin],
 				[limiteUsuarios],
 				[duracion],
-				[idUsuario]	
+				[idUsuario],
+				[estado]
 			)
 			VALUES
 			(
@@ -255,7 +256,8 @@ BEGIN
 				@FECHORA_FIN,
 				@LIMITE_USUARIO,
 				@DURACION,
-				@ID_USER
+				@ID_USER,
+				0
 			);
 			SET @IDRETURN = SCOPE_IDENTITY();
 	END TRY
@@ -327,7 +329,12 @@ BEGIN
     SET @ERRORDESCRIPCION = '';
 
     -- Comprobar si el evento existe
-    IF EXISTS (
+	IF ( (SELECT [estado] FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI) = 1)
+	BEGIN
+		SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'EL EVENTO YA NO ADMITE REGISTROS';
+	END
+    ELSE IF EXISTS (
         SELECT 1
         FROM [dbo].[Evento]
         WHERE [codInvitacion] = @COD_INVI
@@ -378,7 +385,8 @@ BEGIN
             [fechaHoraFin] AS HORA_FINAL,
             [limiteUsuarios] AS LIM_USERS,
             [duracion] AS DURACION,
-			[codInvitacion] AS COD_INVI
+			[codInvitacion] AS COD_INVI,
+			[estado] AS ESTADO
         FROM [dbo].[Evento]
         WHERE [idUsuario] = @ID_USER;
     END
@@ -658,3 +666,61 @@ BEGIN
     END CATCH
 END;
 
+CREATE OR ALTER PROCEDURE SP_OBTENER_REGISTRO
+	@COD_INV NVARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [codInvitacion] = @COD_INV
+    )
+	BEGIN
+		SELECT
+			U.nombre AS NOMBRE_USUARIO,
+			U.apellido AS APELLIDO_USUARIO,
+			E.duracion AS DURACION,
+			E.codInvitacion AS COD_INV,
+			EU.fechaHoraInicio AS FEC_INICIAL,
+			EU.fechaHoraFinal AS FEC_FINAL
+
+		FROM [dbo].[EventoUsuario] EU
+		INNER JOIN [dbo].[Evento] E ON E.[idEvento] = EU.idEvento
+		INNER JOIN [dbo].[Usuario] U ON U.idUsuario = EU.idUsuario
+		WHERE E.codInvitacion = @COD_INV
+	END
+	ELSE
+	BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
+	END
+END
+CREATE OR ALTER PROCEDURE SP_DEFINIR_EVENTO
+	@FEC_INICIAL DATETIME,
+	@FEC_FINAL DATETIME,
+	@ID_USER INT,
+	@COD_INVI NVARCHAR (6),
+    @ERRORID int output,
+    @ERRORDESCRIPCION nvarchar(max) output
+AS
+BEGIN
+	IF NOT EXISTS (SELECT 1 FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER)
+	BEGIN
+        SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'ERROR DESDE BD: USUARIO NO ENCONTRADO';
+	END
+	ELSE IF NOT EXISTS (SELECT 1 FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI)
+	BEGIN
+	    SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'ERROR DESDE BD: EVENTO NO ENCONTRADO';
+	END
+	ELSE 
+	BEGIN
+		UPDATE [dbo].[Evento]
+		SET [fechaHoraInicio] = @FEC_INICIAL, [fechaHoraFin] = @FEC_FINAL, [estado] = 1
+		WHERE [idUsuario] = @ID_USER AND [codInvitacion] = @COD_INVI AND [fechaHoraInicio] < GETDATE()
+	END
+END
+GO

@@ -78,6 +78,64 @@ namespace PlanXBackend.Logica
 
             return res;
         }
+
+        public ResDefinirEvento definirEvento(ReqDefinirEvento req)
+        {
+            ResDefinirEvento res = new ResDefinirEvento();
+            try
+            {
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.id < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario Faltante");
+                }
+                else if (String.IsNullOrEmpty(req.codInvitacion))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Descripcion faltante");
+                }
+                else if (req.horaInicial == DateTime.MinValue)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario Faltante");
+                }
+                else if (req.horaFinal == DateTime.MinValue)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Limite incorrecto");
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_DEFINIR_EVENTO(req.horaInicial, req.horaFinal, req.id, req.codInvitacion, ref errorId, ref errorDescripcion);
+                    if (errorDescripcion != null || errorId != 0)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+            return res;
+        }
         public ResObtenerEvento obtenerEvento(ReqObtenerEvento req)
         {
             ResObtenerEvento res = new ResObtenerEvento();
@@ -256,6 +314,7 @@ namespace PlanXBackend.Logica
             evento.fecHoraInicio = eventoLinq.HORA_INICIO;
             evento.fecHoraFin = eventoLinq.HORA_FINAL;
             evento.codInvitacion = eventoLinq.COD_INVI;
+            evento.estado = eventoLinq.ESTADO;
 
             return evento;
         }

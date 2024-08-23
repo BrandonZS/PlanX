@@ -48,6 +48,7 @@ CREATE TABLE Evento (
     limiteUsuarios int NULL,
     duracion float NOT NULL,
     idUsuario int NOT NULL,
+    estado bit NOT NULL,
     CONSTRAINT [PK_Evento] PRIMARY KEY (idEvento ASC),
     CONSTRAINT FK_UsuarioAdministrador FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario),
     CONSTRAINT CHK_FechaHoraFin_Despues_FechaHoraInicio CHECK (fechaHoraFin > fechaHoraInicio),
