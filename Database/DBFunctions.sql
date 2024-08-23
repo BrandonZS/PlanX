@@ -658,3 +658,34 @@ BEGIN
     END CATCH
 END;
 
+CREATE OR ALTER PROCEDURE SP_OBTENER_REGISTRO
+	@COD_INV NVARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(50) OUTPUT
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM [dbo].[Evento]
+        WHERE [codInvitacion] = @COD_INV
+    )
+	BEGIN
+		SELECT
+			U.nombre AS NOMBRE_USUARIO,
+			U.apellido AS APELLIDO_USUARIO,
+			E.duracion AS DURACION,
+			E.codInvitacion AS COD_INV,
+			EU.fechaHoraInicio AS FEC_INICIAL,
+			EU.fechaHoraFinal AS FEC_FINAL
+
+		FROM [dbo].[EventoUsuario] EU
+		INNER JOIN [dbo].[Evento] E ON E.[idEvento] = EU.idEvento
+		INNER JOIN [dbo].[Usuario] U ON U.idUsuario = EU.idUsuario
+		WHERE E.codInvitacion = @COD_INV
+	END
+	ELSE
+	BEGIN
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
+	END
+END
