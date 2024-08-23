@@ -244,7 +244,8 @@ BEGIN
 				[fechaHoraFin],
 				[limiteUsuarios],
 				[duracion],
-				[idUsuario]	
+				[idUsuario],
+				[estado]
 			)
 			VALUES
 			(
@@ -255,7 +256,8 @@ BEGIN
 				@FECHORA_FIN,
 				@LIMITE_USUARIO,
 				@DURACION,
-				@ID_USER
+				@ID_USER,
+				0
 			);
 			SET @IDRETURN = SCOPE_IDENTITY();
 	END TRY
