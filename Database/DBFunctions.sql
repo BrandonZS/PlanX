@@ -691,3 +691,30 @@ BEGIN
         SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
 	END
 END
+CREATE OR ALTER PROCEDURE SP_DEFINIR_EVENTO
+	@FEC_INICIAL DATETIME,
+	@FEC_FINAL DATETIME,
+	@ID_USER INT,
+	@COD_INVI NVARCHAR (6),
+    @ERRORID int output,
+    @ERRORDESCRIPCION nvarchar(max) output
+AS
+BEGIN
+	IF NOT EXISTS (SELECT 1 FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER)
+	BEGIN
+        SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'ERROR DESDE BD: USUARIO NO ENCONTRADO';
+	END
+	ELSE IF NOT EXISTS (SELECT 1 FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI)
+	BEGIN
+	    SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'ERROR DESDE BD: EVENTO NO ENCONTRADO';
+	END
+	ELSE 
+	BEGIN
+		UPDATE [dbo].[Evento]
+		SET [fechaHoraInicio] = @FEC_INICIAL, [fechaHoraFin] = @FEC_FINAL, [estado] = 1
+		WHERE [idUsuario] = @ID_USER AND [codInvitacion] = @COD_INVI AND [fechaHoraInicio] < GETDATE()
+	END
+END
+GO
