@@ -40,6 +40,15 @@
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.SP_DEFINIR_EVENTO" Method="SP_DEFINIR_EVENTO">
+    <Parameter Name="FEC_INICIAL" Parameter="fEC_INICIAL" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FEC_FINAL" Parameter="fEC_FINAL" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
+    <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="NVarChar(6)" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.SP_ELIMINAR_EVENTO" Method="SP_ELIMINAR_EVENTO">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="COD_INV" Parameter="cOD_INV" Type="System.String" DbType="NVarChar(6)" />
@@ -98,6 +107,20 @@
       <Column Name="CODIGO_PAIS" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.SP_OBTENER_EVENTO" Method="SP_OBTENER_EVENTO">
+    <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <ElementType Name="SP_OBTENER_EVENTOResult">
+      <Column Name="NOMBRE_EVENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HORA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="HORA_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="COD_INV" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.SP_OBTENER_LISTA_EVENTOS" Method="SP_OBTENER_LISTA_EVENTOS">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -110,6 +133,20 @@
       <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
       <Column Name="COD_INVI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ESTADO" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_REGISTRO" Method="SP_OBTENER_REGISTRO">
+    <Parameter Name="COD_INV" Parameter="cOD_INV" Type="System.String" DbType="NVarChar(6)" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <ElementType Name="SP_OBTENER_REGISTROResult">
+      <Column Name="NOMBRE_USUARIO" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDO_USUARIO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="COD_INV" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FEC_INICIAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FEC_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.SP_OBTENER_TAREA" Method="SP_OBTENER_TAREA">
@@ -134,20 +171,6 @@
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SP_OBTENER_EVENTO" Method="SP_OBTENER_EVENTO">
-    <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="VarChar(6)" />
-    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
-    <ElementType Name="SP_OBTENER_EVENTOResult">
-      <Column Name="NOMBRE_EVENTO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="HORA_INICIO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="HORA_FINAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="LIM_USERS" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DURACION" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="COD_INV" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-    </ElementType>
   </Function>
   <Function Name="dbo.SP_REGISTRO_EVENTO_REGULAR" Method="SP_REGISTRO_EVENTO_REGULAR">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />

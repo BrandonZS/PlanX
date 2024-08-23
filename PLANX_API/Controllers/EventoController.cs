@@ -40,5 +40,18 @@ namespace PLANX_API.Controllers
         {
             return new LogEvento().registrarEventoRegular(req);
         }
+
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/evento/obtenerhorario")]
+        public ResObtenerRegistros obtenerHorarios(ReqObtenerEvento req)
+        {
+            return new LogRegistro().obtenerRegistros(req);
+        }
+        [System.Web.Http.HttpPut]
+        [System.Web.Http.Route("api/evento/definirevento")]
+        public ResDefinirEvento definirEvento(ReqDefinirEvento req)
+        {
+            return new LogEvento().definirEvento(req);
+        }
     }
 }

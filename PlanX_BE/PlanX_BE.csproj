@@ -97,11 +97,15 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="Entidades\Entities\Evento.cs" />
+    <Compile Include="Entidades\Entities\HorarioEvento.cs" />
+    <Compile Include="Entidades\Entities\Registro.cs" />
     <Compile Include="Entidades\Entities\Tarea.cs" />
     <Compile Include="Entidades\Entities\Usuario.cs" />
+    <Compile Include="Entidades\Request\ReqEvento\ReqDefinirEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqObtenerEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqObtenerListaEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqRegistroEventoRegular.cs" />
+    <Compile Include="Entidades\Request\ReqObtenerRegistros.cs" />
     <Compile Include="Entidades\Request\ReqTarea\ReqObtenerTarea.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqActualizarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqEliminarUsuario.cs" />
@@ -109,9 +113,11 @@
     <Compile Include="Entidades\Request\ReqTarea\ReqInsertarTarea.cs" />
     <Compile Include="Entidades\Request\ReqUsuario\ReqInsertarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLogin.cs" />
+    <Compile Include="Entidades\Response\ResEvento\ResDefinirEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResObtenerEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResObtenerListaEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResRegistroEventoRegular.cs" />
+    <Compile Include="Entidades\Response\ResObtenerRegistros.cs" />
     <Compile Include="Entidades\Response\ResTarea\ResObtenerTarea.cs" />
     <Compile Include="Entidades\Response\ResUsuario\ResActualizarUsuario.cs" />
     <Compile Include="Entidades\Response\ResBase.cs" />
@@ -122,6 +128,7 @@
     <Compile Include="Entidades\Response\ResLogin.cs" />
     <Compile Include="Logica\LogEvento.cs" />
     <Compile Include="Logica\LogLogin.cs" />
+    <Compile Include="Logica\LogRegistro.cs" />
     <Compile Include="Logica\LogTarea.cs" />
     <Compile Include="Logica\LogUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

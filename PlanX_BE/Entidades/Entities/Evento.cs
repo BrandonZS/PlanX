@@ -15,5 +15,6 @@ namespace PlanXBackend.Entidades.Entities
         public DateTime fecHoraFin { get; set; }
         public int? limUsers { get; set; }
         public float duracion  { get; set; }
+        public bool estado { get; set; }
     } 
 }

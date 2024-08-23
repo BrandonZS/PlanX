@@ -329,7 +329,12 @@ BEGIN
     SET @ERRORDESCRIPCION = '';
 
     -- Comprobar si el evento existe
-    IF EXISTS (
+	IF ( (SELECT [estado] FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI) = 1)
+	BEGIN
+		SET @ERRORID = 1;
+		SET @ERRORDESCRIPCION = 'EL EVENTO YA NO ADMITE REGISTROS';
+	END
+    ELSE IF EXISTS (
         SELECT 1
         FROM [dbo].[Evento]
         WHERE [codInvitacion] = @COD_INVI
@@ -380,7 +385,8 @@ BEGIN
             [fechaHoraFin] AS HORA_FINAL,
             [limiteUsuarios] AS LIM_USERS,
             [duracion] AS DURACION,
-			[codInvitacion] AS COD_INVI
+			[codInvitacion] AS COD_INVI,
+			[estado] AS ESTADO
         FROM [dbo].[Evento]
         WHERE [idUsuario] = @ID_USER;
     END
