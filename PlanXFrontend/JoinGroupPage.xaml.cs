@@ -12,6 +12,10 @@ public partial class JoinGroupPage : ContentPage
 	{
 		InitializeComponent();
 		NavigationPage.SetHasNavigationBar(this, false);
+        enyJoinTitle.Text = InvitacionEvento.evento.nombre;
+        enyJoinDescription.Text = InvitacionEvento.evento.descripcion;
+        enyEventDuration.Text = InvitacionEvento.evento.duracion.ToString();
+        dpEventExpectedDate.Date = InvitacionEvento.evento.fecHoraInicio.Date;
 	}
 
 	public async void btnBackJoinEvent_Clicked(object sender, EventArgs e){
@@ -23,7 +27,6 @@ public partial class JoinGroupPage : ContentPage
         try
         {
             DateTime selectedDate = dpEventExpectedDate.Date;
-
             TimeSpan beginTime = tpRangeOne.Time;
             TimeSpan endTime = tpRangeTwo.Time;
 
@@ -48,7 +51,7 @@ public partial class JoinGroupPage : ContentPage
 
                 if (res.resultado)
                 {
-                    DisplayAlert("Registro correcto", "Usuario se añadio correctamente", "Aceptar");
+                    DisplayAlert("Registro correcto", "Usuario se aï¿½adio correctamente", "Aceptar");
                 }
 
             }

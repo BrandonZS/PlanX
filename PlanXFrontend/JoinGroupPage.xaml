@@ -20,8 +20,56 @@
                         FontFamily="Roboto"
                         FontAttributes="Bold" 
                         HorizontalTextAlignment="Center"
-                        VerticalOptions="CenterAndExpand"
-                        Margin="0,0,0,20"/>
+                        VerticalOptions="CenterAndExpand"/>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,5">
+                                <Label Text="Title"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center" />
+                                <!--Title-->
+                                <Entry x:Name="enyJoinTitle"
+                                TextColor="White"
+                                IsEnabled="False"
+                                FontFamily="Roboto"
+                                PlaceholderColor="White"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,5">
+                                <!--Description-->
+                                        <Label Text="Description"
+                                        FontSize="Subtitle" 
+                                        TextColor="White"
+                                        FontFamily="Roboto"
+                                        FontAttributes="Bold" 
+                                        VerticalOptions="Center" />
+                                        <Editor x:Name="enyJoinDescription"
+                                        AutoSize="TextChanges"
+                                        MaxLength="500"
+                                        TextColor="White"
+                                        IsEnabled="False"
+                                        PlaceholderColor="white"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,15" >
+                        <Label Text="Event Duration"
+                                FontSize="Subtitle" 
+                                TextColor="White"
+                                FontFamily="Roboto"
+                                FontAttributes="Bold" 
+                                VerticalOptions="Center"/>
+                        <Label x:Name="enyEventDuration"
+                                        TextColor="White"
+                                        HorizontalTextAlignment="End"
+                                        FontFamily="Roboto"
+                                        HorizontalOptions="EndAndExpand"
+                                        IsEnabled="False"/>
+                        </StackLayout>
+
+                        <BoxView Color="White"
+                                HeightRequest="0.3"
+                                HorizontalOptions="FillAndExpand"/>
+                        
 
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5" >
                         <Label Text="Expected Date"
@@ -36,8 +84,9 @@
                                         TextColor="White"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"
-                                        IsEnabled="True"/>
+                                        IsEnabled="False"/>
                         </StackLayout>
+
                         <BoxView Color="White"
                                 HeightRequest="0.3"
                                 HorizontalOptions="FillAndExpand"/>

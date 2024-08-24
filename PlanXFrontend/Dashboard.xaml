@@ -13,32 +13,31 @@
         <ToolbarItem x:Name="tbiTask" Order="Primary" Text="Tasks" Clicked="tbiTask_Clicked"/>
         <ToolbarItem x:Name="tbiAccount" Order="Primary" Text="Account"  Clicked="tbiAccount_Clicked"/>
     </ContentPage.ToolbarItems>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+    
     
         <StackLayout VerticalOptions="FillAndExpand" 
-                    Grid.Row="0"
-                    HorizontalOptions="FillAndExpand">
-            <ScrollView>
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White">
+            <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 
                     <syncfusion:SfScheduler x:Name="ScheduleView" 
                                 AppointmentsSource="{Binding SchedulerEvents}"
                                 AllowedViews="Agenda,Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week"
                                 View="Week"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
                                 CellBorderBrush="#608D14A5"
                                 ShowWeekNumber="True"
                                 ShowBusyIndicator="True"
                                 TodayHighlightBrush="#8D14A5">
                     <syncfusion:SfScheduler.BindingContext> 
                         <viewModel:ControlViewModel />
-                    </syncfusion:SfScheduler.BindingContext>
-
+                            </syncfusion:SfScheduler.BindingContext>
+                    <syncfusion:SfScheduler.HeaderView>
+                        <syncfusion:SchedulerHeaderView 
+                                        Background="White">
+                        </syncfusion:SchedulerHeaderView>
+                    </syncfusion:SfScheduler.HeaderView>
                 </syncfusion:SfScheduler>
                         
 
@@ -48,35 +47,24 @@
             <BoxView Color="LightGray" 
                     HeightRequest="1" 
                     HorizontalOptions="Fill"/>
+                    <Button Text="+"
+                x:Name="btnCreateEvent"
+                Clicked="btnCreateEvent_Clicked"
+                FontAttributes="Bold"
+                FontFamily="Roboto"
+                FontSize="Medium"
+                TextColor="White"
+                CornerRadius="0">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="Black" Offset="0.0" />
+                        <GradientStop Color="#8D14A5" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+                </Button>
         </StackLayout>
 
-        <StackLayout Grid.Row="1" 
-                    VerticalOptions="FillAndExpand" 
-                    HorizontalOptions="FillAndExpand">
-            <Label Text="Events" 
-                    FontSize="18" 
-                    FontAttributes="Bold" 
-                    TextColor="Black" 
-                    Margin="22,0"/>
-
-            <Button Text="+" 
-                    x:Name="btnCreateEvent"
-                    FontFamily="Roboto"
-                    FontSize="Medium"
-                    TextColor="Black" 
-                    BackgroundColor="Transparent" 
-                    HorizontalOptions="End" 
-                    VerticalOptions="EndAndExpand"
-                    CornerRadius="20"
-                    BorderColor="Black"
-                    BorderWidth="1"
-                    Margin="20"
-                    Clicked="btnCreateEvent_Clicked"
-                    Pressed="myButton_Pressed"
-                    Released="myButton_Released"/>
-        </StackLayout>
-    
-    </Grid>
+        
 
 
 </ContentPage>
