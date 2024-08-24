@@ -64,7 +64,7 @@ namespace PlanXBackend.Logica
                             
                             foreach (Registro register in listaRegistros)
                             {
-                                if (register.fecInicial >= tiempoInicial && register.fecFinal <= tiempoFinal)
+                                if (register.fecInicial <= tiempoInicial && register.fecFinal >= tiempoFinal)
                                 {
                                     horario.registros.Add(register);
                                 }

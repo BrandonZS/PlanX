@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PLANXAPP" Class="ConexionLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=proyecto-movil.database.windows.net;Initial Catalog=PLANXAPP;Persist Security Info=True;User ID=Admin123;Trust Server Certificate=True" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString5" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.SP_REGISTRO_USUARIO_REGULAR" Method="SP_REGISTRO_USUARIO_REGULAR">
-    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(255)" />
-    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="CODPAIS" Parameter="cODPAIS" Type="System.String" DbType="NVarChar(2)" />
-    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.SP_ACTUALIZAR_EVENTO" Method="SP_ACTUALIZAR_EVENTO">
     <Parameter Name="TITULO" Parameter="tITULO" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="COD_INVI" Parameter="cOD_INVI" Type="System.String" DbType="NVarChar(6)" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_REGISTRO_USUARIO_REGULAR" Method="SP_REGISTRO_USUARIO_REGULAR">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CODPAIS" Parameter="cODPAIS" Type="System.String" DbType="NVarChar(60)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
@@ -35,7 +35,7 @@
     <Parameter Name="CONTRA_ANTIGUA" Parameter="cONTRA_ANTIGUA" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="CONTRA_NUEVA" Parameter="cONTRA_NUEVA" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
-    <Parameter Name="COD_PAIS" Parameter="cOD_PAIS" Type="System.String" DbType="VarChar(2)" />
+    <Parameter Name="COD_PAIS" Parameter="cOD_PAIS" Type="System.String" DbType="VarChar(60)" />
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
     <Return Type="System.Int32" />
@@ -59,6 +59,8 @@
   <Function Name="dbo.SP_ELIMINAR_TAREA" Method="SP_ELIMINAR_TAREA">
     <Parameter Name="ID_USER" Parameter="iD_USER" Type="System.Int32" DbType="Int" />
     <Parameter Name="ID_TAREA" Parameter="iD_TAREA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(4000)" Direction="InOut" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.SP_ELIMINAR_USUARIO_REGULAR" Method="SP_ELIMINAR_USUARIO_REGULAR">
@@ -104,7 +106,7 @@
       <Column Name="NOMBRE" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="CORREO_ELECTRONICO" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="CODIGO_PAIS" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="CODIGO_PAIS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.SP_OBTENER_EVENTO" Method="SP_OBTENER_EVENTO">
@@ -154,6 +156,7 @@
     <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
     <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
     <ElementType Name="SP_OBTENER_TAREAResult">
+      <Column Name="ID_TAREA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TITULO" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="FECINICIAL" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />

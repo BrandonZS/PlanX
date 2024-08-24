@@ -65,21 +65,49 @@
                 BackgroundColor="Transparent"
                 Margin="0,0,0,20">
                 <Picker.Items>
-                <x:String>Costa Rica</x:String>
-                <x:String>Canada</x:String>
-                <x:String>China</x:String>
-                <x:String>Spain</x:String>
-                <x:String>Brazil</x:String>
-                <x:String>United States</x:String>
-                <x:String>Japan</x:String>
+                    <x:String>Argentina</x:String>
+                    <x:String>Bahamas</x:String>
+                    <x:String>Barbados</x:String>
+                    <x:String>Belice</x:String>
+                    <x:String>Bolivia</x:String>
+                    <x:String>Brasil</x:String>
+                    <x:String>Canada</x:String>
+                    <x:String>Chile</x:String>
+                    <x:String>Colombia</x:String>
+                    <x:String>Costa Rica</x:String>
+                    <x:String>Cuba</x:String>
+                    <x:String>Dominica</x:String>
+                    <x:String>Ecuador</x:String>
+                    <x:String>El Salvador</x:String>
+                    <x:String>Estados Unidos</x:String>
+                    <x:String>Guatemala</x:String>
+                    <x:String>Haití</x:String>
+                    <x:String>Honduras</x:String>
+                    <x:String>Jamaica</x:String>
+                    <x:String>México</x:String>
+                    <x:String>Nicaragua</x:String>
+                    <x:String>Panamá</x:String>
+                    <x:String>Paraguay</x:String>
+                    <x:String>Perú</x:String>
+                    <x:String>República Dominicana</x:String>
+                    <x:String>Trinidad y Tobago</x:String>
+                    <x:String>Uruguay</x:String>
+                    <x:String>Venezuela</x:String>
+                    <x:String>San Cristóbal y Nieves</x:String>
+                    <x:String>San Vicente y las Granadinas</x:String>
+                    <x:String>Santa Lucía</x:String>
+                    <x:String>Surinam</x:String>
+                    <x:String>Guyana</x:String>
+                    <x:String>Granada</x:String>
                 </Picker.Items>
-                </Picker>
+            </Picker>
 
         <!-- Botón de Guardar Cambios -->
         <Button Text="Save Changes"
                 BackgroundColor="Black"
                 TextColor="White"
-                FontAttributes="Bold" >
+                FontAttributes="Bold"
+                Clicked="Save_Button_Clicked">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
                         <GradientStop Color="Black" Offset="0.0" />

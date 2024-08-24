@@ -368,6 +368,66 @@ namespace PlanXBackend.Logica
 
             return res;
         }
+
+        public ResActualizarEvento actualizarEvento(ReqActualizarEvento req)
+        {
+            ResActualizarEvento res = new ResActualizarEvento();
+            try
+            {
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.id < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario faltante");
+                }
+                else if (String.IsNullOrEmpty(req.codInvi))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Codigo faltante");
+                }
+                else if (String.IsNullOrEmpty(req.titulo))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Contraseña faltante");
+                }
+                else if (String.IsNullOrEmpty(req.descripcion))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Error en Pais");
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_ACTUALIZAR_EVENTO(req.titulo, req.descripcion, req.id, req.codInvi, ref errorId, ref errorDescripcion); 
+                    
+                    if (errorDescripcion != null)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+
+            return res;
+        }
           
     }
 }

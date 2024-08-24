@@ -1,11 +1,12 @@
 
 --SP para registrar el usuario en la DB ////Ultima Actualizacion 8/8/2024 14:23
+--SP para registrar el usuario en la DB ////Ultima Actualizacion 8/8/2024 14:23
 Create OR Alter PROCEDURE SP_REGISTRO_USUARIO_REGULAR(
     @NOMBRE nvarchar(255),
     @APELLIDOS nvarchar(255),
     @CORREO_ELECTRONICO nvarchar(max),
     @PASSWORD nvarchar(max),
-    @CODPAIS nvarchar(2),
+    @CODPAIS nvarchar(60),
     @IDRETURN int output,
     @ERRORID int output,
     @ERRORDESCRIPCION nvarchar(max) output
@@ -23,7 +24,7 @@ BEGIN
         ELSE
         BEGIN
             DECLARE @IDPAIS int
-            SELECT @IDPAIS = [idPais] FROM [dbo].[PAIS] WHERE [codigo] = @CODPAIS
+            SELECT @IDPAIS = [idPais] FROM [dbo].[PAIS] WHERE [nombre] = @CODPAIS
             
             IF @IDPAIS IS NULL
             BEGIN
@@ -68,14 +69,13 @@ BEGIN
 END
 GO
 
-
 CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_USUARIO_REGULAR
 	@NOMBRE NVARCHAR(255),
 	@APELLIDO NVARCHAR(255),
 	@CONTRA_ANTIGUA NVARCHAR(255),
 	@CONTRA_NUEVA NVARCHAR(255),
 	@ID_USER INT,
-	@COD_PAIS VARCHAR(2),
+	@COD_PAIS VARCHAR(60),
     @ERRORID int output,
     @ERRORDESCRIPCION nvarchar(max) output
 AS
@@ -97,7 +97,7 @@ BEGIN
 		IF @COD_PAIS IS NOT NULL
 		BEGIN
 			DECLARE @ID_PAIS INT
-			SELECT @ID_PAIS = [idPais] FROM [dbo].[PAIS] WHERE @COD_PAIS = [codigo]
+			SELECT @ID_PAIS = [idPais] FROM [dbo].[PAIS] WHERE @COD_PAIS = [nombre]
 			UPDATE  [dbo].[Usuario]
 			SET [idPais] = @ID_PAIS
 			WHERE [idUsuario] = @ID_USER
@@ -120,6 +120,7 @@ BEGIN
 	END CATCH
 END
 GO
+
 
 CREATE OR ALTER PROCEDURE SP_ELIMINAR_USUARIO_REGULAR
 	@ID_USER INT,
@@ -179,7 +180,7 @@ BEGIN
             u.[nombre] AS NOMBRE,
             u.[apellido] AS APELLIDOS,
 			u.[email] AS CORREO_ELECTRONICO,
-            p.[codigo] AS CODIGO_PAIS
+            p.nombre AS CODIGO_PAIS
         FROM 
             [dbo].[Usuario] u
             INNER JOIN [dbo].[Pais] p ON u.[IDPAIS] = p.[idPais]
@@ -270,25 +271,37 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_EVENTO
-	@TITULO NVARCHAR(255),
-	@DESCRIPCION NVARCHAR(255),
-	@ID_USER INT,
-	@COD_INVI NVARCHAR (6),
-    @ERRORID int output,
-    @ERRORDESCRIPCION nvarchar(max) output
+    @TITULO NVARCHAR(255),
+    @DESCRIPCION NVARCHAR(255),
+    @ID_USER INT,
+    @COD_INVI NVARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(MAX) OUTPUT
 AS
 BEGIN
-	IF NOT EXISTS (SELECT 1 FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER)
-	BEGIN
+    -- Inicializa los valores de salida
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = 'ACTUALIZACIÓN EXITOSA';
+
+    -- Verifica si el usuario existe
+    IF NOT EXISTS (SELECT 1 FROM [dbo].[Usuario] WHERE [idUsuario] = @ID_USER)
+    BEGIN
         SET @ERRORID = 1;
-		SET @ERRORDESCRIPCION = 'ERROR DESDE BD: USUARIO NO ENCONTRADO';
-	END
-	ELSE
-	BEGIN
-		UPDATE [dbo].[Evento]
-		SET [nombre] = @TITULO, [descripcion] = @DESCRIPCION
-		WHERE [idUsuario] = @ID_USER AND [codInvitacion] = @COD_INVI AND [fechaHoraInicio] < GETDATE()
-	END
+        SET @ERRORDESCRIPCION = 'ERROR DESDE BD: USUARIO NO ENCONTRADO';
+        RETURN;
+    END
+
+    -- Intenta actualizar el evento
+    UPDATE [dbo].[Evento]
+    SET [nombre] = @TITULO, [descripcion] = @DESCRIPCION
+    WHERE [idUsuario] = @ID_USER AND [codInvitacion] = @COD_INVI;
+
+    -- Verifica si la actualización afectó alguna fila
+    IF @@ROWCOUNT = 0
+    BEGIN
+        SET @ERRORID = 2;
+        SET @ERRORDESCRIPCION = 'ERROR DESDE BD: NO SE ENCONTRÓ UN EVENTO PARA ACTUALIZAR O EL EVENTO YA HA EMPEZADO';
+    END
 END
 GO
 
@@ -476,31 +489,43 @@ CREATE OR ALTER PROCEDURE SP_OBTENER_TAREA
 
 AS
 BEGIN
+    -- Inicialización de los parámetros de salida
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = NULL;
 
-    IF EXISTS (
-        SELECT 1
-        FROM [dbo].[Tarea]
-        WHERE [idUsuario] = @ID_USER
-    )
-    BEGIN
-        -- Seleccionar datos de la tarea
-        SELECT 
-           t.[titulo] AS TITULO,
-           t.[descripcion] AS DESCRIPCION,
-           t.[fechaHoraInicio] AS FECINICIAL,
-           t.[fechaHoraFinal] AS FECFINAL,
-           p.[descripcion] AS PRIORIDAD
-        FROM [dbo].[Tarea] t
-        INNER JOIN [dbo].[Prioridad] p ON t.[idPrioridad] = p.[idPrioridad]
-        WHERE t.[idUsuario] = @ID_USER;
-    END
-    ELSE
-    BEGIN
+    BEGIN TRY
+        IF EXISTS (
+            SELECT 1
+            FROM [dbo].[Tarea]
+            WHERE [idUsuario] = @ID_USER
+        )
+        BEGIN
+            -- Seleccionar datos de la tarea
+            SELECT 
+				t.[idTarea] AS ID_TAREA,
+                t.[titulo] AS TITULO,
+                t.[descripcion] AS DESCRIPCION,
+                t.[fechaHoraInicio] AS FECINICIAL,
+                t.[fechaHoraFinal] AS FECFINAL,
+                p.[descripcion] AS PRIORIDAD
+            FROM [dbo].[Tarea] t
+            INNER JOIN [dbo].[Prioridad] p ON t.[idPrioridad] = p.[idPrioridad]
+            WHERE t.[idUsuario] = @ID_USER;
+        END
+        ELSE
+        BEGIN
+            SET @ERRORID = 1;  -- Código de error personalizado
+            SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
+        END
+    END TRY
+    BEGIN CATCH
+        -- Manejo de errores en caso de excepción
         SET @ERRORID = ERROR_NUMBER();
-        SET @ERRORDESCRIPCION = 'La tarea no existe o los datos no coinciden.';
-    END
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END CATCH
 END;
 GO
+
 
 CREATE OR ALTER PROCEDURE SP_ACTUALIZAR_TAREA
 	@TITULO NVARCHAR(255),
@@ -526,17 +551,34 @@ END
 GO
 
 CREATE OR ALTER PROCEDURE SP_ELIMINAR_TAREA
-	@ID_USER INT,
-	@ID_TAREA INT
+    @ID_USER INT,
+    @ID_TAREA INT,
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(4000) OUTPUT
 AS
 BEGIN
-	IF EXISTS (SELECT 1 FROM [dbo].[Tarea] WHERE [idTarea]= @ID_TAREA AND [idUsuario] = @ID_USER)
-	BEGIN
-	DELETE FROM [dbo].[Tarea]
-	WHERE [idTarea] = @ID_TAREA
-	END
+    SET @ERRORID = 0;
+    SET @ERRORDESCRIPCION = NULL;
+
+    BEGIN TRY
+        IF EXISTS (SELECT 1 FROM [dbo].[Tarea] WHERE [idTarea] = @ID_TAREA AND [idUsuario] = @ID_USER)
+        BEGIN
+            DELETE FROM [dbo].[Tarea]
+            WHERE [idTarea] = @ID_TAREA;
+        END
+        ELSE
+        BEGIN
+            SET @ERRORID = 1;  
+            SET @ERRORDESCRIPCION = 'No se encontró la tarea con el ID especificado para este usuario.';
+        END
+    END TRY
+    BEGIN CATCH
+        SET @ERRORID = ERROR_NUMBER();
+        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+    END CATCH
 END
 GO
+
 
 CREATE OR ALTER PROCEDURE SP_REGISTRO_EVENTO_REGULAR
     @ID_USER INT,
@@ -559,7 +601,7 @@ BEGIN
         END
 
         -- Verifica si el código de invitación es válido y la fecha de inicio es anterior a la actual
-        IF NOT EXISTS (SELECT 1 FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI AND [fechaHoraInicio] > GETDATE())
+        IF NOT EXISTS (SELECT 1 FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INVI )
         BEGIN
             SET @IDRETURN = 0;
             SET @ERRORID = 2;
@@ -579,7 +621,7 @@ BEGIN
         FROM 
             [dbo].[Evento] 
         WHERE 
-            [codInvitacion] = @COD_INVI AND [fechaHoraInicio] > GETDATE();
+            [codInvitacion] = @COD_INVI;
 
         -- Verifica si las fechas de inicio y fin proporcionadas son válidas dentro del rango del evento
         IF (@FEC_INICIO < @INICIO_EVENTO OR @FEC_FIN > @FINAL_EVENTO)

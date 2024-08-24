@@ -19,11 +19,33 @@ public class TaskViewModel
 
             foreach (Tarea tarea in ListaTareas.tareas)
             {
-                SchedulerTasks.Add(new SchedulerAppointment()
+            Color miColor;
+
+            switch (tarea.prioridad)
+            {
+                case "Crítica":
+                    miColor = Colors.Red; // Rojo
+                    break;
+                case "Alta":
+                    miColor = Colors.Orange; // Naranja
+                    break;
+                case "Media":
+                    miColor = Colors.Yellow; // Amarillo
+                    break;
+                case "Baja":
+                    miColor = Colors.Green; // Verde
+                    break;
+                default:
+                    miColor = Colors.AliceBlue; // Azul por defecto
+                    break;
+            }
+            SchedulerTasks.Add(new SchedulerAppointment()
                 {
                     StartTime = tarea.fecHoraInicio,
                     EndTime = tarea.fecHoraFin,
                     Subject = tarea.titulo,
+                    Id = tarea.id,
+                    Background = miColor
 
                 });
             }

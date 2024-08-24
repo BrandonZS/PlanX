@@ -53,8 +53,10 @@ namespace PlanXBackend.Logica
                     int? idReturn = 0;
                     int? errorId = 0;
                     string errorDescripcion = null;
+
+                    string hashedPassword = Encriptador.HashPassword(req.contrasenha);
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
-                    con.SP_REGISTRO_USUARIO_REGULAR(req.nombre, req.apellido, req.email, req.contrasenha, req.codPais, ref idReturn, ref errorId, ref errorDescripcion);
+                    con.SP_REGISTRO_USUARIO_REGULAR(req.nombre, req.apellido, req.email, hashedPassword, req.codPais, ref idReturn, ref errorId, ref errorDescripcion);
                     if (idReturn == 0)
                     {
                         res.resultado = false;
@@ -116,8 +118,16 @@ namespace PlanXBackend.Logica
                 {
                     int? errorId = 0;
                     string errorDescripcion = null;
+
+                    string hashedPassword1 = null; 
+                    string hashedPassword2 = null; 
+                    if (req.contraNueva!=null && req.contraAntigua != null)
+                    {
+                        hashedPassword1 = Encriptador.HashPassword(req.contraAntigua);
+                        hashedPassword2 = Encriptador.HashPassword(req.contraNueva);
+                    }
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
-                    con.SP_ACTUALIZAR_USUARIO_REGULAR(req.nombre, req.apellido, req.contraAntigua, req.contraNueva, req.idUsuario, req.codPais, ref errorId, ref errorDescripcion);
+                    con.SP_ACTUALIZAR_USUARIO_REGULAR(req.nombre, req.apellido, hashedPassword1, hashedPassword2, req.idUsuario, req.codPais, ref errorId, ref errorDescripcion);
                     if (errorDescripcion != null)
                     {
                         res.resultado = false;
@@ -163,8 +173,10 @@ namespace PlanXBackend.Logica
                 {
                     int? errorId = 0;
                     string errorDescripcion = null;
+
+                    string hashedPassword = Encriptador.HashPassword(req.contrasenha);
                     ConexionLINQDataContext con = new ConexionLINQDataContext();
-                    con.SP_ELIMINAR_USUARIO_REGULAR(req.idUsuario, req.contrasenha, ref errorId, ref errorDescripcion);
+                    con.SP_ELIMINAR_USUARIO_REGULAR(req.idUsuario, hashedPassword, ref errorId, ref errorDescripcion);
                     if (errorDescripcion != null)
                     {
                         res.resultado = false;

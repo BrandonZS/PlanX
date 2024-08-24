@@ -111,7 +111,7 @@
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                                <Picker Title="Select duration" 
+                                <Picker Title="Select priority" 
                                 x:Name="enyPriorityTask"
                                 TitleColor="White" 
                                 TextColor="White"
@@ -123,7 +123,7 @@
                                 <x:String>Baja</x:String>
                                 <x:String>Media</x:String>
                                 <x:String>Alta</x:String>
-                                <x:String>Critica</x:String>
+                                <x:String>Crítica</x:String>
                                 </Picker.Items>
                                 </Picker>
                         </StackLayout>

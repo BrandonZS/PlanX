@@ -27,5 +27,20 @@ namespace PLANX_API.Controllers
         {
             return new LogTarea().obtenerListaTarea(req);
         }
+
+        [System.Web.Http.HttpPut]
+        [System.Web.Http.Route("api/tarea/actualizartarea")]
+        public ResActualizarTarea actualizarTarea(ReqActualizarTarea req)
+        {
+            return new LogTarea().actualizarTarea(req);
+        }
+
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/tarea/eliminartarea")]
+        public ResBase eliminarTarea(ReqEliminarTarea req)
+        {
+            return new LogTarea().eliminarTarea(req);
+        }
+
     }
 }

@@ -123,9 +123,117 @@ namespace PlanXBackend.Logica
 
             return res;
         }
+        public ResActualizarTarea actualizarTarea(ReqActualizarTarea req)
+        {
+            ResActualizarTarea res = new ResActualizarTarea();
+            try
+            {
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.idUser < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario faltante");
+                }
+                else if (req.idTarea < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Tarea faltante");
+                }
+                else if (String.IsNullOrEmpty(req.titulo))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Titulo faltante");
+                }
+                else if (String.IsNullOrEmpty(req.descripcion))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Descripcion faltante");
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_ACTUALIZAR_TAREA(req.titulo, req.descripcion, req.idUser, req.idTarea, ref errorId, ref errorDescripcion);
+
+                    if (errorDescripcion != null)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+
+            return res;
+        }
+        public ResBase eliminarTarea(ReqEliminarTarea req)
+        {
+            ResBase res = new ResBase();
+            try
+            {
+                //Faltan Comprobaciones de otros datos
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (req.idUser < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Codigo faltante");
+                }
+                else if (req.idTarea < 0)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario Faltante");
+                }
+                else
+                {
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_ELIMINAR_TAREA(req.idUser, req.idTarea, ref errorId, ref errorDescripcion);
+                    if (errorDescripcion != null)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+            return res;
+        }
         private Tarea armarTarea(SP_OBTENER_TAREAResult tareaLinq)
         {
             Tarea tarea = new Tarea();
+            tarea.Id = tareaLinq.ID_TAREA;
             tarea.titulo = tareaLinq.TITULO;
             tarea.descripcion = tareaLinq.DESCRIPCION;
             tarea.fecHoraInicio = tareaLinq.FECINICIAL;

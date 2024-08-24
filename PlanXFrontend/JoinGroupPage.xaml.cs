@@ -2,6 +2,7 @@ using PlanXFrontend.Entidades.Entities;
 using Newtonsoft.Json;
 using PlanXFrontend.Entidades.Request.ReqEvento;
 using PlanXFrontend.Entidades.Response.ResEvento;
+using MauiApp1;
 
 namespace PlanXFrontend;
 
@@ -51,7 +52,8 @@ public partial class JoinGroupPage : ContentPage
 
                 if (res.resultado)
                 {
-                    DisplayAlert("Registro correcto", "Usuario se a�adio correctamente", "Aceptar");
+                    DisplayAlert("Registro correcto", "Usuario se añadio correctamente", "Aceptar");
+                    await Navigation.PushAsync(new Dashboard());
                 }
 
             }

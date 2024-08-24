@@ -60,5 +60,11 @@ namespace PLANX_API.Controllers
         {
             return new LogEvento().eliminarEvento(req);
         }
+        [System.Web.Http.HttpPut]
+        [System.Web.Http.Route("api/evento/actualizarevento")]
+        public ResActualizarEvento actualizarEvento(ReqActualizarEvento req)
+        {
+            return new LogEvento().actualizarEvento(req);
+        }
     }
 }

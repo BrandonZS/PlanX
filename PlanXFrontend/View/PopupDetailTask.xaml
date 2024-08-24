@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="PlanXFrontend.View.PopupDetailTask">
+    <VerticalStackLayout Padding="30,0,30,0" >
+        <VerticalStackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#8D14A5" Offset="0.0" />
+                <GradientStop Color="Black" Offset="1.0" />
+            </LinearGradientBrush>
+        </VerticalStackLayout.Background>
+        <Label  Text="Task Details"
+                    FontSize="Large" 
+                    Margin="0,20,0,10"
+                    TextColor="White"
+                    FontFamily="Roboto"
+                    FontAttributes="Bold" 
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"/>
+        <Label Text="Title"
+                    FontSize="Subtitle" 
+                    TextColor="White"
+                    FontFamily="Roboto"
+                    FontAttributes="Bold" />
+        <!--Title-->
+        <Entry x:Name="enyTitle"
+                    TextColor="White"
+                    IsEnabled="True"
+                    FontFamily="Roboto"
+                    PlaceholderColor="White"
+                    Margin="0,0,0,20"/>
+
+        <!--Description-->
+        <Label Text="Description"
+                    FontSize="Subtitle" 
+                    TextColor="White"
+                    FontFamily="Roboto"
+                    FontAttributes="Bold" />
+        <Editor x:Name="enyDescription"
+                    AutoSize="TextChanges"
+                    MaxLength="500"
+                    TextColor="White"
+                    PlaceholderColor="white"
+                    Margin="0,0,0,10"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+            <Label Text="Date"
+                            FontSize="Subtitle" 
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            FontAttributes="Bold" 
+                            VerticalOptions="Center"/>
+            <DatePicker x:Name="datePicker"
+                                    Format="D"
+                                    IsEnabled="False"
+                                    TextColor="White"
+                                    FontFamily="Roboto"
+                                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+
+
+
+        <BoxView Color="White"
+                            HeightRequest="0.3"
+                            HorizontalOptions="FillAndExpand"/>
+        <!--date-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+            <Label Text="Begin Hour"
+                            FontSize="Subtitle" 
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            FontAttributes="Bold"
+                            VerticalOptions="Center"/>
+            <TimePicker x:Name="timeBeginPicker"
+                                    TextColor="White"
+                                    IsEnabled="False"
+                                    FontFamily="Roboto"
+                                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+        <BoxView Color="White"
+                            HeightRequest="0.3"
+                            HorizontalOptions="FillAndExpand"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+            <Label Text="End Hour"
+                            FontSize="Subtitle" 
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            FontAttributes="Bold" 
+                            VerticalOptions="Center"/>
+            <TimePicker x:Name="timeEndPicker"
+                                    TextColor="White"
+                                    IsEnabled="False"
+                                    FontFamily="Roboto"
+                                    HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+
+        <BoxView Color="White"
+                            HeightRequest="0.3"
+                            HorizontalOptions="FillAndExpand"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
+            <Label Text="Priority"
+                            FontSize="Subtitle" 
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            FontAttributes="Bold" 
+                            VerticalOptions="Center"/>
+            <Label x:Name="enyPriority"
+                            Text="" 
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            IsEnabled="False"
+                            BackgroundColor="Transparent"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="Center"/>
+        </StackLayout>
+
+
+
+
+
+        <!-- Login Button -->
+        <FlexLayout Margin="0,20,0,20" >
+            <Button Text="Edit"
+                    x:Name="btnEditEvent"
+                    BackgroundColor="Transparent"
+                    CornerRadius="5"
+                    HorizontalOptions="FillAndExpand"
+                    FontFamily="Roboto"
+                    TextColor="GreenYellow" 
+                    FontAttributes="Bold"
+                    Clicked="btnEditEvent_Clicked">
+            </Button>
+
+            <Button Text="Delete"
+                    x:Name="btnDeleteEvent"
+                    BackgroundColor="Transparent"
+                    CornerRadius="5"
+                    Margin="2,0"
+                    HorizontalOptions="FillAndExpand"
+                    FontFamily="Roboto"
+                    TextColor="Red" 
+                    FontAttributes="Bold"
+                    Clicked="btnDeleteEvent_Clicked"/>
+
+        </FlexLayout>
+
+
+    </VerticalStackLayout>
+</toolkit:Popup>

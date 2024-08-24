@@ -41,8 +41,10 @@ namespace PlanXBackend.Logica
                     int? idReturn = 0;
                     int? idError = 0;
                     string errorBd = "";
+
+                    string hashedPassword = Encriptador.HashPassword(req.password);
                     SP_LOGINResult resultado = new SP_LOGINResult();
-                    resultado = linq.SP_LOGIN(req.email, req.password, ref idReturn, ref idError, ref errorBd).ToList().First();
+                    resultado = linq.SP_LOGIN(req.email, hashedPassword, ref idReturn, ref idError, ref errorBd).ToList().First();
                     if (idError == null || idError == 0)
                     {
                             //Usuario verificado

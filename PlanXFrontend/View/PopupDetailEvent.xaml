@@ -26,7 +26,7 @@
                         <!--Title-->
                 <Entry x:Name="enyTitle"
                         TextColor="White"
-                        IsEnabled="False"
+                        IsEnabled="True"
                         FontFamily="Roboto"
                         PlaceholderColor="White"
                         Margin="0,0,0,20"/>
@@ -75,6 +75,7 @@
                                         VerticalTextAlignment="End"
                                         Keyboard="Numeric"
                                         TextColor="White"
+                                        IsEnabled="False"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
@@ -148,7 +149,8 @@
                         HorizontalOptions="FillAndExpand"
                         FontFamily="Roboto"
                         TextColor="GreenYellow" 
-                        FontAttributes="Bold">
+                        FontAttributes="Bold"
+                        Clicked="btnEditEvent_Clicked">
                         </Button>
                         
                         <Button Text="Delete"

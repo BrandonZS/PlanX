@@ -67,9 +67,14 @@ public partial class PopupDetailEvent : Popup
                         }
                         Close(true);
                     }
+                    else
+                    {
+                    Close();
+                    }
                 }
                 else
                 {
+                btnViewScheduleEvent.Text = "Sin Registos";
                 }
             }
             catch (Exception ex)
@@ -101,10 +106,8 @@ public partial class PopupDetailEvent : Popup
 
                 res = JsonConvert.DeserializeObject<ResEliminarEvento>(responseContent);
 
-                if (res.resultado)
-                {
                     Close();
-                }
+                
 
             }
             else
@@ -115,5 +118,42 @@ public partial class PopupDetailEvent : Popup
         {
 
         }
+    }
+
+    private async void btnEditEvent_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            ReqActualizarEvento req = new ReqActualizarEvento();
+            req.id = Sesion.id;
+            req.codInvi = InvitacionEvento.eventoPropio.codInvitacion;
+            req.titulo = enyTitle.Text;
+            req.descripcion = enyDescription.Text;
+
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
+
+            HttpClient httpClient = new HttpClient();
+
+            var response = await httpClient.PutAsync(laUrl + "api/evento/actualizarevento", jsonContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                ResActualizarEvento res = new ResActualizarEvento();
+
+                res = JsonConvert.DeserializeObject<ResActualizarEvento>(responseContent);
+                Close();
+
+
+            }
+            else
+            {
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+
     }
 }

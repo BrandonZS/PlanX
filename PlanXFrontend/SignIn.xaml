@@ -84,14 +84,42 @@
                 FontFamily="Roboto"
                 BackgroundColor="Transparent"
                 Margin="0,0,0,20">
-                <Picker.Items>
-                <x:String>CR</x:String>
-                <x:String>CN</x:String>
-                <x:String>SP</x:String>
-                <x:String>BZ</x:String>
-                <x:String>US</x:String>
-                <x:String>JP</x:String>
-                </Picker.Items>
+                    <Picker.Items>
+                        <x:String>Argentina</x:String>
+                        <x:String>Bahamas</x:String>
+                        <x:String>Barbados</x:String>
+                        <x:String>Belice</x:String>
+                        <x:String>Bolivia</x:String>
+                        <x:String>Brasil</x:String>
+                        <x:String>Canada</x:String>
+                        <x:String>Chile</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Costa Rica</x:String>
+                        <x:String>Cuba</x:String>
+                        <x:String>Dominica</x:String>
+                        <x:String>Ecuador</x:String>
+                        <x:String>El Salvador</x:String>
+                        <x:String>Estados Unidos</x:String>
+                        <x:String>Guatemala</x:String>
+                        <x:String>Haití</x:String>
+                        <x:String>Honduras</x:String>
+                        <x:String>Jamaica</x:String>
+                        <x:String>México</x:String>
+                        <x:String>Nicaragua</x:String>
+                        <x:String>Panamá</x:String>
+                        <x:String>Paraguay</x:String>
+                        <x:String>Perú</x:String>
+                        <x:String>República Dominicana</x:String>
+                        <x:String>Trinidad y Tobago</x:String>
+                        <x:String>Uruguay</x:String>
+                        <x:String>Venezuela</x:String>
+                        <x:String>San Cristóbal y Nieves</x:String>
+                        <x:String>San Vicente y las Granadinas</x:String>
+                        <x:String>Santa Lucía</x:String>
+                        <x:String>Surinam</x:String>
+                        <x:String>Guyana</x:String>
+                        <x:String>Granada</x:String>
+                    </Picker.Items>
                 </Picker>
 
                         <!-- Login Button -->

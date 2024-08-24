@@ -174,6 +174,10 @@ public partial class Dashboard : ContentPage
             {
                 await Navigation.PushAsync(new DefineEventPage());
             }
+            else
+            {
+                await Navigation.PushAsync(new Dashboard());
+            }
         }
 
 

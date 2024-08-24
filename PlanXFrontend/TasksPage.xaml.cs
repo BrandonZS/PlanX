@@ -2,6 +2,9 @@ using PlanXFrontend.Entidades.Entities;
 using PlanXFrontend.Entidades.Request.ReqTarea;
 using Newtonsoft.Json;
 using PlanXFrontend.Entidades.Response.ResTarea;
+using PlanXFrontend.View;
+using CommunityToolkit.Maui.Views;
+using Syncfusion.Maui.Scheduler;
 
 namespace PlanXFrontend;
 
@@ -20,7 +23,10 @@ public partial class TasksPage : ContentPage
 	}
 
 	private async Task ObtenerTarea(){
-
+        if (ListaTareas.tareas.Count != 0)
+        {
+            ListaTareas.tareas.Clear();
+        }
 
         try
         {
@@ -65,4 +71,28 @@ public partial class TasksPage : ContentPage
         }
 
     }
-} 
+
+    private async void Onscheduler_Tapped(object sender, Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs e)
+    {
+        if (e.Appointments != null)
+        {
+            var defineTask = e.Appointments.FirstOrDefault() as SchedulerAppointment;
+
+
+            foreach(Tarea tarea in ListaTareas.tareas)
+            {
+                if(tarea.id.ToString() == defineTask.Id.ToString())
+                {
+                    TareaEstatica.staticTask = tarea;
+                }
+            }
+
+            var popup = new PopupDetailTask();
+            var result = await this.ShowPopupAsync(popup);
+            if (result is bool shouldNavigate && shouldNavigate)
+            {
+                await Navigation.PushAsync(new TasksPage());
+            }
+        }
+    }
+}
