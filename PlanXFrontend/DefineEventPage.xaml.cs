@@ -11,6 +11,7 @@ public partial class DefineEventPage : ContentPage
     string laUrl = App.API_URL;
     public class ObjectList()
 	{
+
 		public string fecInicio { get; set; }
 		public string fecFinal { get; set; }
 		public int usersCount { get; set; }
@@ -23,7 +24,7 @@ public partial class DefineEventPage : ContentPage
     public DefineEventPage()
 	{
 		InitializeComponent();
-
+        this.ToolbarItems.Clear();
 		
 		CollectionObjectList collection = new CollectionObjectList();
 		
@@ -48,10 +49,10 @@ public partial class DefineEventPage : ContentPage
         if (e.SelectedItem == null)
             return;
 
-        // Aquí puedes manejar el item seleccionado
+        // Aquï¿½ puedes manejar el item seleccionado
         var selectedHorario = e.SelectedItem as ObjectList;
 
-        // Por ejemplo, mostrar una alerta con la información del horario seleccionado
+        // Por ejemplo, mostrar una alerta con la informaciï¿½n del horario seleccionado
         bool answer = await DisplayAlert("Horario Seleccionado",
             $"Inicio: {selectedHorario.fecInicio}, Final: {selectedHorario.fecFinal}",
             "Continuar", "Cancelar");
@@ -93,7 +94,7 @@ public partial class DefineEventPage : ContentPage
 
                 if (res.resultado)
                 {
-                    DisplayAlert("Insercion correcta", "Usuario se añadio correctamente", "Aceptar");
+                    DisplayAlert("Insercion correcta", "Usuario se aï¿½adio correctamente", "Aceptar");
                 }
 
             }

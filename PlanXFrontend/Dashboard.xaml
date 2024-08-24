@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Dashboard"
-             Title=""
-             NavigationPage.TitleIconImageSource="Resources/Images/planxlogoresize.png"
+             Title="Main Page"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              xmlns:viewModel="clr-namespace:PlanXFrontend.ViewModel">
 
