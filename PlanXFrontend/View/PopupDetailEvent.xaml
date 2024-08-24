@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.CreateEventPage"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             Title="">
-
-<StackLayout BackgroundColor="White" Margin="0">
-<StackLayout.Background>
-        <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
-                <GradientStop Color="#ffffff" Offset="0.0" />
-                    <!-- Negro semitransparente -->
-                <GradientStop Color="#8D14A5" Offset="1.0" />
-                    <!-- Negro semitransparente -->
-        </RadialGradientBrush>
-</StackLayout.Background>
-
-        <Frame CornerRadius="50"  Padding="0" Margin="30" BorderColor="Black" VerticalOptions="CenterAndExpand">
-            <StackLayout BackgroundColor="#8D14A5" Padding="20">
-                <Label  Text="Create Event"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="PlanXFrontend.View.PopupDetailEvent">
+    <VerticalStackLayout Padding="30,0,30,0" >
+    <VerticalStackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#8D14A5" Offset="0.0" />
+                        <GradientStop Color="Black" Offset="1.0" />
+                    </LinearGradientBrush>
+                </VerticalStackLayout.Background>
+                <Label  Text="Event Details"
                         FontSize="Large" 
+                        Margin="0,20,0,10"
                         TextColor="White"
                         FontFamily="Roboto"
                         FontAttributes="Bold" 
@@ -32,6 +26,7 @@
                         <!--Title-->
                 <Entry x:Name="enyTitle"
                         TextColor="White"
+                        IsEnabled="False"
                         FontFamily="Roboto"
                         PlaceholderColor="White"
                         Margin="0,0,0,20"/>
@@ -58,11 +53,11 @@
                                 VerticalOptions="Center"/>
                         <DatePicker x:Name="datePicker"
                                         Format="D"
-                                        MinimumDate="{x:Static sys:DateTime.Today}"
+                                        IsEnabled="False"
                                         TextColor="White"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
-                        </StackLayout>
+        </StackLayout>
 
                         <BoxView Color="White"
                                 HeightRequest="0.3"
@@ -97,6 +92,7 @@
                                 VerticalOptions="Center"/>
                         <TimePicker x:Name="timeBeginPicker"
                                         TextColor="White"
+                                        IsEnabled="False"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
@@ -113,6 +109,7 @@
                                 VerticalOptions="Center"/>
                         <TimePicker x:Name="timeEndPicker"
                                         TextColor="White"
+                                        IsEnabled="False"
                                         FontFamily="Roboto"
                                         HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
@@ -128,24 +125,14 @@
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                                <Picker Title="Select duration"
-                                x:Name="enyDuracion"
-                                TitleColor="White" 
+                                <Label x:Name="enyDuracion"
+                                Text="" 
                                 TextColor="White"
                                 FontFamily="Roboto"
+                                IsEnabled="False"
                                 BackgroundColor="Transparent"
                                 HorizontalOptions="EndAndExpand"
-                                VerticalOptions="Center">
-                                <Picker.Items>
-                                <x:String>30</x:String>
-                                <x:String>60</x:String>
-                                <x:String>90</x:String>
-                                <x:String>120</x:String>
-                                <x:String>150</x:String>
-                                <x:String>180</x:String>
-                                <x:String>210</x:String>
-                                </Picker.Items>
-                                </Picker>
+                                VerticalOptions="Center"/>
                         </StackLayout>
 
 
@@ -153,22 +140,37 @@
 
 
                         <!-- Login Button -->
-                <Button Text="Accept"
-                        x:Name="btnCreateEvent"
-                        BackgroundColor="White"
-                        CornerRadius="28"
+                        <FlexLayout Margin="0,20,0,20" >
+                        <Button Text="Edit"
+                        x:Name="btnEditEvent"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
                         HorizontalOptions="FillAndExpand"
-                        Margin="0,10,0,20"
                         FontFamily="Roboto"
-                        TextColor="Black" 
-                        FontAttributes="Bold"
-                        BorderColor="Black" 
-                        BorderWidth="2"
-                        Clicked="btnCreateEvent_Clicked"/>
-            </StackLayout>
+                        TextColor="GreenYellow" 
+                        FontAttributes="Bold">
+                        </Button>
+                        
+                        <Button Text="Delete"
+                        x:Name="btnDeleteEvent"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
+                        Margin="2,0"
+                        HorizontalOptions="FillAndExpand"
+                        FontFamily="Roboto"
+                        TextColor="Red" 
+                        FontAttributes="Bold"/>
+                        
+                        <Button Text="Schedules"
+                        x:Name="btnViewScheduleEvent"
+                        BackgroundColor="Transparent"
+                        CornerRadius="5"
+                        HorizontalOptions="FillAndExpand"
+                        FontFamily="Roboto"
+                        TextColor="Turquoise" 
+                        FontAttributes="Bold"/>
+                        </FlexLayout>
+                
             
-        </Frame>
-        
-        
-    </StackLayout>
-</ContentPage>
+    </VerticalStackLayout>
+</toolkit:Popup>

@@ -3,35 +3,24 @@ using PlanXFrontend.Entidades.Entities;
 using Newtonsoft.Json;
 using PlanXFrontend.Entidades.Request.ReqEvento;
 using PlanXFrontend.Entidades.Response.ResEvento;
+using Syncfusion.Maui.Scheduler;
+using Microsoft.Maui.Controls;
+using PlanXFrontend.View;
+using CommunityToolkit.Maui.Views;
 namespace MauiApp1;
 
 public partial class Dashboard : ContentPage
 {
 
     string laUrl = App.API_URL;
-
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        this.ToolbarItems.Clear();
         await ObtenerEvento();
         InitializeComponent();
         NavigationPage.SetHasBackButton(this, false);
     }
-
-    private void myButton_Pressed(object sender, EventArgs e)
-{
-    btnCreateEvent.BorderColor = Colors.BlueViolet;
-    btnCreateEvent.BorderWidth = 2;
-    btnCreateEvent.TextColor = Colors.BlueViolet;
-}
-    private void myButton_Released(object sender, EventArgs e)
-{
-    btnCreateEvent.BorderColor = Colors.Black;
-    btnCreateEvent.BorderWidth = 1;
-    btnCreateEvent.TextColor= Colors.Black;
-
-} 
-	
     private async void tbiTask_Clicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new TasksPage());
@@ -122,6 +111,8 @@ public partial class Dashboard : ContentPage
                     InvitacionEvento.evento.nombre = res.evento.nombre;
                     InvitacionEvento.evento.descripcion = res.evento.descripcion;
                     InvitacionEvento.evento.codInvitacion = res.evento.codInvitacion;
+                    InvitacionEvento.evento.fecHoraInicio = res.evento.fecHoraInicio;
+                    InvitacionEvento.evento.duracion = res.evento.duracion;
                     await Navigation.PushAsync(new JoinGroupPage());
                 }
                 else
@@ -141,5 +132,30 @@ public partial class Dashboard : ContentPage
 
 
     }
+    public void ObtenerModificarEvento(object sender, EventArgs e){
+            
+            DateTime? selectedDate = this.ScheduleView.SelectedDate;
+            
 
+            // Buscar un evento en la fecha seleccionada
+            var selectedEvent = ListaEventos.eventos.FirstOrDefault(evt => evt.fecHoraInicio.TimeOfDay == selectedDate.Value.TimeOfDay);
+            if (selectedEvent != null)
+            {
+                // Aquí podrías resaltar o interactuar con el evento encontrado
+                DisplayAlert("Evento Seleccionado", $"Evento: {selectedEvent.nombre}", "OK");
+
+                // Opcional: Desplazar la vista del scheduler para enfocarse en el evento específico
+                //this.ScheduleView.DisplayDate = selectedEvent.fecHoraInicio;
+            }
+            else
+            {
+                DisplayAlert("Sin Eventos", "No hay eventos en la fecha seleccionada", "OK");
+            }
+        }
+
+    public void OnSchedulerTapped(object sender, EventArgs e)
+    {
+        var popup = new PopupDetailEvent();
+        this.ShowPopup(popup);
+    }
 }

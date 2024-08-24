@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PlanXFrontend.EventDetailsPage"
+             Title="Define Schedule">
+
+             <Grid Margin="20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.Background>
+                    <RadialGradientBrush Center="0.5,0.5" Radius="0.5">
+                        <GradientStop Color="#ffffff" Offset="0.0" />
+                            <!-- Negro semitransparente -->
+                        <GradientStop Color="#8D14A5" Offset="1.0" />
+                            <!-- Negro semitransparente -->
+                    </RadialGradientBrush>
+                </Grid.Background>
+                <Frame Grid.Row="0" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BorderColor="Black" CornerRadius="20">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label FontSize="Medium" FontFamily="Roboto" FontAttributes="Bold" TextColor="White">Schedule Option 1</Label>
+                <DatePicker x:Name="dpScheduleOne"/>
+                <TimePicker x:Name="tpOneScheduleOne"/>
+                <TimePicker x:Name="tpTwoScheduleOne"/>
+                <CheckBox x:Name="chbxScheduleOne"/>
+                </StackLayout>
+                </Frame>
+                
+                <StackLayout Grid.Row="1" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                <Label>Schedule Option 2</Label>
+                <DatePicker x:Name="dpScheduleTwo"/>
+                <TimePicker x:Name="tpOneScheduleTwo"/>
+                <TimePicker x:Name="tpTwoScheduleTwo"/>
+                <CheckBox x:Name="chbxScheduleTwo"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                <Label>Schedule Option 3</Label>
+                <DatePicker x:Name="dpScheduleThree"/>
+                <TimePicker x:Name="tpOneScheduleThree"/>
+                <TimePicker x:Name="tpTwoScheduleThree"/>
+                <CheckBox x:Name="chbxScheduleThree"/>
+                </StackLayout>
+             
+             </Grid>
+</ContentPage>
