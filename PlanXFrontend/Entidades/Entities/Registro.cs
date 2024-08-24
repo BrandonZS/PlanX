@@ -12,5 +12,10 @@ namespace PlanXFrontend.Entidades.Entities
         public string apellido { get; set; }
         public DateTime fecInicial { get; set; }
         public DateTime fecFinal { get; set; }
+
+
+
+        public string FecInicialString => fecInicial.ToString("dd/MM/yyyy HH:mm");
+        public string FecFinalString => fecFinal.ToString("dd/MM/yyyy HH:mm");
     }
 }

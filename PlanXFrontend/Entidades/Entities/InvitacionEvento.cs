@@ -9,5 +9,6 @@ namespace PlanXFrontend.Entidades.Entities
     public class InvitacionEvento
     {
         public static Evento evento = new Evento();
+        public static Evento eventoPropio = new Evento();
     }
 }

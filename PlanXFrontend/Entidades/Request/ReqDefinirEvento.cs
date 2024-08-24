@@ -8,7 +8,7 @@ namespace PlanXFrontend.Entidades.Request
 {
     public class ReqDefinirEvento
     {
-        public int id { get; set; }
+        public Int64 id { get; set; }
         public string codInvitacion { get; set; }
         public DateTime horaInicial { get; set; }
         public DateTime horaFinal { get; set; }
