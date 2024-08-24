@@ -29,6 +29,8 @@
             <Image
                 Source="Resources/Images/planxlogo.png"
                 Aspect="AspectFit" 
+                BackgroundColor="Transparent"
+                Background="Transparent"
                 VerticalOptions="StartAndExpand"
                 HorizontalOptions="FillAndExpand"
                 HeightRequest="280"

@@ -2,15 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PlanXFrontend.DefineEventPage"
-             Title="DefineEventPage">
-    <ListView x:Name="listView" ItemSelected="OnItemSelected">
+             Title="Event Schedules">
+    <ListView x:Name="listView" ItemSelected="OnItemSelected" HasUnevenRows="True" SeparatorColor="White" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+        <ListView.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#8D14A5" Offset="0.0" />
+                <GradientStop Color="Black" Offset="1.0" />
+            </LinearGradientBrush>
+        </ListView.Background>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout>
-                        <Label Text="{Binding usersCount}"/>
-                        <Label Text="{Binding fecInicio}"/>
-                        <Label Text="{Binding fecFinal}"/>
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="15" BackgroundColor="#24052b">
+                                <FlexLayout>
+                                <Label Text="Users: " TextColor="White" FontFamily="Roboto" FontAttributes="Bold" FontSize="Medium"/>
+                                <Label Text="{Binding usersCount}" TextColor="White" FontFamily="Roboto" FontAttributes="Bold" FontSize="Medium"/>
+                                </FlexLayout>
+                                <FlexLayout>
+                                 <Label Text="Start DateTime: " TextColor="White" FontFamily="Roboto" FontAttributes="Bold"/>
+                                 <Label Text="{Binding fecInicio}" TextColor="White" FontFamily="Roboto" FontAttributes="Bold"/>
+                                </FlexLayout>
+                                <FlexLayout>
+                                 <Label Text="End DateTime: " TextColor="White" FontFamily="Roboto" FontAttributes="Bold"/>
+                                 <Label Text="{Binding fecFinal}" TextColor="White" FontFamily="Roboto" FontAttributes="Bold"/>
+                                </FlexLayout>
+                        
+                        
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
