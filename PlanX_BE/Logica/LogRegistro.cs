@@ -81,6 +81,7 @@ namespace PlanXBackend.Logica
                         }
                         res.horarios = res.horarios.OrderByDescending(h => h.registros.Count).Take(3).ToList();
 
+                        res.resultado = true;
                     }
                 }
             }
