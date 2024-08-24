@@ -8,9 +8,9 @@ public partial class AccountPage : ContentPage
 	{
 		InitializeComponent();
 		enyNameAccount.Text = Sesion.nombre;
-		enyLastNameAccount.Text = Sesion.apellidos;
+		enyLastNameAccount.Text = Sesion.apellido;
 		enyEmail.Text = Sesion.email;
-		pickerCountry.Title = Sesion.codPais;
+		pickerCountry.SelectedItem = Sesion.codPais;
 	}
 
 	        public async void ChangePassword_Clicked(object sender, EventArgs e){

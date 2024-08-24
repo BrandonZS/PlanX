@@ -6,10 +6,9 @@ public static class Sesion
 {
     	public static long id { get; set; }
 		public static string nombre { get; set; }
-		public static string apellidos { get; set; }
+		public static string apellido { get; set; }
 		public static string email { get; set; }
 		public static string codPais { get; set; }
-		public static string password { get; set; }
 		public static string token {  get; set; }
  
 		public static bool validarSesion()
@@ -28,7 +27,7 @@ public static class Sesion
 		{
 			Sesion.id = 0;
 			Sesion.nombre = String.Empty;
-			Sesion.apellidos = String.Empty;
+			Sesion.apellido = String.Empty;
 			Sesion.token = String.Empty;
  
 		}

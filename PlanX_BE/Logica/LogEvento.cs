@@ -318,5 +318,56 @@ namespace PlanXBackend.Logica
 
             return evento;
         }
+
+        public ResEliminarEvento eliminarEvento(ReqEliminarEvento req)
+        { 
+            ResEliminarEvento res = new ResEliminarEvento();
+            try
+            {
+                //Faltan Comprobaciones de otros datos
+                if (req == null)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Req null");
+                }
+                else if (String.IsNullOrEmpty(req.codInvi))
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Codigo faltante");
+                }
+                else if (req.id < 1)
+                {
+                    res.resultado = false;
+                    res.listaDeErrores.Add("Usuario Faltante");
+                }
+                else
+                {
+                    int? idReturn = 0;
+                    int? errorId = 0;
+                    string errorDescripcion = null;
+                    ConexionLINQDataContext linq = new ConexionLINQDataContext();
+                    linq.SP_ELIMINAR_EVENTO(req.id, req.codInvi, ref errorId, ref errorDescripcion);
+                    if (errorDescripcion != null)
+                    {
+                        res.resultado = false;
+                        res.listaDeErrores.Add(errorDescripcion);
+
+                    }
+                    else
+                    {
+                        res.resultado = true;
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res.resultado = false;
+                res.listaDeErrores.Add("Excepcion ha ocurrido");
+            }
+
+            return res;
+        }
+          
     }
 }

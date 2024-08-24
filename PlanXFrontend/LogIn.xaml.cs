@@ -46,10 +46,9 @@ public partial class LogIn : ContentPage
 				//Usuario y contraseña correctos. ¡Todo bien!
 				Sesion.id = res.usuario.id;
 				Sesion.nombre = res.usuario.nombre;
-				Sesion.apellidos = res.usuario.apellidos;
+				Sesion.apellido = res.usuario.apellido;
 				Sesion.token = res.usuario.token;
-				Sesion.email = res.usuario.correoElectronico;
-				Sesion.password = res.usuario.password;
+				Sesion.email = res.usuario.email;
  
  
 				//DisplayAlert("Login correcto", "¡Bienvenido(a) " + res.usuario.nombre +"!", "Aceptar");

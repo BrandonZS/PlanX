@@ -159,7 +159,8 @@
                         HorizontalOptions="FillAndExpand"
                         FontFamily="Roboto"
                         TextColor="Red" 
-                        FontAttributes="Bold"/>
+                        FontAttributes="Bold"
+                        Clicked="btnDeleteEvent_Clicked"/>
                         
                         <Button Text="Schedules"
                         x:Name="btnViewScheduleEvent"

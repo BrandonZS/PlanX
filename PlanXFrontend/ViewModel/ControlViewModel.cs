@@ -25,13 +25,24 @@ namespace PlanXFrontend.ViewModel
 
             foreach (Evento evento in ListaEventos.eventos)
             {
+                Color miColor;
+
+                if (evento.estado)
+                {
+                    miColor = Colors.AliceBlue; // Azul
+                }
+                else
+                {
+                    miColor = Colors.Purple; // Morado
+                }
+
                 SchedulerEvents.Add(new SchedulerAppointment()
                 {
                     StartTime = evento.fecHoraInicio,
                     EndTime = evento.fecHoraFin,
                     Subject = evento.nombre,
-                    Id = evento.codInvitacion
-
+                    Id = evento.codInvitacion,
+                    Background = miColor // Asignamos el color de fondo
                 });
             }
         }

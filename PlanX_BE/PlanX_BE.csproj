@@ -102,6 +102,7 @@
     <Compile Include="Entidades\Entities\Tarea.cs" />
     <Compile Include="Entidades\Entities\Usuario.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqDefinirEvento.cs" />
+    <Compile Include="Entidades\Request\ReqEvento\ReqEliminarEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqObtenerEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqObtenerListaEvento.cs" />
     <Compile Include="Entidades\Request\ReqEvento\ReqRegistroEventoRegular.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Entidades\Request\ReqUsuario\ReqInsertarUsuario.cs" />
     <Compile Include="Entidades\Request\ReqLogin.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResDefinirEvento.cs" />
+    <Compile Include="Entidades\Response\ResEvento\ResEliminarEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResObtenerEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResObtenerListaEvento.cs" />
     <Compile Include="Entidades\Response\ResEvento\ResRegistroEventoRegular.cs" />

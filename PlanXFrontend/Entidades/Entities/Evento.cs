@@ -11,5 +11,6 @@ public class Evento
         public DateTime fecHoraFin { get; set; }
         public int limUsers { get; set; }
         public float duracion  { get; set; }
+        public bool estado { get; set; }
 
 }

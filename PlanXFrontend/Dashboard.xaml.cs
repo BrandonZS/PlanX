@@ -155,23 +155,28 @@ public partial class Dashboard : ContentPage
 
     public async void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
     {
-        var defineEvent = e.Appointments.FirstOrDefault() as SchedulerAppointment;
-
-
-        foreach (Evento evento in ListaEventos.eventos)
+        if(e.Appointments != null)
         {
-            if (evento.codInvitacion == defineEvent.Id)
+            var defineEvent = e.Appointments.FirstOrDefault() as SchedulerAppointment;
+
+
+            foreach (Evento evento in ListaEventos.eventos)
             {
-                InvitacionEvento.eventoPropio = evento;
+                if (evento.codInvitacion == defineEvent.Id)
+                {
+                    InvitacionEvento.eventoPropio = evento;
+                }
+            }
+
+            var popup = new PopupDetailEvent();
+            var result = await this.ShowPopupAsync(popup);
+            if (result is bool shouldNavigate && shouldNavigate)
+            {
+                await Navigation.PushAsync(new DefineEventPage());
             }
         }
 
-        var popup = new PopupDetailEvent();
-        var result = await this.ShowPopupAsync(popup);
 
-        if (result is bool shouldNavigate && shouldNavigate)
-        {
-            await Navigation.PushAsync(new DefineEventPage());
-        }
+
     }
 }

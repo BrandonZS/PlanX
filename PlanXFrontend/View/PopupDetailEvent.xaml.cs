@@ -4,6 +4,7 @@ using PlanXFrontend.Entidades.Entities;
 using PlanXFrontend.Entidades.Request;
 using PlanXFrontend.Entidades.Request.ReqEvento;
 using PlanXFrontend.Entidades.Response;
+using PlanXFrontend.Entidades.Response.ResEvento;
 
 namespace PlanXFrontend.View;
 
@@ -12,21 +13,24 @@ public partial class PopupDetailEvent : Popup
     string laUrl = App.API_URL;
     public PopupDetailEvent()
 	{
-		InitializeComponent();
-		enyTitle.Text = InvitacionEvento.eventoPropio.nombre;
+        InitializeComponent();
+        if (InvitacionEvento.eventoPropio.estado)
+        {
+            btnViewScheduleEvent.IsVisible = false;
+        }
+        enyTitle.Text = InvitacionEvento.eventoPropio.nombre;
 		enyDescription.Text = InvitacionEvento.eventoPropio.descripcion;
 		enyDuracion.Text = InvitacionEvento.eventoPropio.duracion.ToString();
 		enyMaxPersonas.Text = InvitacionEvento.eventoPropio.limUsers.ToString();
 		datePicker.Date = InvitacionEvento.eventoPropio.fecHoraInicio;
 		timeBeginPicker.Time = InvitacionEvento.eventoPropio.fecHoraInicio.TimeOfDay;
 		timeEndPicker.Time = InvitacionEvento.eventoPropio.fecHoraFin.TimeOfDay;
+
 		
     }
 
     private async void btnViewScheduleEvent_Clicked(object sender, EventArgs e)
     {
-
-
 
             try
             {
@@ -53,7 +57,7 @@ public partial class PopupDetailEvent : Popup
 
                     if (res.horarios.Count > 0)
                     {
-                        if(ListaHorarios.listaHorarios.Count != 0)
+                        if (ListaHorarios.listaHorarios.Count != 0)
                         {
                             ListaHorarios.listaHorarios.Clear();
                         }
@@ -61,7 +65,7 @@ public partial class PopupDetailEvent : Popup
                         {
                             ListaHorarios.listaHorarios.Add(horario);
                         }
-                    Close(true);
+                        Close(true);
                     }
                 }
                 else
@@ -73,6 +77,43 @@ public partial class PopupDetailEvent : Popup
 
             }
 
+
         }
-    
+
+    private async void btnDeleteEvent_Clicked(object sender, EventArgs e)
+    {
+        try
+        {
+            ReqEliminarEvento req = new ReqEliminarEvento();
+            req.id = Sesion.id;
+            req.codInvi = InvitacionEvento.eventoPropio.codInvitacion;
+
+            var jsonContent = new StringContent(JsonConvert.SerializeObject(req), System.Text.Encoding.UTF8, "application/json");
+
+            HttpClient httpClient = new HttpClient();
+
+            var response = await httpClient.PostAsync(laUrl + "api/evento/eliminarevento", jsonContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseContent = await response.Content.ReadAsStringAsync();
+                ResEliminarEvento res = new ResEliminarEvento();
+
+                res = JsonConvert.DeserializeObject<ResEliminarEvento>(responseContent);
+
+                if (res.resultado)
+                {
+                    Close();
+                }
+
+            }
+            else
+            {
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
 }
