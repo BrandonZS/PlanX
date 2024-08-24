@@ -13,6 +13,7 @@
         <Frame CornerRadius="50" Padding="0" Margin="30" BorderColor="Black">
             <StackLayout BackgroundColor="#8D14A5" Padding="20">
             <Label     Text="Welcome To PlanX"
+                    Margin="0,0,0,15"
                     FontSize="Large" 
                     TextColor="White"
                     FontFamily="Roboto"
