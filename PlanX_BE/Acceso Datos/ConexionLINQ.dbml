@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PLANXAPP" Class="ConexionLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=(localdb)\BrandonZamora;Initial Catalog=PLANXAPP;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString4" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=proyecto-movil.database.windows.net;Initial Catalog=PLANXAPP;Persist Security Info=True;User ID=Admin123;Trust Server Certificate=True" SettingsObjectName="PlanXBackend.Properties.Settings" SettingsPropertyName="PLANXAPPConnectionString5" Provider="System.Data.SqlClient" />
   <Function Name="dbo.SP_ACTUALIZAR_EVENTO" Method="SP_ACTUALIZAR_EVENTO">
     <Parameter Name="TITULO" Parameter="tITULO" Type="System.String" DbType="NVarChar(255)" />
     <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />

@@ -77,5 +77,17 @@ namespace PlanXBackend.Properties {
                 return ((string)(this["PLANXAPPConnectionString4"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyecto-movil.database.windows.net;Initial Catalog=PLANXAPP;Persist " +
+            "Security Info=True;User ID=Admin123;Password=Password98765;TrustServerCertificat" +
+            "e=True")]
+        public string PLANXAPPConnectionString5 {
+            get {
+                return ((string)(this["PLANXAPPConnectionString5"]));
+            }
+        }
     }
 }
