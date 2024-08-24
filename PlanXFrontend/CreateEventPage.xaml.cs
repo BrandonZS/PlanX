@@ -18,17 +18,16 @@ public partial class CreateEventPage : ContentPage
         try
         {
             DateTime selectedDate = datePicker.Date;
-
             TimeSpan beginTime = timeBeginPicker.Time;
             TimeSpan endTime = timeEndPicker.Time;
-
+            
 
             ReqInsertarEvento req = new ReqInsertarEvento();
             req.nombre = enyTitle.Text;
             req.descripcion = enyDescription.Text;
             req.fecHoraInicio = selectedDate.Add(beginTime);
             req.fecHoraFin = selectedDate.Add(endTime);
-            req.limUsers = 5;
+            req.limUsers = int.Parse(enyMaxPersonas.Text);
             req.duracion = float.Parse(enyDuracion.SelectedItem.ToString());
             req.idUsuario = Sesion.id;
 
@@ -47,7 +46,7 @@ public partial class CreateEventPage : ContentPage
 
                 if (res.resultado)
                 {
-                    DisplayAlert("Insercion correcta", "Usuario se añadio correctamente", "Aceptar");
+                    DisplayAlert("Insercion correcta", "Usuario se aï¿½adio correctamente", "Aceptar");
                 }
 
             }
