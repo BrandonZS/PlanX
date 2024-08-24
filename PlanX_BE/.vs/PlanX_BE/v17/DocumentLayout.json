@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\acceso datos\\conexionlinq.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|solutionrelative:acceso datos\\conexionlinq.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15D1DB3F-BD28-4ACB-BB50-B560D587CA5B}|..\\PLANX_API\\PLANX_API.csproj|c:\\users\\asus x515\\documents\\github\\planx\\planx_api\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -20,10 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\entidades\\response\\resevento\\resdefinirevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|solutionrelative:entidades\\response\\resevento\\resdefinirevento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\acceso datos\\conexionlinq.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
-      "RelativeMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|solutionrelative:acceso datos\\conexionlinq.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F1600F2-53BE-4170-8585-0EC90B8E7A65}|PlanX_BE.csproj|C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\logica\\loglogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -109,11 +109,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ResDefinirEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Entidades\\Response\\ResEvento\\ResDefinirEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Response\\ResEvento\\ResDefinirEvento.cs",
@@ -125,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ReqDefinirEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Entidades\\Request\\ReqEvento\\ReqDefinirEvento.cs",
               "RelativeDocumentMoniker": "Entidades\\Request\\ReqEvento\\ReqDefinirEvento.cs",
@@ -217,8 +217,7 @@
               "RelativeToolTip": "Logica\\LogTarea.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T05:34:57.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-23T05:34:57.818Z"
             },
             {
               "$type": "Document",
@@ -246,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Evento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Entidades\\Entities\\Evento.cs",
               "RelativeDocumentMoniker": "Entidades\\Entities\\Evento.cs",
@@ -270,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EventoController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PLANX_API\\Controllers\\EventoController.cs",
               "RelativeDocumentMoniker": "..\\PLANX_API\\Controllers\\EventoController.cs",
@@ -379,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LogEvento.cs",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Logica\\LogEvento.cs",
               "RelativeDocumentMoniker": "Logica\\LogEvento.cs",
@@ -399,18 +398,20 @@
               "RelativeToolTip": "Acceso Datos\\ConexionLINQ.designer.cs",
               "ViewState": "AQIAALgCAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T04:19:02.669Z"
+              "WhenOpened": "2024-08-23T04:19:02.669Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ConexionLINQ.dbml",
               "DocumentMoniker": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Acceso Datos\\ConexionLINQ.dbml",
               "RelativeDocumentMoniker": "Acceso Datos\\ConexionLINQ.dbml",
               "ToolTip": "C:\\Users\\ASUS X515\\Documents\\GitHub\\PlanX\\PlanX_BE\\Acceso Datos\\ConexionLINQ.dbml",
               "RelativeToolTip": "Acceso Datos\\ConexionLINQ.dbml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
-              "WhenOpened": "2024-08-23T04:18:24.257Z"
+              "WhenOpened": "2024-08-23T04:18:24.257Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -33,7 +33,7 @@ namespace PlanXBackend.Acceso_Datos
     #endregion
 		
 		public ConexionLINQDataContext() : 
-				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString4, mappingSource)
+				base(global::PlanXBackend.Properties.Settings.Default.PLANXAPPConnectionString5, mappingSource)
 		{
 			OnCreated();
 		}
