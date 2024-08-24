@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace PlanXFrontend.Entidades.Entities
 {
-    public class InvitacionEvento
+    public class ListaHorarios
     {
-        public static Evento evento = new Evento();
-        public static Evento eventoPropio = new Evento();
+        public static List<Horario> listaHorarios = new List<Horario>();
+
     }
+
 }

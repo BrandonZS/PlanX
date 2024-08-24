@@ -19,5 +19,6 @@ public partial class AccountPage : ContentPage
 
 		public async void btnLogOut(object sender, EventArgs e){
             Sesion.cerrarSesion();
-        }
+			await Navigation.PushAsync(new MainPage());
+    }
 }

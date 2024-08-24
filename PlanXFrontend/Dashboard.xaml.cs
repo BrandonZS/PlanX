@@ -153,9 +153,25 @@ public partial class Dashboard : ContentPage
             }
         }
 
-    public void OnSchedulerTapped(object sender, EventArgs e)
+    public async void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
     {
+        var defineEvent = e.Appointments.FirstOrDefault() as SchedulerAppointment;
+
+
+        foreach (Evento evento in ListaEventos.eventos)
+        {
+            if (evento.codInvitacion == defineEvent.Id)
+            {
+                InvitacionEvento.eventoPropio = evento;
+            }
+        }
+
         var popup = new PopupDetailEvent();
-        this.ShowPopup(popup);
+        var result = await this.ShowPopupAsync(popup);
+
+        if (result is bool shouldNavigate && shouldNavigate)
+        {
+            await Navigation.PushAsync(new DefineEventPage());
+        }
     }
 }

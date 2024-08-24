@@ -29,7 +29,8 @@
                                 CellBorderBrush="#608D14A5"
                                 ShowWeekNumber="True"
                                 ShowBusyIndicator="True"
-                                TodayHighlightBrush="#8D14A5">
+                                TodayHighlightBrush="#8D14A5"
+                                Tapped="OnSchedulerTapped">
                     <syncfusion:SfScheduler.BindingContext> 
                         <viewModel:ControlViewModel />
                             </syncfusion:SfScheduler.BindingContext>
