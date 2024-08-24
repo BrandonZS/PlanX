@@ -43,7 +43,7 @@ public partial class CreateTaskPage : ContentPage
                 if (res.resultado)
                 {
                     DisplayAlert("Nice!!", "Your Task Was Added", "OK");
-                    await Navigation.PushAsync(new TasksPage());
+                    await Navigation.PopAsync();
                 }
 
             }

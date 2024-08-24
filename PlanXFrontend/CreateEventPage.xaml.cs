@@ -65,8 +65,8 @@ public partial class CreateEventPage : ContentPage
 
                     if (res.resultado)
                     {
-                        DisplayAlert("Nice!", "Evento se añadio correctamente", "Aceptar");
-                        await Navigation.PushAsync(new Dashboard());
+                        DisplayAlert("Nice!", "Task Added", "OK");
+                        await Navigation.PopAsync();
                     }
 
                 }

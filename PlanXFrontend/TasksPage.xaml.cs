@@ -15,6 +15,7 @@ public partial class TasksPage : ContentPage
 	{
 		base.OnAppearing();
 		await ObtenerTarea();
+        this.ToolbarItems.Clear();
 		InitializeComponent();
 	}
 
