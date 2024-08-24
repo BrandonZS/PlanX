@@ -30,6 +30,7 @@ namespace PlanXFrontend.ViewModel
                     StartTime = evento.fecHoraInicio,
                     EndTime = evento.fecHoraFin,
                     Subject = evento.nombre,
+                    Id = evento.codInvitacion
 
                 });
             }

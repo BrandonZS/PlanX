@@ -50,7 +50,6 @@ public partial class LogIn : ContentPage
 				Sesion.token = res.usuario.token;
 				Sesion.email = res.usuario.correoElectronico;
 				Sesion.password = res.usuario.password;
-				Sesion.codPais = res.usuario.codPais;
  
  
 				//DisplayAlert("Login correcto", "¡Bienvenido(a) " + res.usuario.nombre +"!", "Aceptar");

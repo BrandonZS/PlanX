@@ -168,7 +168,8 @@
                         HorizontalOptions="FillAndExpand"
                         FontFamily="Roboto"
                         TextColor="Turquoise" 
-                        FontAttributes="Bold"/>
+                        FontAttributes="Bold"
+                        Clicked="btnViewScheduleEvent_Clicked"/>
                         </FlexLayout>
                 
             
