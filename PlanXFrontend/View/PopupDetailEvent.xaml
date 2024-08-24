@@ -63,13 +63,13 @@
                                 HeightRequest="0.3"
                                 HorizontalOptions="FillAndExpand"/>
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,5">
-                        <Label Text="Max People"
+                        <Label Text="Code"
                                 FontSize="Subtitle" 
                                 TextColor="White"
                                 FontFamily="Roboto"
                                 FontAttributes="Bold" 
                                 VerticalOptions="Center"/>
-                                        <Entry x:Name="enyMaxPersonas"
+                                        <Entry x:Name="enyCode"
                                         Placeholder="0"
                                         PlaceholderColor="White"
                                         VerticalTextAlignment="End"

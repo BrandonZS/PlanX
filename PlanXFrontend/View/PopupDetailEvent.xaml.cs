@@ -21,7 +21,7 @@ public partial class PopupDetailEvent : Popup
         enyTitle.Text = InvitacionEvento.eventoPropio.nombre;
 		enyDescription.Text = InvitacionEvento.eventoPropio.descripcion;
 		enyDuracion.Text = InvitacionEvento.eventoPropio.duracion.ToString();
-		enyMaxPersonas.Text = InvitacionEvento.eventoPropio.limUsers.ToString();
+        enyCode.Text = InvitacionEvento.eventoPropio.codInvitacion;
 		datePicker.Date = InvitacionEvento.eventoPropio.fecHoraInicio;
 		timeBeginPicker.Time = InvitacionEvento.eventoPropio.fecHoraInicio.TimeOfDay;
 		timeEndPicker.Time = InvitacionEvento.eventoPropio.fecHoraFin.TimeOfDay;
