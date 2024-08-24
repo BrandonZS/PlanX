@@ -294,27 +294,50 @@ GO
 
 CREATE OR ALTER PROCEDURE SP_ELIMINAR_EVENTO
     @ID_USER INT,
-	@COD_INV NVARCHAR(6),
-	@ERRORID int output,
-    @ERRORDESCRIPCION nvarchar(max) output
+    @COD_INV NVARCHAR(6),
+    @ERRORID INT OUTPUT,
+    @ERRORDESCRIPCION NVARCHAR(MAX) OUTPUT
 AS
 BEGIN
     -- Iniciar la transacción
     BEGIN TRANSACTION;
-    DECLARE @ID_EVENTO INT 
-	SELECT @ID_EVENTO = [idEvento] FROM [dbo].[Evento] WHERE [codInvitacion] = @COD_INV AND [fechaHoraInicio] < GETDATE()
-    BEGIN TRY
-        DELETE FROM [dbo].[EventoUsuario]
-        WHERE [idEvento] = @ID_EVENTO;
-        DELETE FROM Evento
-        WHERE [idEvento] = @ID_EVENTO;
-        COMMIT TRANSACTION;
-    END TRY
-    BEGIN CATCH
+    DECLARE @ID_EVENTO INT;
+
+    -- Obtener el ID del evento basado en el código de invitación y asegurarse de que el evento ya haya iniciado
+    SELECT @ID_EVENTO = [idEvento] 
+    FROM [dbo].[Evento] 
+    WHERE [codInvitacion] = @COD_INV;
+
+    IF @ID_EVENTO IS NOT NULL
+    BEGIN
+        BEGIN TRY
+            -- Eliminar registros de la tabla EventoUsuario relacionados con el evento
+            DELETE FROM [dbo].[EventoUsuario]
+            WHERE [idEvento] = @ID_EVENTO;
+
+            -- Eliminar el evento de la tabla Evento
+            DELETE FROM [dbo].[Evento]
+            WHERE [idEvento] = @ID_EVENTO;
+
+            -- Confirmar la transacción si todo salió bien
+            COMMIT TRANSACTION;
+            SET @ERRORID = 0;
+            SET @ERRORDESCRIPCION = 'Evento eliminado exitosamente.';
+        END TRY
+        BEGIN CATCH
+            -- Revertir la transacción en caso de error
+            ROLLBACK TRANSACTION;
+            SET @ERRORID = ERROR_NUMBER();
+            SET @ERRORDESCRIPCION = ERROR_MESSAGE();
+        END CATCH
+    END
+    ELSE
+    BEGIN
+        -- Si no se encuentra un evento, revertir la transacción y devolver un error
         ROLLBACK TRANSACTION;
-        SET @ERRORID = ERROR_NUMBER();
-        SET @ERRORDESCRIPCION = ERROR_MESSAGE();
-    END CATCH
+        SET @ERRORID = -1;
+        SET @ERRORDESCRIPCION = 'No se encontró un evento que coincida con los criterios proporcionados.';
+    END
 END;
 GO
 
